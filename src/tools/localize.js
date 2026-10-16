@@ -206,8 +206,9 @@ function localBases() {
   else if (Array.isArray(custom)) bases.push(...custom);
   const scriptBase = getScriptBaseUrl();
   if (scriptBase) bases.push(scriptBase);
-  // Canonical HACS install path as a last resort.
-  bases.push('/hacsfiles/Bubble-Card/');
+  // Canonical install paths also work when Home Assistant imports the module
+  // without leaving a script element in the document.
+  bases.push('/hacsfiles/lovely-card/', '/local/lovely-card/');
   return bases;
 }
 
