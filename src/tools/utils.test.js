@@ -157,7 +157,7 @@ describe('toggleBodyScroll', () => {
         // now carries the rules that stop the document scrolling at all.
         utilsModule.toggleBodyScroll(true);
 
-        const styles = document.getElementById('bubble-card-no-scroll-styles');
+        const styles = document.getElementById('lovely-card-no-scroll-styles');
 
         expect(document.documentElement.classList.contains('bubble-body-scroll-locked')).toBe(true);
         expect(styles.textContent).toContain('html.bubble-body-scroll-locked body');
@@ -180,7 +180,7 @@ describe('toggleBodyScroll', () => {
 
         utilsModule.toggleBodyScroll(true);
 
-        const styles = document.getElementById('bubble-card-no-scroll-styles');
+        const styles = document.getElementById('lovely-card-no-scroll-styles');
 
         expect(document.documentElement.classList.contains('bubble-scroll-lock-gutter')).toBe(true);
         expect(styles.textContent).toContain('html.bubble-body-scroll-locked.bubble-scroll-lock-gutter {');
@@ -325,7 +325,7 @@ describe('toggleBodyScroll', () => {
 
         utilsModule.toggleBodyScroll(true);
 
-        const styles = document.getElementById('bubble-card-no-scroll-styles');
+        const styles = document.getElementById('lovely-card-no-scroll-styles');
 
         expect(document.documentElement.classList.contains('bubble-scroll-lock-gutter')).toBe(false);
         expect(styles.textContent).not.toMatch(/html\.bubble-body-scroll-locked\s*\{[^}]*scrollbar-gutter/);
@@ -347,7 +347,7 @@ describe('toggleBodyScroll', () => {
         // scrolling with it. The lock is CSS and nothing else.
         utilsModule.toggleBodyScroll(true);
 
-        const styles = document.getElementById('bubble-card-no-scroll-styles');
+        const styles = document.getElementById('lovely-card-no-scroll-styles');
 
         // The overlay legitimately uses touch-action for the area outside the
         // pop-up. What must stay clean is what the page itself is given.
@@ -359,7 +359,7 @@ describe('toggleBodyScroll', () => {
     test('locks scroll with a transparent overlay instead of fixing the body', () => {
         utilsModule.toggleBodyScroll(true);
 
-        const scrollLockLayer = document.getElementById('bubble-card-scroll-lock-layer');
+        const scrollLockLayer = document.getElementById('lovely-card-scroll-lock-layer');
 
         expect(document.body.classList.contains('bubble-body-scroll-locked')).toBe(true);
         expect(scrollLockLayer).toBeTruthy();
@@ -373,7 +373,7 @@ describe('toggleBodyScroll', () => {
     test('prevents touchmove and wheel scrolling on the lock layer without restoring scroll position', () => {
         utilsModule.toggleBodyScroll(true);
 
-        const scrollLockLayer = document.getElementById('bubble-card-scroll-lock-layer');
+        const scrollLockLayer = document.getElementById('lovely-card-scroll-lock-layer');
         const touchMoveEvent = new Event('touchmove', { cancelable: true });
         const wheelEvent = new Event('wheel', { cancelable: true });
 
@@ -394,7 +394,7 @@ describe('toggleBodyScroll', () => {
         utilsModule.toggleBodyScroll(true);
         utilsModule.toggleBodyScroll(true);
 
-        const scrollLockLayers = document.body.children.filter((child) => child.id === 'bubble-card-scroll-lock-layer');
+        const scrollLockLayers = document.body.children.filter((child) => child.id === 'lovely-card-scroll-lock-layer');
 
         expect(scrollLockLayers).toHaveLength(1);
     });
@@ -402,13 +402,13 @@ describe('toggleBodyScroll', () => {
     test('keeps unlock no-op cheap when the body is already unlocked', () => {
         utilsModule.toggleBodyScroll(false);
 
-        expect(document.getElementById('bubble-card-no-scroll-styles')).toBeNull();
-        expect(document.getElementById('bubble-card-scroll-lock-layer')).toBeNull();
+        expect(document.getElementById('lovely-card-no-scroll-styles')).toBeNull();
+        expect(document.getElementById('lovely-card-scroll-lock-layer')).toBeNull();
         expect(document.body.classList.contains('bubble-body-scroll-locked')).toBe(false);
     });
 });
 
-// Home Assistant applies a theme by writing it inline on <html>, and Bubble Card
+// Home Assistant applies a theme by writing it inline on <html>, and Lovely Card
 // reads its colors again whenever that attribute moves. This style replays every
 // write to the observers watching it, the way the browser does.
 function createObservedStyle(element, observers) {

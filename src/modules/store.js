@@ -75,7 +75,7 @@ function _drainStoreDescriptions(context) {
 }
 
 const BCT_CHECK_RETRY_MS = 5000;
-const RATE_LIMIT_WARNING_STORAGE_KEY = 'bubble-card-rate-limit-warning';
+const RATE_LIMIT_WARNING_STORAGE_KEY = 'lovely-card-rate-limit-warning';
 const HA_INPUT_SEARCH_MIN_VERSION = '2026.5';
 
 function _persistRateLimitWarning(resetTimeMs) {
@@ -128,7 +128,7 @@ export function makeModuleStore(context) {
   // Check if ranking info has been dismissed
   if (context._rankingInfoDismissed === undefined) {
     try {
-      context._rankingInfoDismissed = localStorage.getItem('bubble-card-ranking-info-dismissed') === 'true';
+      context._rankingInfoDismissed = localStorage.getItem('lovely-card-ranking-info-dismissed') === 'true';
     } catch (e) {
       context._rankingInfoDismissed = false;
     }
@@ -151,7 +151,7 @@ export function makeModuleStore(context) {
   context._dismissRankingInfo = () => {
     context._rankingInfoDismissed = true;
     try {
-      localStorage.setItem('bubble-card-ranking-info-dismissed', 'true');
+      localStorage.setItem('lovely-card-ranking-info-dismissed', 'true');
     } catch (e) {
       console.warn('Failed to save ranking info dismiss state to localStorage', e);
     }
@@ -859,7 +859,7 @@ export function _isModuleInstalledViaYaml(moduleId) {
   
   // Fallback to the old method (check if it's not in localStorage)
   try {
-    const storedModules = JSON.parse(localStorage.getItem('bubble-card-modules') || '{}');
+    const storedModules = JSON.parse(localStorage.getItem('lovely-card-modules') || '{}');
     return !storedModules[moduleId]; // Return true if NOT in localStorage (meaning it was installed via yaml)
   } catch (error) {
     console.warn("Error checking module installation source:", error);
@@ -1047,7 +1047,7 @@ export async function _fetchModuleStore(context, isBackgroundFetch = false) {
   try {
     // Check cooldown from previous API failures
     if (!isManualRefresh) {
-      const lastApiFailure = localStorage.getItem('bubble-card-api-failure-timestamp');
+      const lastApiFailure = localStorage.getItem('lovely-card-api-failure-timestamp');
       if (lastApiFailure) {
         const failureTime = parseInt(lastApiFailure);
         const cooldownPeriod = 30 * 60 * 1000; // 30 minutes
@@ -1076,7 +1076,7 @@ export async function _fetchModuleStore(context, isBackgroundFetch = false) {
           return;
         } else {
           // Cooldown finished, we can retry
-          localStorage.removeItem('bubble-card-api-failure-timestamp');
+          localStorage.removeItem('lovely-card-api-failure-timestamp');
         }
       }
     }
@@ -1177,7 +1177,7 @@ export async function _fetchModuleStore(context, isBackgroundFetch = false) {
         }
         
         // Save failure timestamp for cooldown
-        localStorage.setItem('bubble-card-api-failure-timestamp', Date.now().toString());
+        localStorage.setItem('lovely-card-api-failure-timestamp', Date.now().toString());
         
         throw new Error(`REST API Error: ${restResponse.status}`);
       }

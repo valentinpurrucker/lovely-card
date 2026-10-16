@@ -20,9 +20,9 @@
     --bubble-pop-up-visible-bottom-padding: 18px;
     --bubble-pop-up-extra-bottom-space: max(0px, calc(var(--bubble-pop-up-bottom-padding, 84px) - var(--bubble-pop-up-visible-bottom-padding, 18px)));
     padding: 18px 18px var(--bubble-pop-up-visible-bottom-padding, 18px) 18px;
-    border-radius: var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)));
-    -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))));
-    clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))));
+    border-radius: var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))));
+    -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))));
+    clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))));
     box-sizing: border-box;
     touch-action: pan-x pan-y pinch-zoom;
     overscroll-behavior: contain;
@@ -31,15 +31,15 @@
 .bubble-pop-up:not(.no-header):not(.editor) > .bubble-pop-up-container {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    -webkit-clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))));
-    clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))));
+    -webkit-clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))));
+    clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))));
 }
 
 .bubble-pop-up:not(.editor):not(.popup-mode-centered):not(.popup-mode-adaptive-dialog) > .bubble-pop-up-container {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0);
-    clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0);
+    -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0);
+    clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0);
 }
 
 .bubble-pop-up:not(.no-header):not(.editor):not(.popup-mode-centered):not(.popup-mode-adaptive-dialog) > .bubble-pop-up-container {
@@ -142,7 +142,7 @@
     position: fixed;
     width: 100%;
     max-width: 100%;
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) 0 0;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) 0 0;
     box-sizing: border-box;
     margin-inline-start: var(--custom-margin);
     inset-inline-start: 7px;
@@ -220,13 +220,13 @@
     min-width: 0 !important;
     height: fit-content !important;
     max-height: calc(100vh - 112px - 2 * var(--custom-height-offset-desktop, 0px)) !important;
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
     --bubble-pop-up-bottom-padding: 18px;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
 }
 
 .bubble-pop-up.popup-mode-centered .bubble-pop-up-background {
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
 }
 
 .bubble-pop-up.popup-mode-centered.is-popup-closed:not(.editor) {
@@ -245,7 +245,7 @@
 .bubble-pop-up.popup-mode-centered.is-closing:not(.editor) {
     transform: scale(0.9) !important;
     opacity: 0 !important;
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
     transition: transform 0.2s ease-in, opacity 0.2s ease-in !important;
 }
 
@@ -338,8 +338,8 @@
     .bubble-pop-up.popup-mode-adaptive-dialog:not(.editor) > .bubble-pop-up-container {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
-        -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0);
-        clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0);
+        -webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0);
+        clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0);
     }
 
     .bubble-pop-up.popup-mode-adaptive-dialog:not(.no-header):not(.editor) > .bubble-pop-up-container {
@@ -422,12 +422,12 @@
         min-width: 0 !important;
         height: fit-content !important;
         max-height: calc(100vh - 112px - 2 * var(--custom-height-offset-desktop, 0px)) !important;
-        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
         --bubble-pop-up-bottom-padding: 18px;
         transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
     }
     .bubble-pop-up.popup-mode-adaptive-dialog .bubble-pop-up-background {
-        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
     }
     .bubble-pop-up.popup-mode-adaptive-dialog.is-popup-closed:not(.editor) {
         contain: paint !important;
@@ -443,7 +443,7 @@
     .bubble-pop-up.popup-mode-adaptive-dialog.is-closing:not(.editor) {
         transform: scale(0.9) !important;
         opacity: 0 !important;
-        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+        border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
         transition: transform 0.2s ease-in, opacity 0.2s ease-in !important;
     }
     .bubble-pop-up.popup-mode-adaptive-dialog.popup-style-classic:not(.editor) > .bubble-header-container::before {
@@ -499,7 +499,7 @@
 .bubble-pop-up.popup-style-classic > .bubble-header-container > .bubble-header-actions > .bubble-header-action-button {
     background-color: var(--bubble-sub-button-background-color, var(--bubble-icon-background-color, var(--bubble-secondary-background-color, var(--card-background-color, var(--ha-card-background))))) !important;
     border: none !important;
-    border-radius: var(--bubble-sub-button-border-radius, var(--bubble-border-radius, 18px)) !important;
+    border-radius: var(--bubble-sub-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px)))) !important;
     height: 36px !important;
     width: 36px !important;
     color: var(--primary-text-color) !important;
@@ -528,7 +528,7 @@
     min-height: 36px;
     width: 36px;
     height: 36px;
-    border-radius: var(--bubble-sub-button-border-radius, var(--bubble-border-radius, 18px));
+    border-radius: var(--bubble-sub-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
 }
 
 .bubble-pop-up.popup-style-classic > .bubble-header-container > .bubble-header-actions .bubble-header-action-icon svg {
@@ -574,7 +574,7 @@
     left: 0;
     position: absolute;
     background-color: var(--bubble-pop-up-main-background-color, var(--bubble-pop-up-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color)))));
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) 0 0;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) 0 0;
     border: var(--bubble-pop-up-border, var(--bubble-border, none));
     box-sizing: border-box;
     contain: paint;
@@ -783,7 +783,7 @@
     height: 50px;
     width: 50px;
     border: var(--bubble-pop-up-close-button-border, var(--bubble-pop-up-border, var(--bubble-border, none)));
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px));
+    border-radius: var(--bubble-pop-up-close-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     background: var(--bubble-pop-up-main-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color))));
     color: var(--primary-text-color);
     flex-shrink: 0;
@@ -873,7 +873,7 @@
     padding: 8px 16px;
     margin-top: 20px;
     background: var(--bubble-secondary-background-color, var(--card-background-color, var(--ha-card-background)));
-    border-radius: var(--bubble-border-radius, 32px);
+    border-radius: var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)));
     color: var(--primary-text-color);
     font-size: 16px;
     opacity: 0.8;
@@ -924,7 +924,7 @@
     gap: 6px;
     flex-shrink: 0;
     padding: 4px 8px;
-    border-radius: 18px;
+    border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
     white-space: nowrap;
     background-color: var(--mdc-text-field-disabled-line-color);
     font-size: 13px;
@@ -972,7 +972,7 @@
     display: flex;
     position: absolute;
     background-color: var(--bubble-pop-up-main-background-color, var(--bubble-pop-up-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color)))));
-    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)) !important;
+    border-radius: var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     contain: none !important;
@@ -1036,7 +1036,7 @@
    THE SURFACE
    =========== */
 .bubble-pop-up.popup-style-home-assistant {
-    --bubble-pop-up-border-radius: var(--ha-dialog-border-radius, var(--ha-border-radius-3xl, 24px));
+    --bubble-pop-up-border-radius: var(--lovely-radius-popup, var(--lovely-radius, 16px));
     --bubble-pop-up-gap: var(--ha-section-grid-row-gap, 8px);
     /* A more info dialog stacks its header above its content. Bubble slides the
        content up under the header by fifty pixels, which is what let the cards
@@ -1184,7 +1184,7 @@
     border: none !important;
     width: var(--ha-space-12, 48px) !important;
     height: var(--ha-space-12, 48px) !important;
-    border-radius: var(--ha-border-radius-circle, 50%) !important;
+    border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px)) !important;
     color: var(--primary-text-color) !important;
     overflow: hidden !important;
 }
@@ -1251,7 +1251,7 @@
    A sheet below the breakpoint of ha-adaptive-dialog, a dialog above it. */
 @media (max-width: 870px), (max-height: 500px) {
     .bubble-pop-up.popup-style-home-assistant {
-        --bubble-pop-up-border-radius: var(--ha-bottom-sheet-border-radius, var(--ha-dialog-border-radius, var(--ha-border-radius-2xl, 20px)));
+        --bubble-pop-up-border-radius: var(--lovely-radius-popup, var(--lovely-radius, 16px));
         /* --ha-bottom-sheet-height, from the :host of ha-more-info-dialog. The
            sheet leaves the taller of the top inset and forty eight above itself,
            where Bubble leaves a header height plus that inset. The mode already
@@ -1291,7 +1291,7 @@
         transform: translateX(-50%);
         width: 40px;
         height: 4px;
-        border-radius: var(--ha-border-radius-md, 8px);
+        border-radius: min(1px, var(--lovely-radius-indicator, var(--lovely-radius, 2px)));
         background-color: var(--ha-bottom-sheet-handle-color, var(--divider-color));
         pointer-events: none;
         z-index: 4;

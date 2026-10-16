@@ -115,7 +115,7 @@
       "info_organize": "Vous pouvez organiser les sous-boutons individuellement ou les regrouper. Les groupes peuvent être disposés côte à côte ou en rangées (empilés verticalement), et les boutons au sein d'un groupe peuvent être affichés en ligne ou en colonne.",
       "editor_title": "Éditeur de sous-boutons",
       "rows_detected_title": "Configuration de lignes détectée",
-      "rows_detected_body": "La hauteur de la carte (lignes) est explicitement définie dans votre configuration. Cela empêchera l'ajustement automatique des lignes lors de l'ajout de sous-boutons (par exemple, lors de l'ajout de sous-boutons en bas). Cliquez sur le bouton ci-dessous pour supprimer cette valeur et laisser Bubble Card calculer automatiquement les lignes.",
+      "rows_detected_body": "La hauteur de la carte (lignes) est explicitement définie dans votre configuration. Cela empêchera l'ajustement automatique des lignes lors de l'ajout de sous-boutons (par exemple, lors de l'ajout de sous-boutons en bas). Cliquez sur le bouton ci-dessous pour supprimer cette valeur et laisser Lovely Card calculer automatiquement les lignes.",
       "remove_override": "Supprimer la valeur et calculer automatiquement",
       "card_specific": "Boutons spécifiques à la carte",
       "main_top": "Sous-boutons principaux (en haut)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Vous utilisez YAML ?",
       "notice_yaml_body": "Remplacez l'ancienne configuration de pop-up par le format autonome :",
       "notice_protip": "Astuce :",
-      "notice_protip_body": "Honnêtement, si vous utilisez encore YAML pour Bubble Card à ce stade, vous devriez essayer le nouvel éditeur, il rend la création et la modification des pop-ups un vrai jeu d'enfant ! Vous accédez aussi au Module Store. J'ai mis tellement d'amour dans cet éditeur ❤️",
+      "notice_protip_body": "Honnêtement, si vous utilisez encore YAML pour Lovely Card à ce stade, vous devriez essayer le nouvel éditeur, il rend la création et la modification des pop-ups un vrai jeu d'enfant ! Vous accédez aussi au Module Store. J'ai mis tellement d'amour dans cet éditeur ❤️",
       "notice_enjoy": "Profitez bien de cette mise à jour ! Santé ! 🍻",
       "notice_dismiss": "Compris, ne plus afficher sur cette vue",
       "notice_remind": "Me le rappeler plus tard"
@@ -579,7 +579,7 @@
       "show_original": "Afficher l'original",
       "show_translation": "Afficher la traduction",
       "translate_offer_title": "Traduire les textes des modules",
-      "translate_offer_body": "Les modules sont publiés en anglais. Bubble Card peut traduire leurs descriptions et leurs options dans votre langue, mais cela envoie ce texte à un service de traduction externe. Reste désactivé tant que vous ne l'activez pas."
+      "translate_offer_body": "Les modules sont publiés en anglais. Lovely Card peut traduire leurs descriptions et leurs options dans votre langue, mais cela envoie ce texte à un service de traduction externe. Reste désactivé tant que vous ne l'activez pas."
     },
     "module_editor": {
       "create_module": "Créer un nouveau module",
@@ -598,7 +598,7 @@
       "description_helper": "Cette description apparaît dans votre module et dans le Module Store (si vous le partagez), alors assurez-vous qu'elle soit claire et concise. {bold}, mais notez que cela ne sera rendu que dans votre module, le Module Store ne l'affichera pas.",
       "description_helper_bold": "Vous pouvez utiliser du HTML et du CSS en ligne",
       "code_title": "Code (modèle CSS/JS)",
-      "code_helper": "Plus d'informations et d'exemples sur les possibilités des modèles CSS et JS sont disponibles dans la {link}. Astuce : vous pouvez agrandir l'éditeur en cliquant sur le titre du panneau (Configuration de Bubble Card).",
+      "code_helper": "Plus d'informations et d'exemples sur les possibilités des modèles CSS et JS sont disponibles dans la {link}. Astuce : vous pouvez agrandir l'éditeur en cliquant sur le titre du panneau (Configuration de Lovely Card).",
       "styling_docs": "documentation sur les styles et les modèles",
       "editor_schema_title": "Optionnel : Schéma d'éditeur (YAML)",
       "yaml_error_title": "Erreur dans le schéma YAML",
@@ -653,7 +653,7 @@
       "download_error": "Erreur lors du téléchargement du module : {error}"
     },
     "card_picker": {
-      "description": "Bubble Card est une collection de cartes minimaliste et personnalisable"
+      "description": "Lovely Card est une collection de cartes minimaliste et personnalisable"
     },
     "errors": {
       "card_type_required": "Vous devez définir un type de carte",
@@ -673,8 +673,8 @@
       "hidden_content": "Contenu masqué en mode édition pour les performances"
     },
     "navigation": {
-      "group": "Pop-ups Bubble Card",
-      "hash_hint": "Hash de pop-up Bubble Card"
+      "group": "Pop-ups Lovely Card",
+      "hash_hint": "Hash de pop-up Lovely Card"
     }
   }
 }

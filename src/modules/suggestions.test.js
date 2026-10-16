@@ -236,7 +236,7 @@ describe('module entity suggestions', () => {
         const suggestions = getEntitySuggestion(hass, ENTITY);
         const standalone = suggestions.find((s) => s.label === 'My Module · Fancy tile');
 
-        expect(standalone.config.type).toBe('custom:bubble-card');
+        expect(standalone.config.type).toBe('custom:lovely-card');
         expect(standalone.config.entity).toBe(ENTITY);
         expect(standalone.config.tap_action.target.entity_id).toBe(ENTITY);
         expect(standalone.config.modules).toEqual(['my_module']);
@@ -377,7 +377,7 @@ describe('the suggestions_code hook', () => {
         const [, , room, plain] = getEntitySuggestion(hass, ENTITY);
 
         expect(room.label).toBe('Auto Pop-up · Room');
-        expect(room.config).toEqual({ type: 'custom:bubble-card', card_type: 'pop-up', hash: '#salon' });
+        expect(room.config).toEqual({ type: 'custom:lovely-card', card_type: 'pop-up', hash: '#salon' });
         // A generated card is standalone: it must survive the module being
         // uninstalled, so nothing is injected behind the author's back.
         expect(room.config.entity).toBeUndefined();
@@ -407,8 +407,8 @@ describe('the suggestions_code hook', () => {
 
     test('nested cards are left exactly as the module authored them', () => {
         const authored = [
-            { type: 'custom:bubble-card', card_type: 'separator', name: 'Lights' },
-            { type: 'custom:bubble-card', card_type: 'button', entity: 'light.salon_lamp', modules: ['x'] },
+            { type: 'custom:lovely-card', card_type: 'separator', name: 'Lights' },
+            { type: 'custom:lovely-card', card_type: 'button', entity: 'light.salon_lamp', modules: ['x'] },
         ];
         yamlKeysMap.set('bubble_popup_suggestions', {
             name: 'Auto Pop-up',
@@ -436,7 +436,7 @@ describe('the suggestions_code hook', () => {
         expect(suggestions).toHaveLength(4);
         expect(suggestions[2]).toEqual({
             label: 'Supported',
-            config: { type: 'custom:bubble-card', card_type: 'pop-up' },
+            config: { type: 'custom:lovely-card', card_type: 'pop-up' },
         });
         expect(suggestions[3].config.card_type).toBe('button');
     });
@@ -699,7 +699,7 @@ describe('the helpers handed to a code hook', () => {
                         hash: '#' + area,
                         name: helpers.areaName(area),
                         cards: ids.map((id) => ({
-                            type: 'custom:bubble-card',
+                            type: 'custom:lovely-card',
                             card_type: 'button',
                             entity: id,
                             name: helpers.friendlyName(id),
@@ -712,7 +712,7 @@ describe('the helpers handed to a code hook', () => {
         const generated = getEntitySuggestion(registryHass, ENTITY)[2];
 
         expect(generated.label).toBe('Auto Pop-up · Living room');
-        expect(generated.config.type).toBe('custom:bubble-card');
+        expect(generated.config.type).toBe('custom:lovely-card');
         expect(generated.config.hash).toBe('#salon');
         expect(generated.config.cards.map((card) => card.entity)).toEqual([
             'light.salon_lamp',

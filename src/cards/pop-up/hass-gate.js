@@ -106,7 +106,7 @@ export function releasePopupOpenHassGate(context) {
     drainPopupOpenHassGateQueue();
 }
 
-// Called by the bubble-card hass setter. The element stores the fresh hass
+// Called by the lovely-card hass setter. The element stores the fresh hass
 // before asking, so a queued card always renders the latest state on flush.
 export function shouldHoldDashboardHassUpdate(element) {
     if (monotonicNow() >= popupOpenHassGate.until) {

@@ -115,7 +115,7 @@
       "info_organize": "Þú getur raðað undirhnöppum hverjum fyrir sig eða hópað þá saman. Hópa má raða í línu (hlið við hlið) eða í raðir (staflað lóðrétt), og hnappa innan hópa má sýna í línu eða í dálkaútliti.",
       "editor_title": "Ritill undirhnappa",
       "rows_detected_title": "Raðastilling fannst",
-      "rows_detected_body": "Hæð kortsins (raðir) er skilgreind sérstaklega í stillingunum þínum. Þetta kemur í veg fyrir sjálfvirka aðlögun raða þegar undirhnöppum er bætt við (til dæmis þegar neðri undirhnöppum er bætt við). Smelltu á hnappinn hér fyrir neðan til að fjarlægja stillinguna og láta Bubble Card reikna raðirnar sjálfkrafa.",
+      "rows_detected_body": "Hæð kortsins (raðir) er skilgreind sérstaklega í stillingunum þínum. Þetta kemur í veg fyrir sjálfvirka aðlögun raða þegar undirhnöppum er bætt við (til dæmis þegar neðri undirhnöppum er bætt við). Smelltu á hnappinn hér fyrir neðan til að fjarlægja stillinguna og láta Lovely Card reikna raðirnar sjálfkrafa.",
       "remove_override": "Fjarlægja stillingu og reikna sjálfkrafa",
       "card_specific": "Kortasértækir hnappar",
       "main_top": "Aðalundirhnappar (efst)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Notarðu YAML?",
       "notice_yaml_body": "Skiptu gömlu sprettigluggastillingunum út fyrir sjálfstæða sniðið:",
       "notice_protip": "Gott ráð:",
-      "notice_protip_body": "Í hreinskilni sagt, ef þú notar enn YAML fyrir Bubble Card á þessum tímapunkti ættirðu að prófa nýja ritilinn, hann gerir það leikandi létt að búa til og breyta sprettigluggum! Þú færð líka aðgang að Module Store. Ég lagði svo mikla ást í þennan ritil ❤️",
+      "notice_protip_body": "Í hreinskilni sagt, ef þú notar enn YAML fyrir Lovely Card á þessum tímapunkti ættirðu að prófa nýja ritilinn, hann gerir það leikandi létt að búa til og breyta sprettigluggum! Þú færð líka aðgang að Module Store. Ég lagði svo mikla ást í þennan ritil ❤️",
       "notice_enjoy": "Njóttu þessarar uppfærslu! Skál! 🍻",
       "notice_dismiss": "Skilið, ekki sýna aftur í þessari sýn",
       "notice_remind": "Minna mig á síðar"
@@ -579,7 +579,7 @@
       "show_original": "Sýna upprunalegt",
       "show_translation": "Sýna þýðingu",
       "translate_offer_title": "Þýða texta eininganna",
-      "translate_offer_body": "Einingar eru gefnar út á ensku. Bubble Card getur þýtt lýsingar þeirra og valkosti yfir á tungumálið þitt, en það sendir þann texta til utanaðkomandi þýðingarþjónustu. Það helst slökkt þar til þú kveikir á því sjálf."
+      "translate_offer_body": "Einingar eru gefnar út á ensku. Lovely Card getur þýtt lýsingar þeirra og valkosti yfir á tungumálið þitt, en það sendir þann texta til utanaðkomandi þýðingarþjónustu. Það helst slökkt þar til þú kveikir á því sjálf."
     },
     "module_editor": {
       "create_module": "Búa til nýja einingu",
@@ -598,7 +598,7 @@
       "description_helper": "Þessi lýsing birtist í einingunni þinni og í Module Store (ef þú deilir henni), svo gættu þess að hún sé skýr og hnitmiðuð. {bold}, en athugaðu að það birtist aðeins í einingunni þinni, Module Store sýnir það ekki.",
       "description_helper_bold": "Þú getur notað HTML og innfellt CSS",
       "code_title": "Kóði (CSS/JS-sniðmát)",
-      "code_helper": "Nánari upplýsingar og dæmi um möguleika CSS- og JS-sniðmáta má finna í {link}. Ábending: Þú getur stækkað ritilinn með því að smella á titil spjaldsins (Bubble Card configuration).",
+      "code_helper": "Nánari upplýsingar og dæmi um möguleika CSS- og JS-sniðmáta má finna í {link}. Ábending: Þú getur stækkað ritilinn með því að smella á titil spjaldsins (Lovely Card configuration).",
       "styling_docs": "skjölun um stíla og sniðmát",
       "editor_schema_title": "Valfrjálst: Skema ritils (YAML)",
       "yaml_error_title": "Villa í YAML-skema",
@@ -653,7 +653,7 @@
       "download_error": "Villa við að sækja eininguna: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card er einfalt og sérsníðanlegt safn af kortum"
+      "description": "Lovely Card er einfalt og sérsníðanlegt safn af kortum"
     },
     "errors": {
       "card_type_required": "Þú þarft að skilgreina tegund korts",
@@ -673,8 +673,8 @@
       "hidden_content": "Efni falið í breytingaham vegna afkasta"
     },
     "navigation": {
-      "group": "Bubble Card sprettigluggar",
-      "hash_hint": "Kviss (hash) fyrir Bubble Card sprettiglugga"
+      "group": "Lovely Card sprettigluggar",
+      "hash_hint": "Kviss (hash) fyrir Lovely Card sprettiglugga"
     }
   }
 }

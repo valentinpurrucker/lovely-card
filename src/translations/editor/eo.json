@@ -115,7 +115,7 @@
       "info_organize": "Vi povas organizi la subbutonojn unuope aŭ grupigi ilin. Grupoj povas esti aranĝitaj en linio (flank-al-flanke) aŭ en vicoj (vertikale stakigitaj), kaj butonoj ene de grupoj povas montriĝi en linio aŭ en kolumna aranĝo.",
       "editor_title": "Redaktilo de subbutonoj",
       "rows_detected_title": "Vica agordo detektita",
-      "rows_detected_body": "La alto de la karto (rows) estas eksplicite difinita en via agordo. Tio malhelpos aŭtomatajn ĝustigojn de la vicoj kiam subbutonoj estas aldonataj (ekzemple, kiam vi aldonas malsuprajn subbutonojn). Alklaku la butonon sube por forigi la difinon kaj lasi Bubble Card aŭtomate kalkuli la vicojn.",
+      "rows_detected_body": "La alto de la karto (rows) estas eksplicite difinita en via agordo. Tio malhelpos aŭtomatajn ĝustigojn de la vicoj kiam subbutonoj estas aldonataj (ekzemple, kiam vi aldonas malsuprajn subbutonojn). Alklaku la butonon sube por forigi la difinon kaj lasi Lovely Card aŭtomate kalkuli la vicojn.",
       "remove_override": "Forigi la difinon kaj aŭtomate kalkuli",
       "card_specific": "Butonoj specifaj de la karto",
       "main_top": "Ĉefaj subbutonoj (supre)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Ĉu vi uzas YAML?",
       "notice_yaml_body": "Anstataŭigu la malnovan ŝprucfenestran agordon per la memstara formo:",
       "notice_protip": "Konsileto:",
-      "notice_protip_body": "Sincere, se vi ankoraŭ uzas YAML por Bubble Card, vi eble volus provi la novan redaktilon, ĝi faras la kreadon kaj redaktadon de ŝprucfenestroj tre facilaj! Vi ankaŭ ricevas aliron al la Module Store. Mi metis tiom da amo en ĉi tiun redaktilon ❤️",
+      "notice_protip_body": "Sincere, se vi ankoraŭ uzas YAML por Lovely Card, vi eble volus provi la novan redaktilon, ĝi faras la kreadon kaj redaktadon de ŝprucfenestroj tre facilaj! Vi ankaŭ ricevas aliron al la Module Store. Mi metis tiom da amo en ĉi tiun redaktilon ❤️",
       "notice_enjoy": "Ĝuu ĉi tiun ĝisdatigon! Je via sano! 🍻",
       "notice_dismiss": "Komprenite, ne plu montri en ĉi tiu vido",
       "notice_remind": "Memorigu min poste"
@@ -579,7 +579,7 @@
       "show_original": "Montri la originalon",
       "show_translation": "Montri la tradukon",
       "translate_offer_title": "Traduki la tekstojn de la moduloj",
-      "translate_offer_body": "La moduloj estas publikigitaj en la angla. Bubble Card povas traduki iliajn priskribojn kaj opciojn al via lingvo, sed tio sendas tiun tekston al ekstera traduka servo. Ĝi restas malŝaltita ĝis vi mem ŝaltas ĝin."
+      "translate_offer_body": "La moduloj estas publikigitaj en la angla. Lovely Card povas traduki iliajn priskribojn kaj opciojn al via lingvo, sed tio sendas tiun tekston al ekstera traduka servo. Ĝi restas malŝaltita ĝis vi mem ŝaltas ĝin."
     },
     "module_editor": {
       "create_module": "Krei novan modulon",
@@ -598,7 +598,7 @@
       "description_helper": "Ĉi tiu priskribo aperas en via modulo kaj en la Module Store (se vi kunhavigas ĝin), do certigu ke ĝi estas klara kaj konciza. {bold}, sed notu ke ĝi estos bildigita nur en via modulo, la Module Store ne montros ĝin.",
       "description_helper_bold": "Vi povas uzi HTML kaj entekstan CSS",
       "code_title": "Kodo (CSS/JS-ŝablono)",
-      "code_helper": "Pliaj informoj kaj ekzemploj pri la eblecoj de CSS- kaj JS-ŝablonoj troveblas en la {link}. Konsileto: vi povas pligrandigi la redaktilon alklakante la titolon de la panelo (agordo de Bubble Card).",
+      "code_helper": "Pliaj informoj kaj ekzemploj pri la eblecoj de CSS- kaj JS-ŝablonoj troveblas en la {link}. Konsileto: vi povas pligrandigi la redaktilon alklakante la titolon de la panelo (agordo de Lovely Card).",
       "styling_docs": "dokumentaro pri stiloj kaj ŝablonoj",
       "editor_schema_title": "Nedeviga: skemo de la redaktilo (YAML)",
       "yaml_error_title": "Eraro en la YAML-skemo",
@@ -653,7 +653,7 @@
       "download_error": "Eraro dum elŝuto de la modulo: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card estas minimalisma kaj agordebla kolekto de kartoj"
+      "description": "Lovely Card estas minimalisma kaj agordebla kolekto de kartoj"
     },
     "errors": {
       "card_type_required": "Vi devas difini tipon de karto",
@@ -673,8 +673,8 @@
       "hidden_content": "Enhavo kaŝita en redakta reĝimo pro rapideco"
     },
     "navigation": {
-      "group": "Ŝprucfenestroj de Bubble Card",
-      "hash_hint": "Haketo de ŝprucfenestro de Bubble Card"
+      "group": "Ŝprucfenestroj de Lovely Card",
+      "hash_hint": "Haketo de ŝprucfenestro de Lovely Card"
     }
   }
 }

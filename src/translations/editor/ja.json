@@ -115,7 +115,7 @@
       "info_organize": "サブボタンは個別に配置することも、グループにまとめることもできます。グループはインライン (横並び) または行 (縦積み) に配置でき、グループ内のボタンはインラインまたはカラムレイアウトで表示できます。",
       "editor_title": "サブボタンエディター",
       "rows_detected_title": "行 (rows) の設定を検出しました",
-      "rows_detected_body": "カードの高さ (rows) が設定で明示的に指定されています。このため、サブボタンを追加したとき (例えば下部サブボタンを追加したとき) に行数が自動調整されません。下のボタンをクリックすると、この指定を削除して Bubble Card に行数を自動計算させることができます。",
+      "rows_detected_body": "カードの高さ (rows) が設定で明示的に指定されています。このため、サブボタンを追加したとき (例えば下部サブボタンを追加したとき) に行数が自動調整されません。下のボタンをクリックすると、この指定を削除して Lovely Card に行数を自動計算させることができます。",
       "remove_override": "指定を削除して自動計算",
       "card_specific": "カード固有のボタン",
       "main_top": "メインサブボタン (上部)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML を使っていますか？",
       "notice_yaml_body": "レガシーのポップアップ設定をスタンドアロン形式に置き換えてください:",
       "notice_protip": "プロのヒント:",
-      "notice_protip_body": "正直なところ、今も Bubble Card を YAML で書いているなら、ぜひ新しいエディターを試してみてください。ポップアップの作成も編集もぐっと快適になります！ Module Store も利用できます。このエディターにはたっぷり愛情を注ぎました ❤️",
+      "notice_protip_body": "正直なところ、今も Lovely Card を YAML で書いているなら、ぜひ新しいエディターを試してみてください。ポップアップの作成も編集もぐっと快適になります！ Module Store も利用できます。このエディターにはたっぷり愛情を注ぎました ❤️",
       "notice_enjoy": "このアップデートをお楽しみください！乾杯！🍻",
       "notice_dismiss": "了解しました。このビューでは今後表示しない",
       "notice_remind": "後で通知する"
@@ -579,7 +579,7 @@
       "show_original": "原文を表示",
       "show_translation": "翻訳を表示",
       "translate_offer_title": "モジュールのテキストを翻訳",
-      "translate_offer_body": "モジュールは英語で公開されています。Bubble Card はその説明やオプションをあなたの言語に翻訳できますが、そのテキストは外部の翻訳サービスに送信されます。あなたが自分でオンにするまでは無効のままです。"
+      "translate_offer_body": "モジュールは英語で公開されています。Lovely Card はその説明やオプションをあなたの言語に翻訳できますが、そのテキストは外部の翻訳サービスに送信されます。あなたが自分でオンにするまでは無効のままです。"
     },
     "module_editor": {
       "create_module": "新しいモジュールを作成",
@@ -598,7 +598,7 @@
       "description_helper": "この説明はモジュール内と、(共有した場合は) Module Storeに表示されるので、明確で簡潔なものにしてください。{bold}が、モジュール内でのみレンダリングされ、Module Storeでは表示されない点に注意してください。",
       "description_helper_bold": "HTMLとインラインCSSを使用できます",
       "code_title": "コード (CSS/JSテンプレート)",
-      "code_helper": "CSSおよびJSテンプレートの可能性に関する詳しい情報と例は、{link}にあります。ヒント：パネルタイトル (Bubble Card configuration) をクリックすると、エディターを拡大できます。",
+      "code_helper": "CSSおよびJSテンプレートの可能性に関する詳しい情報と例は、{link}にあります。ヒント：パネルタイトル (Lovely Card configuration) をクリックすると、エディターを拡大できます。",
       "styling_docs": "スタイルとテンプレートのドキュメント",
       "editor_schema_title": "オプション：エディタースキーマ (YAML)",
       "yaml_error_title": "YAMLスキーマのエラー",
@@ -653,7 +653,7 @@
       "download_error": "モジュールのダウンロードエラー：{error}"
     },
     "card_picker": {
-      "description": "Bubble Card はミニマルでカスタマイズ可能なカードコレクションです"
+      "description": "Lovely Card はミニマルでカスタマイズ可能なカードコレクションです"
     },
     "errors": {
       "card_type_required": "カードタイプを指定してください",
@@ -673,8 +673,8 @@
       "hidden_content": "パフォーマンスのため、編集モードではコンテンツを非表示にしています"
     },
     "navigation": {
-      "group": "Bubble Card のポップアップ",
-      "hash_hint": "Bubble Card のポップアップのハッシュ"
+      "group": "Lovely Card のポップアップ",
+      "hash_hint": "Lovely Card のポップアップのハッシュ"
     }
   }
 }

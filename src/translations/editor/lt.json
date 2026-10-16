@@ -115,7 +115,7 @@
       "info_organize": "Papildomus mygtukus galite tvarkyti po vieną arba grupuoti. Grupės gali būti išdėstytos eilėje (viena šalia kitos) arba eilutėmis (vertikaliai), o mygtukai grupėse gali būti rodomi eilėje arba stulpeliu.",
       "editor_title": "Papildomų mygtukų redaktorius",
       "rows_detected_title": "Aptikta eilučių konfigūracija",
-      "rows_detected_body": "Kortelės aukštis (eilutės) yra aiškiai nustatytas jūsų konfigūracijoje. Tai neleis automatiškai koreguoti eilučių pridedant papildomų mygtukų (pavyzdžiui, pridedant apatinius papildomus mygtukus). Spustelėkite žemiau esantį mygtuką, kad pašalintumėte šį nustatymą ir leistumėte Bubble Card automatiškai apskaičiuoti eilutes.",
+      "rows_detected_body": "Kortelės aukštis (eilutės) yra aiškiai nustatytas jūsų konfigūracijoje. Tai neleis automatiškai koreguoti eilučių pridedant papildomų mygtukų (pavyzdžiui, pridedant apatinius papildomus mygtukus). Spustelėkite žemiau esantį mygtuką, kad pašalintumėte šį nustatymą ir leistumėte Lovely Card automatiškai apskaičiuoti eilutes.",
       "remove_override": "Pašalinti nustatymą ir apskaičiuoti automatiškai",
       "card_specific": "Kortelei specifiniai mygtukai",
       "main_top": "Pagrindiniai papildomi mygtukai (viršuje)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Naudojate YAML?",
       "notice_yaml_body": "Pakeiskite senąją iškylančiojo lango konfigūraciją savarankišku formatu:",
       "notice_protip": "Patarimas:",
-      "notice_protip_body": "Atvirai kalbant, jei Bubble Card vis dar naudojate YAML, verta išbandyti naująjį redaktorių, su juo kurti ir redaguoti iškylančiuosius langus vienas malonumas! Taip pat gaunate prieigą prie Module Store. Į šį redaktorių įdėjau labai daug meilės ❤️",
+      "notice_protip_body": "Atvirai kalbant, jei Lovely Card vis dar naudojate YAML, verta išbandyti naująjį redaktorių, su juo kurti ir redaguoti iškylančiuosius langus vienas malonumas! Taip pat gaunate prieigą prie Module Store. Į šį redaktorių įdėjau labai daug meilės ❤️",
       "notice_enjoy": "Mėgaukitės šiuo atnaujinimu! Į sveikatą! 🍻",
       "notice_dismiss": "Supratau, daugiau nerodyti šiame rodinyje",
       "notice_remind": "Priminti vėliau"
@@ -579,7 +579,7 @@
       "show_original": "Rodyti originalą",
       "show_translation": "Rodyti vertimą",
       "translate_offer_title": "Versti modulių tekstus",
-      "translate_offer_body": "Moduliai skelbiami anglų kalba. Bubble Card gali išversti jų aprašymus ir parinktis į jūsų kalbą, bet tada šis tekstas siunčiamas išorinei vertimo paslaugai. Lieka išjungta, kol patys neįjungsite."
+      "translate_offer_body": "Moduliai skelbiami anglų kalba. Lovely Card gali išversti jų aprašymus ir parinktis į jūsų kalbą, bet tada šis tekstas siunčiamas išorinei vertimo paslaugai. Lieka išjungta, kol patys neįjungsite."
     },
     "module_editor": {
       "create_module": "Sukurti naują modulį",
@@ -598,7 +598,7 @@
       "description_helper": "Šis aprašymas rodomas jūsų modulyje ir Module Store (jei juo dalijatės), tad pasirūpinkite, kad jis būtų aiškus ir glaustas. {bold}, bet atkreipkite dėmesį, kad jis bus atvaizduojamas tik jūsų modulyje, Module Store jo nerodys.",
       "description_helper_bold": "Galite naudoti HTML ir inline CSS",
       "code_title": "Kodas (CSS/JS šablonas)",
-      "code_helper": "Daugiau informacijos ir pavyzdžių apie CSS ir JS šablonų galimybes rasite {link}. Patarimas: redaktorių galite padidinti spustelėję skydelio pavadinimą (Bubble Card konfigūracija).",
+      "code_helper": "Daugiau informacijos ir pavyzdžių apie CSS ir JS šablonų galimybes rasite {link}. Patarimas: redaktorių galite padidinti spustelėję skydelio pavadinimą (Lovely Card konfigūracija).",
       "styling_docs": "stilių ir šablonų dokumentacijoje",
       "editor_schema_title": "Neprivaloma: redaktoriaus schema (YAML)",
       "yaml_error_title": "Klaida YAML schemoje",
@@ -653,7 +653,7 @@
       "download_error": "Klaida atsisiunčiant modulį: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card yra minimalistinė ir pritaikoma kortelių kolekcija"
+      "description": "Lovely Card yra minimalistinė ir pritaikoma kortelių kolekcija"
     },
     "errors": {
       "card_type_required": "Turite nurodyti kortelės tipą",
@@ -673,8 +673,8 @@
       "hidden_content": "Turinys paslėptas redagavimo režimu dėl našumo"
     },
     "navigation": {
-      "group": "Bubble Card iškylantieji langai",
-      "hash_hint": "Bubble Card iškylančiojo lango maiša"
+      "group": "Lovely Card iškylantieji langai",
+      "hash_hint": "Lovely Card iškylančiojo lango maiša"
     }
   }
 }

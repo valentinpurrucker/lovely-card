@@ -59,7 +59,7 @@ function now() {
 function warnOnce(entry, message) {
     if (entry.warned === message) return;
     entry.warned = message;
-    console.warn(`Bubble Card - Template ${message}: ${entry.template.substring(0, 80)}`);
+    console.warn(`Lovely Card - Template ${message}: ${entry.template.substring(0, 80)}`);
 }
 
 // The editor error console listens for this event. It keys on the card being
@@ -67,7 +67,7 @@ function warnOnce(entry, message) {
 function reportToEditor(owner, message, level) {
     if (typeof window === 'undefined' || typeof CustomEvent !== 'function') return;
     try {
-        window.dispatchEvent(new CustomEvent('bubble-card-error', {
+        window.dispatchEvent(new CustomEvent('lovely-card-error', {
             detail: {
                 message,
                 context: {
@@ -94,7 +94,7 @@ function scheduleFlush() {
                 if (typeof owner.onTemplateResults === 'function') owner.onTemplateResults(kinds);
                 else if (typeof owner.updateBubbleCard === 'function') owner.updateBubbleCard();
             } catch (e) {
-                console.error('Bubble Card - Error while rendering a template result:', e);
+                console.error('Lovely Card - Error while rendering a template result:', e);
             }
             if (dirtyOwners.size > 0 && now() - start > flushBudgetMs) {
                 scheduleFlush();

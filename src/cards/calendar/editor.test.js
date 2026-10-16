@@ -8,11 +8,11 @@ jest.unstable_mockModule('../../tools/localize.js', () => ({
     default: () => (key) => key,
 }));
 
-jest.unstable_mockModule('../../components/editor/ha-selector-calendar_entity.js', () => ({}));
+jest.unstable_mockModule('../../components/editor/ha-selector-lc_calendar_entity.js', () => ({}));
 
 const { renderCalendarEditor } = await import('./editor.js');
 
-// Minimal stand-in for the Bubble Card editor element, only what the calendar
+// Minimal stand-in for the Lovely Card editor element, only what the calendar
 // editor template touches while it is being evaluated.
 function makeEditor(config) {
     return {

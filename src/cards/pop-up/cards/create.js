@@ -912,12 +912,12 @@ export function _createHuiCard(cardConfig, context, preview) {
         if (!_warnedAboutMissingHuiCard) {
             _warnedAboutMissingHuiCard = true;
             console.warn(
-                'Bubble Card: Home Assistant no longer provides the "hui-card" element this version builds ' +
+                'Lovely Card: Home Assistant no longer provides the "hui-card" element this version builds ' +
                 'pop-up content with. ' +
                 (canFallBack
                     ? 'Falling back to the public card helpers'
                     : 'The public card helpers are not available either, so this pop-up will render empty') +
-                '; please report this so Bubble Card can be updated.'
+                '; please report this so Lovely Card can be updated.'
             );
         }
 
@@ -933,7 +933,7 @@ export function _createHuiCard(cardConfig, context, preview) {
                 }
                 return fallbackEl || null;
             } catch (e) {
-                console.warn('Bubble Card: Failed to create card element', e);
+                console.warn('Lovely Card: Failed to create card element', e);
                 return null;
             }
         }
@@ -950,14 +950,14 @@ export function _createHuiCard(cardConfig, context, preview) {
         }
         return cardEl;
     } catch (e) {
-        console.warn('Bubble Card: Failed to create card element', e);
+        console.warn('Lovely Card: Failed to create card element', e);
         return null;
     }
 }
 
 export function _isStandalonePopupCardConfig(cardConfig) {
     return Boolean(
-        cardConfig?.type === 'custom:bubble-card' &&
+        cardConfig?.type === 'custom:lovely-card' &&
         cardConfig?.card_type === 'pop-up'
     );
 }
@@ -1022,7 +1022,7 @@ function _hasExplicitRows(cardConfig = {}) {
 }
 
 function _getRenderedCardConfig(cardConfig = {}) {
-    if (cardConfig?.type !== 'custom:bubble-card') {
+    if (cardConfig?.type !== 'custom:lovely-card') {
         return cardConfig;
     }
 

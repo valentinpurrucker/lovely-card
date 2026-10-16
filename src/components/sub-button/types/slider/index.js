@@ -430,7 +430,7 @@ export function ensureSliderForSubButton(context, element, options) {
     element.sliderOpen = true;
 
     // Ensure host is not treated as an actionable button in always-visible mode
-    try { element.classList.remove('bubble-action', 'bubble-action-enabled'); } catch (_) {}
+    try { element.classList.remove('lovely-action', 'lovely-action-enabled'); } catch (_) {}
     if (element.haRipple) {
       try { element.removeChild(element.haRipple); } catch (_) {}
       try { delete element.haRipple; } catch (_) {}

@@ -6,7 +6,7 @@ export function initializeContent(context) {
         let hostStyle = document.createElement("style");
         hostStyle.textContent = ":host{display:inline-block;width:100%;vertical-align:top;}";
         let card = document.createElement("ha-card");
-        card.style.cssText = "background: none; border: none; box-shadow: none; border-radius: 16px;";
+        card.style.cssText = "background: none; border: none; box-shadow: none; border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));";
         let content = document.createElement("div");
         content.className = "card-content";
         content.style.padding = "0";

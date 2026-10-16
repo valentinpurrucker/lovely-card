@@ -115,7 +115,7 @@
       "info_organize": "子按鈕可以個別排列，也可以組成群組。群組可以並排排列 (橫向) 或按橫列排列 (垂直堆疊)，群組內的按鈕可以橫向顯示或以直欄配置顯示。",
       "editor_title": "子按鈕編輯器",
       "rows_detected_title": "偵測到橫列 (rows) 設定",
-      "rows_detected_body": "您的設定中已明確指定卡片高度 (rows)。這會使新增子按鈕時 (例如新增底部子按鈕時) 無法自動調整列數。點擊下方按鈕可移除該設定，讓 Bubble Card 自動計算列數。",
+      "rows_detected_body": "您的設定中已明確指定卡片高度 (rows)。這會使新增子按鈕時 (例如新增底部子按鈕時) 無法自動調整列數。點擊下方按鈕可移除該設定，讓 Lovely Card 自動計算列數。",
       "remove_override": "移除設定並自動計算",
       "card_specific": "卡片專屬按鈕",
       "main_top": "主要子按鈕 (頂部)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "使用 YAML 嗎？",
       "notice_yaml_body": "將舊版彈出視窗設定換成獨立格式:",
       "notice_protip": "專業提示:",
-      "notice_protip_body": "老實說，如果您到現在還在用 YAML 撰寫 Bubble Card，不妨試試新的編輯器，建立與編輯彈出視窗變得輕而易舉！您也能使用 Module Store。我在這個編輯器上投入了滿滿的心血 ❤️",
+      "notice_protip_body": "老實說，如果您到現在還在用 YAML 撰寫 Lovely Card，不妨試試新的編輯器，建立與編輯彈出視窗變得輕而易舉！您也能使用 Module Store。我在這個編輯器上投入了滿滿的心血 ❤️",
       "notice_enjoy": "祝您使用愉快！乾杯！🍻",
       "notice_dismiss": "知道了，不要在此檢視中再顯示",
       "notice_remind": "稍後提醒我"
@@ -579,7 +579,7 @@
       "show_original": "顯示原文",
       "show_translation": "顯示翻譯",
       "translate_offer_title": "翻譯模組文字",
-      "translate_offer_body": "模組以英文發布。Bubble Card 可以把它們的描述和選項翻譯成你的語言，但這會把該文字傳送到外部翻譯服務。在你自己開啟之前，它一直是關閉的。"
+      "translate_offer_body": "模組以英文發布。Lovely Card 可以把它們的描述和選項翻譯成你的語言，但這會把該文字傳送到外部翻譯服務。在你自己開啟之前，它一直是關閉的。"
     },
     "module_editor": {
       "create_module": "建立新模組",
@@ -598,7 +598,7 @@
       "description_helper": "此描述會顯示在您的模組中，以及 Module Store 中 (如果您分享它)，所以請確保內容清楚簡潔。{bold}，但請注意它只會在您的模組中呈現，Module Store 不會顯示這些效果。",
       "description_helper_bold": "您可以使用 HTML 與行內 CSS",
       "code_title": "程式碼 (CSS/JS 範本)",
-      "code_helper": "有關 CSS 與 JS 範本可實現效果的更多資訊與範例，請參閱{link}。提示：點擊面板標題 (Bubble Card configuration) 可放大編輯器。",
+      "code_helper": "有關 CSS 與 JS 範本可實現效果的更多資訊與範例，請參閱{link}。提示：點擊面板標題 (Lovely Card configuration) 可放大編輯器。",
       "styling_docs": "樣式與範本文件",
       "editor_schema_title": "選用：編輯器結構描述 (YAML)",
       "yaml_error_title": "YAML 結構描述錯誤",
@@ -653,7 +653,7 @@
       "download_error": "下載模組時發生錯誤：{error}"
     },
     "card_picker": {
-      "description": "Bubble Card 是一套極簡且可自訂的卡片集合"
+      "description": "Lovely Card 是一套極簡且可自訂的卡片集合"
     },
     "errors": {
       "card_type_required": "需要指定卡片類型",
@@ -673,8 +673,8 @@
       "hidden_content": "為了效能，編輯模式下已隱藏內容"
     },
     "navigation": {
-      "group": "Bubble Card 彈出視窗",
-      "hash_hint": "Bubble Card 彈出視窗雜湊"
+      "group": "Lovely Card 彈出視窗",
+      "hash_hint": "Lovely Card 彈出視窗雜湊"
     }
   }
 }

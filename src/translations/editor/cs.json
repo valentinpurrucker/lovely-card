@@ -115,7 +115,7 @@
       "info_organize": "Podtlačítka můžete uspořádat jednotlivě nebo je seskupit. Skupiny lze uspořádat v řadě (vedle sebe) nebo v řádcích (pod sebou) a tlačítka ve skupinách lze zobrazit v řadě nebo ve sloupci.",
       "editor_title": "Editor podtlačítek",
       "rows_detected_title": "Zjištěna konfigurace řádků",
-      "rows_detected_body": "Výška karty (rows) je ve vaší konfiguraci nastavena výslovně. To zabrání automatické úpravě řádků při přidávání podtlačítek (například při přidání spodních podtlačítek). Kliknutím na tlačítko níže odeberete toto přepsání a necháte Bubble Card řádky vypočítat automaticky.",
+      "rows_detected_body": "Výška karty (rows) je ve vaší konfiguraci nastavena výslovně. To zabrání automatické úpravě řádků při přidávání podtlačítek (například při přidání spodních podtlačítek). Kliknutím na tlačítko níže odeberete toto přepsání a necháte Lovely Card řádky vypočítat automaticky.",
       "remove_override": "Odebrat přepsání a vypočítat automaticky",
       "card_specific": "Tlačítka specifická pro kartu",
       "main_top": "Hlavní podtlačítka (nahoře)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Používáte YAML?",
       "notice_yaml_body": "Nahraďte starou konfiguraci pop-upu samostatným formátem:",
       "notice_protip": "Tip:",
-      "notice_protip_body": "Upřímně, pokud v tuto chvíli pro Bubble Card stále používáte YAML, zkuste nový editor, tvorba a úpravy pop-upů jsou s ním hračka! Získáte také přístup k Module Store. Vložil jsem do tohoto editoru spoustu lásky ❤️",
+      "notice_protip_body": "Upřímně, pokud v tuto chvíli pro Lovely Card stále používáte YAML, zkuste nový editor, tvorba a úpravy pop-upů jsou s ním hračka! Získáte také přístup k Module Store. Vložil jsem do tohoto editoru spoustu lásky ❤️",
       "notice_enjoy": "Užijte si tuto aktualizaci! Na zdraví! 🍻",
       "notice_dismiss": "Rozumím, v tomto pohledu už nezobrazovat",
       "notice_remind": "Připomenout později"
@@ -579,7 +579,7 @@
       "show_original": "Zobrazit originál",
       "show_translation": "Zobrazit překlad",
       "translate_offer_title": "Přeložit texty modulů",
-      "translate_offer_body": "Moduly se publikují v angličtině. Bubble Card umí přeložit jejich popisy a možnosti do vašeho jazyka, ale odešle přitom tento text externí překladové službě. Zůstává vypnuté, dokud to sami nezapnete."
+      "translate_offer_body": "Moduly se publikují v angličtině. Lovely Card umí přeložit jejich popisy a možnosti do vašeho jazyka, ale odešle přitom tento text externí překladové službě. Zůstává vypnuté, dokud to sami nezapnete."
     },
     "module_editor": {
       "create_module": "Vytvořit nový modul",
@@ -598,7 +598,7 @@
       "description_helper": "Tento popis se zobrazuje ve vašem modulu a v Module Store (pokud jej sdílíte), takže dbejte na to, aby byl jasný a stručný. {bold}, ale mějte na paměti, že se vykreslí pouze ve vašem modulu; Module Store jej nezobrazí.",
       "description_helper_bold": "Můžete použít HTML a inline CSS",
       "code_title": "Kód (šablona CSS/JS)",
-      "code_helper": "Více informací a příkladů o možnostech šablon CSS a JS najdete v {link}. Tip: editor můžete zvětšit kliknutím na název panelu (konfigurace Bubble Card).",
+      "code_helper": "Více informací a příkladů o možnostech šablon CSS a JS najdete v {link}. Tip: editor můžete zvětšit kliknutím na název panelu (konfigurace Lovely Card).",
       "styling_docs": "dokumentaci stylů a šablon",
       "editor_schema_title": "Volitelné: schéma editoru (YAML)",
       "yaml_error_title": "Chyba ve schématu YAML",
@@ -653,7 +653,7 @@
       "download_error": "Chyba při stahování modulu: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card je minimalistická a přizpůsobitelná kolekce karet"
+      "description": "Lovely Card je minimalistická a přizpůsobitelná kolekce karet"
     },
     "errors": {
       "card_type_required": "Musíte definovat typ karty",
@@ -673,8 +673,8 @@
       "hidden_content": "Obsah skrytý v režimu úprav kvůli výkonu"
     },
     "navigation": {
-      "group": "Pop-upy Bubble Card",
-      "hash_hint": "Hash pop-upu Bubble Card"
+      "group": "Pop-upy Lovely Card",
+      "hash_hint": "Hash pop-upu Lovely Card"
     }
   }
 }

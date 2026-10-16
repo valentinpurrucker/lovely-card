@@ -503,7 +503,7 @@ function getSectionState(editor, sectionKey) {
 
 // Initialize and get dismiss state for groups info
 function getGroupsInfoDismissState(editor, sectionKey) {
-  const dismissKey = `bubble-card-groups-info-dismissed-${sectionKey}`;
+  const dismissKey = `lovely-card-groups-info-dismissed-${sectionKey}`;
   if (!editor._groupsInfoDismissed) editor._groupsInfoDismissed = {};
   if (editor._groupsInfoDismissed[sectionKey] === undefined) {
     try { editor._groupsInfoDismissed[sectionKey] = localStorage.getItem(dismissKey) === 'true'; } 

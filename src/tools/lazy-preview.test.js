@@ -39,7 +39,7 @@ function chain(...tags) {
 }
 
 // The real chain inside the picker: the suggestion card holds a hui-card in its
-// shadow root, and the bubble-card is a light-DOM child of that hui-card.
+// shadow root, and the lovely-card is a light-DOM child of that hui-card.
 function createPreview({ inPicker = true, connected = true, cardType = 'button', height = 0 } = {}) {
   const style = {
     values: {},
@@ -261,9 +261,9 @@ describe('contexts that must never be gated', () => {
     expect(observers).toHaveLength(0);
   });
 
-  test('a card nested inside another Bubble Card follows its host', () => {
+  test('a card nested inside another Lovely Card follows its host', () => {
     const element = createPreview();
-    element.parentNode = chain('bubble-card', 'hui-card', 'hui-suggestion-card');
+    element.parentNode = chain('lovely-card', 'hui-card', 'hui-suggestion-card');
 
     setPreviewMode(element, true);
 

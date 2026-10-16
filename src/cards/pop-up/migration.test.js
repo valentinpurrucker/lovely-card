@@ -139,7 +139,7 @@ afterEach(() => {
 });
 
 const legacyPopupConfig = {
-    type: 'custom:bubble-card',
+    type: 'custom:lovely-card',
     card_type: 'pop-up',
     hash: '#kitchen',
     name: 'Kitchen',
@@ -148,7 +148,7 @@ const legacyPopupConfig = {
 };
 
 const buttonCard = {
-    type: 'custom:bubble-card',
+    type: 'custom:lovely-card',
     card_type: 'button',
     button_type: 'switch',
     entity: 'light.kitchen',
@@ -172,7 +172,7 @@ const widthConfiguredButtonCard = {
 };
 
 const separatorCard = {
-    type: 'custom:bubble-card',
+    type: 'custom:lovely-card',
     card_type: 'separator',
     name: 'Lights',
 };
@@ -194,14 +194,14 @@ const horizontalStackCard = {
     type: 'horizontal-stack',
     cards: [
         {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             button_type: 'name',
             name: 'Left',
             columns: 2,
         },
         {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             button_type: 'name',
             name: 'Right',
@@ -218,9 +218,9 @@ const mixedHorizontalStackCard = {
 
 describe('getMigrationNoticeStorageKey', () => {
     test.each([
-        ['/home/lights', { panelUrl: 'home' }, 'bubble-card-legacy-popup-notice-home/lights'],
-        ['/lovelace/kitchen', { panelUrl: 'lovelace' }, 'bubble-card-legacy-popup-notice-lovelace/kitchen'],
-        ['/ha/mobile/home/overview', { panelUrl: 'home' }, 'bubble-card-legacy-popup-notice-home/overview'],
+        ['/home/lights', { panelUrl: 'home' }, 'lovely-card-legacy-popup-notice-home/lights'],
+        ['/lovelace/kitchen', { panelUrl: 'lovelace' }, 'lovely-card-legacy-popup-notice-lovelace/kitchen'],
+        ['/ha/mobile/home/overview', { panelUrl: 'home' }, 'lovely-card-legacy-popup-notice-home/overview'],
     ])('uses hass.panelUrl to scope %s to the current view', (pathname, hass, expectedKey) => {
         setLocationPathname(pathname);
 
@@ -273,8 +273,8 @@ describe('maybeShowMigrationNotice', () => {
         dismissButton.dispatchFakeEvent('click');
 
         expect(globalThis.localStorage.setItem).toHaveBeenCalledTimes(1);
-        expect(harness.storage.get('bubble-card-legacy-popup-notice-lovelace/kitchen')).toBe('1');
-        expect(harness.storage.has('bubble-card-legacy-popup-notice-lovelace')).toBe(false);
+        expect(harness.storage.get('lovely-card-legacy-popup-notice-lovelace/kitchen')).toBe('1');
+        expect(harness.storage.has('lovely-card-legacy-popup-notice-lovelace')).toBe(false);
     });
 
     function noticeHashes(harness) {
@@ -312,9 +312,9 @@ describe('maybeShowMigrationNotice', () => {
                     views: [{
                         path: 'salon',
                         cards: [
-                            { type: 'grid', cards: [{ type: 'custom:bubble-card', card_type: 'pop-up', hash: '#in-grid' }, buttonCard] },
-                            { type: 'vertical-stack', cards: [{ type: 'custom:bubble-card', card_type: 'pop-up', hash: '#in-stack' }, buttonCard] },
-                            { type: 'custom:bubble-card', card_type: 'pop-up', hash: '#migrated', cards: [buttonCard] },
+                            { type: 'grid', cards: [{ type: 'custom:lovely-card', card_type: 'pop-up', hash: '#in-grid' }, buttonCard] },
+                            { type: 'vertical-stack', cards: [{ type: 'custom:lovely-card', card_type: 'pop-up', hash: '#in-stack' }, buttonCard] },
+                            { type: 'custom:lovely-card', card_type: 'pop-up', hash: '#migrated', cards: [buttonCard] },
                         ],
                     }],
                 },
@@ -538,7 +538,7 @@ describe('findLegacyPopUpStack', () => {
 
 describe('legacy pop-ups held by a grid card', () => {
     const gridPopupConfig = {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'pop-up',
         hash: '#grid-legacy',
         name: 'In a grid',
@@ -782,14 +782,14 @@ describe('migrateLegacyPopUpLovelaceConfig', () => {
                 grid_options: { columns: 12 },
             },
             {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'button',
                 button_type: 'name',
                 name: 'Left',
                 grid_options: { columns: 6 },
             },
             {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'button',
                 button_type: 'name',
                 name: 'Right',
@@ -1026,7 +1026,7 @@ describe('renderLegacyMigrationNotice cost on modern configs', () => {
 
     test('does not reach for the dashboard config when the pop-up is not legacy', () => {
         const editor = createEditor({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#kitchen',
             cards: [],
@@ -1037,7 +1037,7 @@ describe('renderLegacyMigrationNotice cost on modern configs', () => {
     });
 
     test('does not reach for the dashboard config for a card that is not a pop-up', () => {
-        const editor = createEditor({ type: 'custom:bubble-card', card_type: 'button' });
+        const editor = createEditor({ type: 'custom:lovely-card', card_type: 'button' });
 
         expect(renderLegacyMigrationNotice(editor, '#kitchen')).toBe('');
         expect(editor._getActiveLovelaceConfig).not.toHaveBeenCalled();
@@ -1045,7 +1045,7 @@ describe('renderLegacyMigrationNotice cost on modern configs', () => {
 
     test('still inspects the dashboard for a legacy pop-up config', () => {
         const editor = createEditor({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#kitchen',
         });

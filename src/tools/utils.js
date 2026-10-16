@@ -131,7 +131,7 @@ const scrollLockDeclarations = ['--wa-scroll-lock-size', '--wa-scroll-lock-gutte
 
 function getCurrentThemeId() {
     // Home Assistant applies a theme by writing every token inline on <html>, so the
-    // number of inline declarations plus the two colors Bubble Card reads identifies
+    // number of inline declarations plus the two colors Lovely Card reads identifies
     // it. The count matters: themes sharing a background and a text color still
     // differ by it, and the default light theme, which writes no token at all, no
     // longer looks like a page whose theme has simply not been applied yet.
@@ -1071,7 +1071,7 @@ export function setLayout(context, targetElementOverride = null, defaultLayoutOv
             // deciding from the mere absence of a masonry element meant a
             // single HA restructuring of hui-root would silently switch every
             // masonry dashboard to the large layout — a visual change users
-            // would blame on Bubble Card. Descendant selectors so an extra
+            // would blame on Lovely Card. Descendant selectors so an extra
             // wrapper element cannot break the chain.
             const root = huiRoot.shadowRoot;
             const masonryView = root.querySelector("hui-masonry-view");
@@ -1197,10 +1197,10 @@ export function throttle(mainFunction, delay = 300) {
 }
 
 const scrollLockBodyClass = 'bubble-body-scroll-locked';
-const scrollLockLayerId = 'bubble-card-scroll-lock-layer';
+const scrollLockLayerId = 'lovely-card-scroll-lock-layer';
 const scrollLockLayerClass = 'bubble-scroll-lock-layer';
 const scrollLockLayerActiveClass = 'is-active';
-const scrollLockStyleId = 'bubble-card-no-scroll-styles';
+const scrollLockStyleId = 'lovely-card-no-scroll-styles';
 const scrollLockGutterProperty = '--bubble-scroll-lock-size';
 const scrollLockGutterClass = 'bubble-scroll-lock-gutter';
 // Engines that reserve the gutter themselves never read the size.

@@ -1,6 +1,6 @@
 // Persistent clipboard utilities for sub-buttons (shared across editor panels)
 
-const CLIPBOARD_KEY = 'bubble-card-subbutton-clipboard';
+const CLIPBOARD_KEY = 'lovely-card-subbutton-clipboard';
 
 export function loadSubButtonClipboard() {
   try {

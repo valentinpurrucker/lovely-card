@@ -115,7 +115,7 @@
       "info_organize": "You can organise sub-buttons individually or group them together. Groups can be arranged inline (side by side) or in rows (stacked vertically), and buttons within groups can be displayed inline or in a column layout.",
       "editor_title": "Sub-buttons editor",
       "rows_detected_title": "Rows configuration detected",
-      "rows_detected_body": "The card height (rows) is explicitly set in your configuration. This will prevent automatic row adjustments when sub-buttons are added (for example, when adding bottom sub-buttons). Click the button below to remove the override and let Bubble Card auto-calculate the rows.",
+      "rows_detected_body": "The card height (rows) is explicitly set in your configuration. This will prevent automatic row adjustments when sub-buttons are added (for example, when adding bottom sub-buttons). Click the button below to remove the override and let Lovely Card auto-calculate the rows.",
       "remove_override": "Remove override and auto-calculate",
       "card_specific": "Card specific buttons",
       "main_top": "Main sub-buttons (top)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Using YAML?",
       "notice_yaml_body": "Replace the legacy pop-up config with the standalone format:",
       "notice_protip": "Pro tip:",
-      "notice_protip_body": "Honestly, if you're still using YAML for Bubble Card at this point, you might want to give the new editor a try, it makes creating and editing pop-ups a breeze! You also get access to the Module Store. I've put so much love into this editor ❤️",
+      "notice_protip_body": "Honestly, if you're still using YAML for Lovely Card at this point, you might want to give the new editor a try, it makes creating and editing pop-ups a breeze! You also get access to the Module Store. I've put so much love into this editor ❤️",
       "notice_enjoy": "Enjoy this update! Cheers! 🍻",
       "notice_dismiss": "Got it, don't show again on this view",
       "notice_remind": "Remind me later"
@@ -579,7 +579,7 @@
       "show_original": "Show original",
       "show_translation": "Show translation",
       "translate_offer_title": "Translate module texts",
-      "translate_offer_body": "Modules are published in English. Bubble Card can translate their descriptions and options into your language, but this sends that text to an external translation service. It stays off until you turn it on."
+      "translate_offer_body": "Modules are published in English. Lovely Card can translate their descriptions and options into your language, but this sends that text to an external translation service. It stays off until you turn it on."
     },
     "module_editor": {
       "create_module": "Create new Module",
@@ -598,7 +598,7 @@
       "description_helper": "This description appears in your module and in the Module Store (if you share it), so make sure it's clear and concise. {bold}, but note that it will only be rendered in your module, the Module Store will not display it.",
       "description_helper_bold": "You can use HTML and inline CSS",
       "code_title": "Code (CSS/JS template)",
-      "code_helper": "More information and examples about the CSS and JS template possibilities can be found in the {link}. Tip: You can enlarge the editor by clicking on the panel title (Bubble Card configuration).",
+      "code_helper": "More information and examples about the CSS and JS template possibilities can be found in the {link}. Tip: You can enlarge the editor by clicking on the panel title (Lovely Card configuration).",
       "styling_docs": "Styling and Templates documentation",
       "editor_schema_title": "Optional: Editor schema (YAML)",
       "yaml_error_title": "Error in YAML schema",
@@ -653,7 +653,7 @@
       "download_error": "Error downloading module: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card is a minimalist and customisable card collection"
+      "description": "Lovely Card is a minimalist and customisable card collection"
     },
     "errors": {
       "card_type_required": "You need to define a card type",
@@ -673,8 +673,8 @@
       "hidden_content": "Content hidden in edit mode for performance"
     },
     "navigation": {
-      "group": "Bubble Card pop-ups",
-      "hash_hint": "Bubble Card pop-up hash"
+      "group": "Lovely Card pop-ups",
+      "hash_hint": "Lovely Card pop-up hash"
     }
   }
 }

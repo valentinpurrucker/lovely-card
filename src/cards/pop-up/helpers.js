@@ -25,9 +25,9 @@ export { isDialogNode };
 // (#2606). So `location-changed` is kept for the moments the URL really moved,
 // which is the protocol `common/navigate.ts` follows and what third-party hash
 // routing listens for, and the signals that only ever needed to reach our own
-// listeners travel on this private type instead. Every Bubble Card listener
+// listeners travel on this private type instead. Every Lovely Card listener
 // that reacts to one reacts to the other, so nothing changes on our side.
-export const BUBBLE_URL_EVENT = 'bubble-card-location-changed';
+export const BUBBLE_URL_EVENT = 'lovely-card-location-changed';
 
 function resetPopupScroll(context) {
     const container = context.elements?.popUpContainer;
@@ -1143,8 +1143,8 @@ function scheduleStandalonePostOpenContentWake(context) {
     }
 }
 
-// Deduplicate Bubble Card's own synthetic no-hash step used during popup close.
-if (!window.__bubbleLocationDeduperAdded) {
+// Deduplicate Lovely Card's own synthetic no-hash step used during popup close.
+if (!window.__lovelyLocationDeduperAdded) {
     try {
         let pendingHashBase = null;
         let pendingHashPushed = false;
@@ -1212,7 +1212,7 @@ if (!window.__bubbleLocationDeduperAdded) {
         };
         window.addEventListener('location-changed', onUrlEvent);
         window.addEventListener(BUBBLE_URL_EVENT, onUrlEvent);
-        window.__bubbleLocationDeduperAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
     } catch (_) {
     }
 }
@@ -1223,12 +1223,12 @@ const dialogState = {
     protectionWindow: 500 // ms to protect after dialog close
 };
 
-if (!window.__bubbleDialogListenerAdded) {
+if (!window.__lovelyDialogListenerAdded) {
     window.addEventListener('dialog-closed', () => {
         dialogState.recentlyClosedTimestamp = Date.now();
     }, { capture: true });
     
-    window.__bubbleDialogListenerAdded = true;
+    window.__lovelyDialogListenerAdded = true;
 }
 
 function isEventInsidePopupOrDialog(event) {
@@ -2365,7 +2365,7 @@ function handleCloseOnClickTouchEnd(event, context) {
         return;
     }
 
-    if (window.isScrolling) {
+    if (window.__lovelyIsScrolling) {
         return;
     }
 

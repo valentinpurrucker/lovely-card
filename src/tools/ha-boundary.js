@@ -1,4 +1,4 @@
-// Every assumption Bubble Card makes about Home Assistant's own DOM lives
+// Every assumption Lovely Card makes about Home Assistant's own DOM lives
 // here. HA's frontend is internal API: element names, wrapper structure and
 // dialog surfaces change between releases, and each of those assumptions used
 // to be duplicated across the codebase, so a single rename meant hunting down
@@ -10,7 +10,7 @@
 //   - be covered by a contract test, so a HA bump fails the suite during an
 //     upgrade instead of breaking users' dashboards.
 
-// The per-card wrapper HA puts around every card in a view. Bubble Card needs
+// The per-card wrapper HA puts around every card in a view. Lovely Card needs
 // it to collapse the grid cell reserved for a (visually absent) pop-up.
 export const HA_CARD_WRAPPER_TAG = 'hui-card';
 
@@ -49,7 +49,7 @@ export function isDialogNode(node) {
     }
 }
 
-// The element HA renders the active panel into. Bubble Card measures its rect
+// The element HA renders the active panel into. Lovely Card measures its rect
 // to know where the dashboard content really starts on screen, because
 // pop-ups are position:fixed and are therefore laid out against the viewport
 // while the dashboard itself sits inset behind the sidebar.
@@ -91,8 +91,8 @@ export function resolveLegacyStackRoot(verticalStack) {
     const fallback = verticalStack.firstElementChild || null;
     if (fallback) {
         console.warn(
-            'Bubble Card: Home Assistant no longer exposes the "#root" container this version builds legacy ' +
-            'pop-ups on. Falling back to the stack\'s first child; please report this so Bubble Card can be updated.'
+            'Lovely Card: Home Assistant no longer exposes the "#root" container this version builds legacy ' +
+            'pop-ups on. Falling back to the stack\'s first child; please report this so Lovely Card can be updated.'
         );
     }
     return fallback;

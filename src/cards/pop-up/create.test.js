@@ -231,7 +231,7 @@ describe('createHeader', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         global.window = global.window || {};
-        delete global.window.popUpError;
+        delete global.window.__lovelyPopUpError;
     });
 
     test('creates previous and close header buttons and wires their actions', () => {
@@ -313,7 +313,7 @@ describe('createHeader', () => {
             getRootNode: () => null,
         });
 
-        expect(global.window.popUpError).toBe(true);
+        expect(global.window.__lovelyPopUpError).toBe(true);
         expect(firstContent.querySelector('.bubble-error-text')).not.toBeNull();
         expect(render).toHaveBeenCalledTimes(1);
 
@@ -363,7 +363,7 @@ describe('prepareStructure', () => {
         jest.clearAllMocks();
         jest.useFakeTimers();
         global.window = global.window || {};
-        delete global.window.popUpError;
+        delete global.window.__lovelyPopUpError;
     });
 
     afterEach(() => {

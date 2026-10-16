@@ -7,7 +7,7 @@ import {
   validatePlatformCondition,
 } from "./ha-conditions.js";
 
-// Condition types Home Assistant knows but Bubble Card cannot evaluate get
+// Condition types Home Assistant knows but Lovely Card cannot evaluate get
 // reported once each, instead of quietly reading as false on every render.
 const warnedConditionTypes = new Set();
 
@@ -15,7 +15,7 @@ function warnUnsupportedCondition(type) {
   if (warnedConditionTypes.has(type)) return;
   warnedConditionTypes.add(type);
   console.warn(
-    `Bubble Card - Unsupported condition type "${type}", it will always evaluate to false. `
+    `Lovely Card - Unsupported condition type "${type}", it will always evaluate to false. `
     + "Please report it so it can be added: https://github.com/Clooos/Bubble-Card/issues",
   );
 }
@@ -208,7 +208,7 @@ function checkLocationCondition(condition, hass) {
   return stateObj ? condition.locations?.includes(stateObj.state) === true : false;
 }
 
-// Bubble Card is never the one laying out the view columns, so this condition
+// Lovely Card is never the one laying out the view columns, so this condition
 // can only be neutral, like Home Assistant is without a column context.
 function checkViewColumnsCondition() {
   return true;

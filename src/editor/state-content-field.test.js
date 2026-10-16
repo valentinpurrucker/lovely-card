@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 
-// The same mocks as bubble-card-editor.test.js, with one difference: `html`
+// The same mocks as lovely-card-editor.test.js, with one difference: `html`
 // joins its parts here rather than returning an empty string, so the test can
 // read which fields the state panel decided to build.
 jest.unstable_mockModule('lit', () => ({
@@ -20,7 +20,7 @@ jest.unstable_mockModule('lit', () => ({
 }));
 jest.unstable_mockModule('../var/version.js', () => ({ version: 'test' }));
 jest.unstable_mockModule('../tools/utils.js', () => ({ fireEvent: jest.fn() }));
-jest.unstable_mockModule('../components/editor/ha-selector-bc_object.js', () => ({}));
+jest.unstable_mockModule('../components/editor/ha-selector-lc_object.js', () => ({}));
 jest.unstable_mockModule('../cards/button/editor.js', () => ({ renderButtonEditor: jest.fn() }));
 jest.unstable_mockModule('../cards/sub-buttons/editor.js', () => ({ renderSubButtonsEditor: jest.fn() }));
 jest.unstable_mockModule('../cards/pop-up/editor.js', () => ({ renderPopUpEditor: jest.fn() }));
@@ -87,8 +87,8 @@ global.document = {
 
 // The module has no export: the class is only reachable through the
 // customElements.define call it performs at load time.
-await import('./bubble-card-editor.js');
-const BubbleCardEditor = definedElements['bubble-card-editor'];
+await import('./lovely-card-editor.js');
+const BubbleCardEditor = definedElements['lovely-card-editor'];
 const { fireEvent } = await import('../tools/utils.js');
 
 function makeEditor(config) {

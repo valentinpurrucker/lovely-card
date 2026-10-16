@@ -115,7 +115,7 @@
       "info_organize": "Az algombokat egyenként rendezheti, vagy csoportosíthatja őket. A csoportok elrendezhetők egy sorban (egymás mellett) vagy sorokban (függőlegesen egymásra), a csoporton belüli gombok pedig egy sorban vagy oszlopos elrendezésben jeleníthetők meg.",
       "editor_title": "Algombok szerkesztője",
       "rows_detected_title": "Sorbeállítás észlelve",
-      "rows_detected_body": "A kártya magassága (sorok) kifejezetten meg van adva a konfigurációban. Ez megakadályozza a sorok automatikus igazítását az algombok hozzáadásakor (például alsó algombok hozzáadásakor). Kattintson a lenti gombra a felülírás eltávolításához, hogy a Bubble Card automatikusan számíthassa ki a sorokat.",
+      "rows_detected_body": "A kártya magassága (sorok) kifejezetten meg van adva a konfigurációban. Ez megakadályozza a sorok automatikus igazítását az algombok hozzáadásakor (például alsó algombok hozzáadásakor). Kattintson a lenti gombra a felülírás eltávolításához, hogy a Lovely Card automatikusan számíthassa ki a sorokat.",
       "remove_override": "Felülírás eltávolítása és automatikus számítás",
       "card_specific": "Kártyaspecifikus gombok",
       "main_top": "Fő algombok (felül)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML-t használ?",
       "notice_yaml_body": "Cserélje le a régi pop-up konfigurációt az önálló formátumra:",
       "notice_protip": "Profi tipp:",
-      "notice_protip_body": "Őszintén szólva, ha ezen a ponton még mindig YAML-t használ a Bubble Card esetében, érdemes kipróbálnia az új szerkesztőt, vele a pop-upok létrehozása és szerkesztése gyerekjáték! Ráadásul hozzáférést kap a Module Store-hoz is. Rengeteg szeretetet fektettem ebbe a szerkesztőbe ❤️",
+      "notice_protip_body": "Őszintén szólva, ha ezen a ponton még mindig YAML-t használ a Lovely Card esetében, érdemes kipróbálnia az új szerkesztőt, vele a pop-upok létrehozása és szerkesztése gyerekjáték! Ráadásul hozzáférést kap a Module Store-hoz is. Rengeteg szeretetet fektettem ebbe a szerkesztőbe ❤️",
       "notice_enjoy": "Jó szórakozást ehhez a frissítéshez! Egészségünkre! 🍻",
       "notice_dismiss": "Értem, ne jelenjen meg többé ezen a nézeten",
       "notice_remind": "Emlékeztessen később"
@@ -579,7 +579,7 @@
       "show_original": "Eredeti megjelenítése",
       "show_translation": "Fordítás megjelenítése",
       "translate_offer_title": "Modulszövegek fordítása",
-      "translate_offer_body": "A modulok angolul jelennek meg. A Bubble Card le tudja fordítani a leírásaikat és beállításaikat a te nyelvedre, de ehhez elküldi ezt a szöveget egy külső fordítószolgáltatásnak. Kikapcsolva marad, amíg te magad be nem kapcsolod."
+      "translate_offer_body": "A modulok angolul jelennek meg. A Lovely Card le tudja fordítani a leírásaikat és beállításaikat a te nyelvedre, de ehhez elküldi ezt a szöveget egy külső fordítószolgáltatásnak. Kikapcsolva marad, amíg te magad be nem kapcsolod."
     },
     "module_editor": {
       "create_module": "Új modul létrehozása",
@@ -598,7 +598,7 @@
       "description_helper": "Ez a leírás megjelenik a moduljában és a Module Store-ban (ha megosztja), ezért legyen világos és tömör. {bold}, de vegye figyelembe, hogy ez csak az Ön moduljában jelenik meg, a Module Store nem jeleníti meg.",
       "description_helper_bold": "Használhat HTML-t és inline CSS-t",
       "code_title": "Kód (CSS/JS sablon)",
-      "code_helper": "További információk és példák a CSS és JS sablonok lehetőségeiről a {link} találhatók. Tipp: A szerkesztőt megnagyíthatja a panel címére (Bubble Card configuration) kattintva.",
+      "code_helper": "További információk és példák a CSS és JS sablonok lehetőségeiről a {link} találhatók. Tipp: A szerkesztőt megnagyíthatja a panel címére (Lovely Card configuration) kattintva.",
       "styling_docs": "Stílus- és sablondokumentációban",
       "editor_schema_title": "Opcionális: szerkesztőséma (YAML)",
       "yaml_error_title": "Hiba a YAML sémában",
@@ -653,7 +653,7 @@
       "download_error": "Hiba a modul letöltésekor: {error}"
     },
     "card_picker": {
-      "description": "A Bubble Card egy minimalista és testreszabható kártyagyűjtemény"
+      "description": "A Lovely Card egy minimalista és testreszabható kártyagyűjtemény"
     },
     "errors": {
       "card_type_required": "Meg kell adnia egy kártyatípust",
@@ -673,8 +673,8 @@
       "hidden_content": "A tartalom rejtve van szerkesztési módban a teljesítmény érdekében"
     },
     "navigation": {
-      "group": "Bubble Card pop-upok",
-      "hash_hint": "Bubble Card pop-up hash"
+      "group": "Lovely Card pop-upok",
+      "hash_hint": "Lovely Card pop-up hash"
     }
   }
 }

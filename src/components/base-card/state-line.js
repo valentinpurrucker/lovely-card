@@ -1,6 +1,6 @@
 // Turns the items of a `state_content` list into the text of a state line,
 // for the card and for its sub-buttons alike. Each item renders the way Home
-// Assistant renders it on its tile card, with what Bubble Card already had on
+// Assistant renders it on its tile card, with what Lovely Card already had on
 // top: attribute paths, the weather forecast units, and templates.
 
 import {

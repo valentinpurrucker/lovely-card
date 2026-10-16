@@ -3,7 +3,7 @@
     position: relative;
     height: 36px;
     width: 36px;
-    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     background-color: var(--bubble-media-player-button-background-color);
     cursor: pointer;
     align-items: center;
@@ -98,7 +98,7 @@
     flex: 1 1 auto;
     height: 100%;
     overflow: hidden;
-    border-radius: var(--bubble-media-player-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+    border-radius: var(--bubble-media-player-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     background-color: var(--bubble-media-player-slider-background-color, var(--bubble-icon-background-color, var(--bubble-secondary-background-color, var(--card-background-color, var(--ha-card-background)))));
 }
 
@@ -170,7 +170,7 @@
     position: relative;
     height: 36px;
     width: 36px;
-    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     background-color: var(--bubble-media-player-button-background-color);
     cursor: pointer;
     align-items: center;
@@ -188,7 +188,7 @@
     position: relative;
     height: 36px;
     width: 36px;
-    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+    border-radius: var(--bubble-media-player-buttons-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     background-color: var(--bubble-media-player-button-background-color);
     cursor: pointer;
     align-items: center;
@@ -242,7 +242,7 @@
        a no-op on the engines that trim it correctly. The radius is the one
        base-card gives this element, kept as the same expression so the two
        cannot drift apart. */
-    clip-path: inset(0 round var(--bubble-card-type-border-radius, var(--bubble-border-radius, calc(var(--row-height, 56px) / 2))));
+    clip-path: inset(0 round var(--bubble-card-type-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px)))));
 }
 
 .bubble-media-info-container.name-without-icon {
@@ -278,7 +278,7 @@
 
 .large .bubble-volume-slider {
   height: 42px;
-  border-radius: var(--bubble-media-player-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+  border-radius: var(--bubble-media-player-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
 }
 
 .large .bubble-volume-slider-mute-button,

@@ -128,7 +128,7 @@ ha-card {
 
 .bubble-button {
     align-items: center;
-    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, 32px));
+    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     color: var(--primary-text-color);
     cursor: pointer;
     display: inline-flex;
@@ -146,7 +146,7 @@ ha-card {
 }
 .bubble-background-color {
     border: 1px solid var(--primary-text-color);
-    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, 32px));
+    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     box-sizing: border-box;
     height: 100%;
     left: 0;
@@ -158,7 +158,7 @@ ha-card {
 }
 .bubble-background {
     opacity: 0.8;
-    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, 32px));
+    border-radius: var(--bubble-horizontal-buttons-stack-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     width: 100%;
     height: 100%;
     box-sizing: border-box !important;

@@ -115,7 +115,7 @@
       "info_organize": "Papildpogas var organizēt atsevišķi vai grupēt kopā. Grupas var izkārtot rindā (blakus viena otrai) vai rindās (vertikāli), un pogas grupās var attēlot rindā vai kolonnas izkārtojumā.",
       "editor_title": "Papildpogu redaktors",
       "rows_detected_title": "Konstatēta rindu konfigurācija",
-      "rows_detected_body": "Kartītes augstums (rindas) ir tieši iestatīts jūsu konfigurācijā. Tas neļaus automātiski pielāgot rindas, kad tiek pievienotas papildpogas (piemēram, pievienojot apakšējās papildpogas). Noklikšķiniet uz zemāk esošās pogas, lai noņemtu šo iestatījumu un ļautu Bubble Card automātiski aprēķināt rindas.",
+      "rows_detected_body": "Kartītes augstums (rindas) ir tieši iestatīts jūsu konfigurācijā. Tas neļaus automātiski pielāgot rindas, kad tiek pievienotas papildpogas (piemēram, pievienojot apakšējās papildpogas). Noklikšķiniet uz zemāk esošās pogas, lai noņemtu šo iestatījumu un ļautu Lovely Card automātiski aprēķināt rindas.",
       "remove_override": "Noņemt iestatījumu un aprēķināt automātiski",
       "card_specific": "Kartītei specifiskas pogas",
       "main_top": "Galvenās papildpogas (augšā)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Izmantojat YAML?",
       "notice_yaml_body": "Aizstājiet veco uznirstošā loga konfigurāciju ar atsevišķo formātu:",
       "notice_protip": "Padoms:",
-      "notice_protip_body": "Godīgi sakot, ja šobrīd Bubble Card joprojām izmantojat YAML, ir vērts izmēģināt jauno redaktoru, ar to uznirstošo logu veidošana un rediģēšana ir ļoti vienkārša! Jūs iegūstat arī piekļuvi Module Store. Šajā redaktorā esmu ielicis ļoti daudz mīlestības ❤️",
+      "notice_protip_body": "Godīgi sakot, ja šobrīd Lovely Card joprojām izmantojat YAML, ir vērts izmēģināt jauno redaktoru, ar to uznirstošo logu veidošana un rediģēšana ir ļoti vienkārša! Jūs iegūstat arī piekļuvi Module Store. Šajā redaktorā esmu ielicis ļoti daudz mīlestības ❤️",
       "notice_enjoy": "Izbaudiet šo atjauninājumu! Priekā! 🍻",
       "notice_dismiss": "Skaidrs, vairs nerādīt šajā skatā",
       "notice_remind": "Atgādināt vēlāk"
@@ -579,7 +579,7 @@
       "show_original": "Rādīt oriģinālu",
       "show_translation": "Rādīt tulkojumu",
       "translate_offer_title": "Tulkot moduļu tekstus",
-      "translate_offer_body": "Moduļi tiek publicēti angļu valodā. Bubble Card var pārtulkot to aprakstus un iespējas jūsu valodā, taču tad šis teksts tiek nosūtīts ārējam tulkošanas pakalpojumam. Paliek izslēgts, līdz jūs pats to ieslēdzat."
+      "translate_offer_body": "Moduļi tiek publicēti angļu valodā. Lovely Card var pārtulkot to aprakstus un iespējas jūsu valodā, taču tad šis teksts tiek nosūtīts ārējam tulkošanas pakalpojumam. Paliek izslēgts, līdz jūs pats to ieslēdzat."
     },
     "module_editor": {
       "create_module": "Izveidot jaunu moduli",
@@ -598,7 +598,7 @@
       "description_helper": "Šis apraksts parādās jūsu modulī un Module Store (ja to kopīgojat), tāpēc pārliecinieties, ka tas ir skaidrs un kodolīgs. {bold}, taču ņemiet vērā, ka tas tiks attēlots tikai jūsu modulī, Module Store to nerādīs.",
       "description_helper_bold": "Varat izmantot HTML un inline CSS",
       "code_title": "Kods (CSS/JS veidne)",
-      "code_helper": "Vairāk informācijas un piemēru par CSS un JS veidņu iespējām atradīsiet {link}. Padoms: redaktoru varat palielināt, noklikšķinot uz paneļa virsraksta (Bubble Card konfigurācija).",
+      "code_helper": "Vairāk informācijas un piemēru par CSS un JS veidņu iespējām atradīsiet {link}. Padoms: redaktoru varat palielināt, noklikšķinot uz paneļa virsraksta (Lovely Card konfigurācija).",
       "styling_docs": "stilu un veidņu dokumentācijā",
       "editor_schema_title": "Neobligāti: redaktora shēma (YAML)",
       "yaml_error_title": "Kļūda YAML shēmā",
@@ -653,7 +653,7 @@
       "download_error": "Kļūda, lejupielādējot moduli: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card ir minimālistiska un pielāgojama kartīšu kolekcija"
+      "description": "Lovely Card ir minimālistiska un pielāgojama kartīšu kolekcija"
     },
     "errors": {
       "card_type_required": "Jānorāda kartītes tips",
@@ -673,8 +673,8 @@
       "hidden_content": "Saturs rediģēšanas režīmā paslēpts veiktspējas dēļ"
     },
     "navigation": {
-      "group": "Bubble Card uznirstošie logi",
-      "hash_hint": "Bubble Card uznirstošā loga jaucējkods"
+      "group": "Lovely Card uznirstošie logi",
+      "hash_hint": "Lovely Card uznirstošā loga jaucējkods"
     }
   }
 }

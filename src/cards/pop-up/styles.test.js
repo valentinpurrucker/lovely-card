@@ -59,9 +59,9 @@ describe('pop-up styles', () => {
     expect(popUpRule).not.toContain('overflow: hidden');
     expect(popUpRule).not.toContain('contain: paint');
     expect(containerRule).toContain('overflow: auto');
-    expect(containerRule).toContain('border-radius: var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px)))');
-    expect(containerRule).toContain('-webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))))');
-    expect(containerRule).toContain('clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))))');
+    expect(containerRule).toContain('border-radius: var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px)))))');
+    expect(containerRule).toContain('-webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))))');
+    expect(containerRule).toContain('clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))))');
   });
 
   test('clips only the lower foreground corners when a header is visible', () => {
@@ -69,8 +69,8 @@ describe('pop-up styles', () => {
 
     expect(rule).toContain('border-top-left-radius: 0');
     expect(rule).toContain('border-top-right-radius: 0');
-    expect(rule).toContain('-webkit-clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))))');
-    expect(rule).toContain('clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))))');
+    expect(rule).toContain('-webkit-clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))))');
+    expect(rule).toContain('clip-path: inset(0 round 0 0 var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))))');
   });
 
   test('removes lower foreground rounding for bottom-sheet layouts', () => {
@@ -79,11 +79,11 @@ describe('pop-up styles', () => {
 
     expect(bottomSheetRule).toContain('border-bottom-right-radius: 0');
     expect(bottomSheetRule).toContain('border-bottom-left-radius: 0');
-    expect(bottomSheetRule).toContain('-webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0)');
-    expect(bottomSheetRule).toContain('clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, 42px))) 0 0)');
+    expect(bottomSheetRule).toContain('-webkit-clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0)');
+    expect(bottomSheetRule).toContain('clip-path: inset(0 round var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) var(--bubble-pop-up-content-border-radius, var(--bubble-pop-up-border-radius, var(--bubble-border-radius, var(--lovely-radius-popup, var(--lovely-radius, 16px))))) 0 0)');
     expect(headerBottomSheetRule).toContain('-webkit-clip-path: inset(0 round 0)');
     expect(headerBottomSheetRule).toContain('clip-path: inset(0 round 0)');
-    expect(styles).toMatch(/@media \(max-width: 870px\), \(max-height: 500px\) \{[\s\S]*\.bubble-pop-up\.popup-mode-adaptive-dialog:not\(\.editor\) > \.bubble-pop-up-container\s*\{[^}]*border-bottom-right-radius: 0;[^}]*border-bottom-left-radius: 0;[^}]*clip-path: inset\(0 round var\(--bubble-pop-up-content-border-radius, var\(--bubble-pop-up-border-radius, var\(--bubble-border-radius, 42px\)\)\) var\(--bubble-pop-up-content-border-radius, var\(--bubble-pop-up-border-radius, var\(--bubble-border-radius, 42px\)\)\) 0 0\);/);
+    expect(styles).toMatch(/@media \(max-width: 870px\), \(max-height: 500px\) \{[\s\S]*\.bubble-pop-up\.popup-mode-adaptive-dialog:not\(\.editor\) > \.bubble-pop-up-container\s*\{[^}]*border-bottom-right-radius: 0;[^}]*border-bottom-left-radius: 0;[^}]*clip-path: inset\(0 round var\(--bubble-pop-up-content-border-radius, var\(--bubble-pop-up-border-radius, var\(--bubble-border-radius, var\(--lovely-radius-popup, var\(--lovely-radius, 16px\)\)\)\)\) var\(--bubble-pop-up-content-border-radius, var\(--bubble-pop-up-border-radius, var\(--bubble-border-radius, var\(--lovely-radius-popup, var\(--lovely-radius, 16px\)\)\)\)\) 0 0\);/);
     expect(styles).toMatch(/@media \(max-width: 870px\), \(max-height: 500px\) \{[\s\S]*\.bubble-pop-up\.popup-mode-adaptive-dialog:not\(\.no-header\):not\(\.editor\) > \.bubble-pop-up-container\s*\{[^}]*clip-path: inset\(0 round 0\);/);
   });
 
@@ -183,10 +183,9 @@ describe('pop-up styles', () => {
   const haStyle = styles.slice(styles.indexOf('/* Home Assistant style'));
   const declares = (value) => expect(haStyle).toContain(value);
 
-  test('reads its geometry from the Home Assistant tokens, not from pixels', () => {
-    // A hard coded number here would be the bug: it would stop following a theme.
-    declares('--bubble-pop-up-border-radius: var(--ha-dialog-border-radius, var(--ha-border-radius-3xl, 24px));');
-    declares('--bubble-pop-up-border-radius: var(--ha-bottom-sheet-border-radius, var(--ha-dialog-border-radius, var(--ha-border-radius-2xl, 20px)));');
+  test('uses Lovely corners while retaining Home Assistant spacing and shadows', () => {
+    // Both responsive popup layouts share the fork's configurable corner scale.
+    declares('--bubble-pop-up-border-radius: var(--lovely-radius-popup, var(--lovely-radius, 16px));');
     declares('box-shadow: var(--dialog-box-shadow, var(--ha-box-shadow-l,');
     declares('padding-inline: var(--ha-space-6, 24px);');
     // The width is set inline in create.js, where an inline property can win.

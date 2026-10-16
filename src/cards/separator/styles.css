@@ -26,7 +26,7 @@
 }
 
 .bubble-line {
-    border-radius: 6px;
+    border-radius: var(--lovely-radius-indicator, var(--lovely-radius, 2px));
     margin-inline-end: 14px;
     opacity: 0.6;
     flex-grow: 1;

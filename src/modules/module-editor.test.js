@@ -82,7 +82,7 @@ jest.unstable_mockModule('./bct-provider.js', () => ({
 
 const nativeSuggestion = () => ({
     label: 'Light',
-    config: { type: 'custom:bubble-card', card_type: 'button', entity: 'light.salon' },
+    config: { type: 'custom:lovely-card', card_type: 'button', entity: 'light.salon' },
 });
 const getNativeEntitySuggestion = jest.fn(() => [nativeSuggestion()]);
 jest.unstable_mockModule('../tools/entity-suggestion.js', () => ({
@@ -200,7 +200,7 @@ describe('buildSuggestionsPreview', () => {
                 label: 'My Module · Square',
                 config: {
                     card_type: 'button',
-                    type: 'custom:bubble-card',
+                    type: 'custom:lovely-card',
                     entity: ENTITY,
                     modules: ['my_module'],
                 },
@@ -231,7 +231,7 @@ describe('buildSuggestionsPreview', () => {
                 label: 'Pop-ups · Salon',
                 // No entity filled in, no modules injected: a generated card is
                 // standalone and must keep working without its generator.
-                config: { card_type: 'pop-up', hash: '#salon', type: 'custom:bubble-card' },
+                config: { card_type: 'pop-up', hash: '#salon', type: 'custom:lovely-card' },
             },
         ]);
     });
@@ -363,7 +363,7 @@ describe('the entity suggestions preview takeover', () => {
         expect(cards[0].hass).toBe(hass);
         expect(cards[0].config).toEqual({
             card_type: 'button',
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             entity: ENTITY,
             modules: ['my_module'],
         });

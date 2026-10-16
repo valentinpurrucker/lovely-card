@@ -19,7 +19,7 @@ import { beginTemplateRender, sweepTemplates, releaseTemplates, refreshTemplateS
 import { maybeShowMigrationNotice } from './cards/pop-up/migration.js';
 import { registerForIconRefresh, unregisterForIconRefresh } from './tools/icon.js';
 import { monotonicNow } from './tools/monotonic-time.js';
-import BubbleCardEditor from './editor/bubble-card-editor.js';
+import BubbleCardEditor from './editor/lovely-card-editor.js';
 
 import { cleanupPopUp, handlePopUp } from './cards/pop-up/index.js';
 import { handleButton } from './cards/button/index.js';
@@ -41,7 +41,7 @@ let _lastSeenThemes = null;
 // content (placeholders, onboarding, errors) is built outside the editor.
 const connectedCards = new Set();
 try {
-  window.addEventListener('bubble-card-language-changed', () => {
+  window.addEventListener('lovely-card-language-changed', () => {
     connectedCards.forEach((card) => {
       try { card.updateBubbleCard(); } catch (_) {}
     });
@@ -227,15 +227,15 @@ class BubbleCard extends HTMLElement {
     } catch (e) {}
     try {
       // The element itself is the context keyed into the timer registry
-      // (base-card changes.js passes the bubble-card element to
+      // (base-card changes.js passes the lovely-card element to
       // startTimerInterval), so it must be the key used to stop it.
       stopTimerInterval(this);
       stopRelativeTimeInterval(this);
     } catch (e) {}
     try {
       if (this._moduleChangeHandler) {
-        window.removeEventListener('bubble-card-modules-changed', this._moduleChangeHandler);
-        window.removeEventListener('bubble-card-module-updated', this._moduleChangeHandler);
+        window.removeEventListener('lovely-card-modules-changed', this._moduleChangeHandler);
+        window.removeEventListener('lovely-card-module-updated', this._moduleChangeHandler);
         document.removeEventListener('yaml-modules-updated', this._moduleChangeHandler);
         this._moduleChangeHandler = null;
         this._moduleChangeListenerAdded = false;
@@ -443,7 +443,7 @@ class BubbleCard extends HTMLElement {
       try {
         if (refreshTemplateStyles(this)) return;
       } catch (e) {
-        console.error('Bubble Card: Error while refreshing styles from a template', e);
+        console.error('Lovely Card: Error while refreshing styles from a template', e);
         return;
       }
     }
@@ -472,7 +472,7 @@ class BubbleCard extends HTMLElement {
       try {
         handlers[type](this);
       } catch (e) {
-        console.error(`Bubble Card: Error in handler for card_type '${type}'`, e);
+        console.error(`Lovely Card: Error in handler for card_type '${type}'`, e);
       }
     }
     try { sweepTemplates(this); } catch (e) {}
@@ -592,7 +592,7 @@ class BubbleCard extends HTMLElement {
   }
 
   static getConfigElement() {
-    return document.createElement("bubble-card-editor");
+    return document.createElement("lovely-card-editor");
   }
 
   _notifyEditorContext() {
@@ -609,19 +609,19 @@ class BubbleCard extends HTMLElement {
         isEditor: detectedEditor,
         editMode: this.editor || detectedEditor
       };
-      window.dispatchEvent(new CustomEvent('bubble-card-context', { detail }));
+      window.dispatchEvent(new CustomEvent('lovely-card-context', { detail }));
     } catch (_) {
       /* no-op */
     }
   }
 }
 
-customElements.define("bubble-card", BubbleCard);
+customElements.define("lovely-card", BubbleCard);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: "bubble-card",
-  name: "Bubble Card",
+  type: "lovely-card",
+  name: "Lovely Card",
   preview: false,
   // Resolved when Home Assistant renders the card picker rather than at
   // registration time: `hass` (and the fetched dictionary) only exist later.
@@ -630,12 +630,12 @@ window.customCards.push({
     ensureEditorTranslations(hass);
     return setupTranslation(hass)('editor.card_picker.description');
   },
-  documentationURL: "https://github.com/Clooos/Bubble-Card/",
+  documentationURL: "https://github.com/valentinpurrucker/lovely-card/",
   getEntitySuggestion,
 });
 
 console.info(
-  `%c Bubble Card %c ${version} `,
+  `%c Lovely Card %c ${version} `,
   'background-color: #555;color: #fff;padding: 3px 2px 3px 3px;border-radius: 14px 0 0 14px;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)',
   'background-color: #506eac;color: #fff;padding: 3px 3px 3px 2px;border-radius: 0 14px 14px 0;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)'
 );

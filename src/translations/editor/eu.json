@@ -115,7 +115,7 @@
       "info_organize": "Azpibotoiak banaka antolatu edo elkarrekin taldekatu ditzakezu. Taldeak lerroan (elkarren ondoan) edo errenkadatan (bertikalean pilatuta) antola daitezke, eta taldeetako botoiak lerroan edo zutabe-diseinuan erakuts daitezke.",
       "editor_title": "Azpibotoien editorea",
       "rows_detected_title": "Errenkaden konfigurazioa detektatu da",
-      "rows_detected_body": "Txartelaren altuera (errenkadak) esplizituki ezarrita dago zure konfigurazioan. Horrek errenkaden doikuntza automatikoak eragotziko ditu azpibotoiak gehitzean (adibidez, beheko azpibotoiak gehitzean). Sakatu beheko botoia ezarpen hori kentzeko eta Bubble Card-i errenkadak automatikoki kalkulatzen uzteko.",
+      "rows_detected_body": "Txartelaren altuera (errenkadak) esplizituki ezarrita dago zure konfigurazioan. Horrek errenkaden doikuntza automatikoak eragotziko ditu azpibotoiak gehitzean (adibidez, beheko azpibotoiak gehitzean). Sakatu beheko botoia ezarpen hori kentzeko eta Lovely Card-i errenkadak automatikoki kalkulatzen uzteko.",
       "remove_override": "Kendu ezarpena eta kalkulatu automatikoki",
       "card_specific": "Txartelaren berezko botoiak",
       "main_top": "Azpibotoi nagusiak (goian)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML erabiltzen duzu?",
       "notice_yaml_body": "Ordeztu laster-leihoaren konfigurazio zaharra formatu independentearekin:",
       "notice_protip": "Aholkua:",
-      "notice_protip_body": "Egia esan, oraindik YAML erabiltzen baduzu Bubble Card-erako, merezi du editore berria probatzea, oso erraza da laster-leihoak sortzea eta editatzea! Gainera, Module Store atzitzeko aukera ere izango duzu. Maitasun handia jarri dut editore honetan ❤️",
+      "notice_protip_body": "Egia esan, oraindik YAML erabiltzen baduzu Lovely Card-erako, merezi du editore berria probatzea, oso erraza da laster-leihoak sortzea eta editatzea! Gainera, Module Store atzitzeko aukera ere izango duzu. Maitasun handia jarri dut editore honetan ❤️",
       "notice_enjoy": "Gozatu eguneratze honetaz! Topa! 🍻",
       "notice_dismiss": "Ulertuta, ez erakutsi berriro ikuspegi honetan",
       "notice_remind": "Gogorarazi geroago"
@@ -579,7 +579,7 @@
       "show_original": "Erakutsi jatorrizkoa",
       "show_translation": "Erakutsi itzulpena",
       "translate_offer_title": "Itzuli moduluen testuak",
-      "translate_offer_body": "Moduluak ingelesez argitaratzen dira. Bubble Card-ek haien deskribapenak eta aukerak zure hizkuntzara itzul ditzake, baina horrek testu hori kanpoko itzulpen zerbitzu batera bidaltzen du. Itzalita jarraitzen du zuk piztu arte."
+      "translate_offer_body": "Moduluak ingelesez argitaratzen dira. Lovely Card-ek haien deskribapenak eta aukerak zure hizkuntzara itzul ditzake, baina horrek testu hori kanpoko itzulpen zerbitzu batera bidaltzen du. Itzalita jarraitzen du zuk piztu arte."
     },
     "module_editor": {
       "create_module": "Sortu modulu berria",
@@ -598,7 +598,7 @@
       "description_helper": "Deskribapen hau zure moduluan eta Module Store-n (partekatzen baduzu) agertzen da, beraz ziurtatu argia eta laburra dela. {bold}, baina kontuan izan zure moduluan bakarrik errendatuko dela; Module Store-k ez du erakutsiko.",
       "description_helper_bold": "HTML eta CSS inline erabil ditzakezu",
       "code_title": "Kodea (CSS/JS txantiloia)",
-      "code_helper": "CSS eta JS txantiloien aukerei buruzko informazio eta adibide gehiago {link} aurki ditzakezu. Aholkua: editorea handitu dezakezu panelaren izenburuan sakatuz (Bubble Card configuration).",
+      "code_helper": "CSS eta JS txantiloien aukerei buruzko informazio eta adibide gehiago {link} aurki ditzakezu. Aholkua: editorea handitu dezakezu panelaren izenburuan sakatuz (Lovely Card configuration).",
       "styling_docs": "Estiloen eta txantiloien dokumentazioan",
       "editor_schema_title": "Aukerakoa: editorearen eskema (YAML)",
       "yaml_error_title": "Errorea YAML eskeman",
@@ -653,7 +653,7 @@
       "download_error": "Errorea modulua deskargatzean: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card txartel bilduma minimalista eta pertsonalizagarria da"
+      "description": "Lovely Card txartel bilduma minimalista eta pertsonalizagarria da"
     },
     "errors": {
       "card_type_required": "Txartel mota bat zehaztu behar duzu",
@@ -673,8 +673,8 @@
       "hidden_content": "Edukia ezkutatuta dago edizio moduan errendimendua hobetzeko"
     },
     "navigation": {
-      "group": "Bubble Card-en laster-leihoak",
-      "hash_hint": "Bubble Card-en laster-leihoaren hash-a"
+      "group": "Lovely Card-en laster-leihoak",
+      "hash_hint": "Lovely Card-en laster-leihoaren hash-a"
     }
   }
 }

@@ -1,13 +1,13 @@
 // Get cached module data from localStorage
 export function getCachedModuleData() {
   try {
-    const cachedDataString = localStorage.getItem('bubble-card-module-store');
+    const cachedDataString = localStorage.getItem('lovely-card-module-store');
     if (!cachedDataString) return null;
 
     const cachedData = JSON.parse(cachedDataString);
 
     // Check if we are in API cooldown period due to API failure
-    const apiFailure = localStorage.getItem('bubble-card-api-failure-timestamp');
+    const apiFailure = localStorage.getItem('lovely-card-api-failure-timestamp');
     
     // If the API is in cooldown period after a failure and the cache is expired but still present, 
     // temporarily extend the validity of the cache
@@ -18,7 +18,7 @@ export function getCachedModuleData() {
       cachedData.expiration = extendedExpiration;
       
       // Save the extension
-      localStorage.setItem('bubble-card-module-store', JSON.stringify(cachedData));
+      localStorage.setItem('lovely-card-module-store', JSON.stringify(cachedData));
       console.log("⏳ Cache extended until", new Date(extendedExpiration));
       
       return cachedData;
@@ -48,7 +48,7 @@ export function saveCachedModuleData(modules) {
   try {
     // Save to local storage with expiration (24 hours)
     const expiration = Date.now() + 86400000; // 24 hours
-    localStorage.setItem('bubble-card-module-store', JSON.stringify({
+    localStorage.setItem('lovely-card-module-store', JSON.stringify({
       modules,
       expiration,
       // Store when the cache was last refreshed to support SWR checks

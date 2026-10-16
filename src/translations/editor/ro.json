@@ -115,7 +115,7 @@
       "info_organize": "Puteți organiza sub-butoanele individual sau le puteți grupa. Grupurile pot fi aranjate în linie (unul lângă altul) sau pe rânduri (stivuite vertical), iar butoanele din grupuri pot fi afișate în linie sau în coloană.",
       "editor_title": "Editor de sub-butoane",
       "rows_detected_title": "Configurație de rânduri detectată",
-      "rows_detected_body": "Înălțimea cardului (rows) este definită explicit în configurația dvs. Acest lucru va împiedica ajustările automate ale rândurilor la adăugarea sub-butoanelor (de exemplu, la adăugarea sub-butoanelor de jos). Apăsați butonul de mai jos pentru a elimina această definiție și a lăsa Bubble Card să calculeze automat rândurile.",
+      "rows_detected_body": "Înălțimea cardului (rows) este definită explicit în configurația dvs. Acest lucru va împiedica ajustările automate ale rândurilor la adăugarea sub-butoanelor (de exemplu, la adăugarea sub-butoanelor de jos). Apăsați butonul de mai jos pentru a elimina această definiție și a lăsa Lovely Card să calculeze automat rândurile.",
       "remove_override": "Elimină definiția și calculează automat",
       "card_specific": "Butoane specifice cardului",
       "main_top": "Sub-butoane principale (sus)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Folosiți YAML?",
       "notice_yaml_body": "Înlocuiți configurația veche a pop-up-ului cu formatul independent:",
       "notice_protip": "Sfat:",
-      "notice_protip_body": "Sincer, dacă în acest moment tot mai folosiți YAML pentru Bubble Card, ar merita să încercați noul editor, face crearea și editarea pop-up-urilor extrem de simple! Aveți acces și la Module Store. Am pus atât de mult suflet în acest editor ❤️",
+      "notice_protip_body": "Sincer, dacă în acest moment tot mai folosiți YAML pentru Lovely Card, ar merita să încercați noul editor, face crearea și editarea pop-up-urilor extrem de simple! Aveți acces și la Module Store. Am pus atât de mult suflet în acest editor ❤️",
       "notice_enjoy": "Bucurați-vă de această actualizare! Noroc! 🍻",
       "notice_dismiss": "Am înțeles, nu mai afișa în această vizualizare",
       "notice_remind": "Amintește-mi mai târziu"
@@ -579,7 +579,7 @@
       "show_original": "Afișează originalul",
       "show_translation": "Afișează traducerea",
       "translate_offer_title": "Traducerea textelor modulelor",
-      "translate_offer_body": "Modulele sunt publicate în engleză. Bubble Card poate traduce descrierile și opțiunile lor în limba ta, dar asta trimite textul respectiv către un serviciu de traducere extern. Rămâne dezactivat până îl activezi tu."
+      "translate_offer_body": "Modulele sunt publicate în engleză. Lovely Card poate traduce descrierile și opțiunile lor în limba ta, dar asta trimite textul respectiv către un serviciu de traducere extern. Rămâne dezactivat până îl activezi tu."
     },
     "module_editor": {
       "create_module": "Creează un modul nou",
@@ -598,7 +598,7 @@
       "description_helper": "Această descriere apare în modulul dvs. și în Module Store (dacă îl partajați), așa că asigurați-vă că este clară și concisă. {bold}, dar rețineți că va fi redat doar în modulul dvs., Module Store nu îl va afișa.",
       "description_helper_bold": "Puteți folosi HTML și CSS inline",
       "code_title": "Cod (șablon CSS/JS)",
-      "code_helper": "Mai multe informații și exemple despre posibilitățile șabloanelor CSS și JS găsiți în {link}. Sfat: puteți mări editorul apăsând pe titlul panoului (configurația Bubble Card).",
+      "code_helper": "Mai multe informații și exemple despre posibilitățile șabloanelor CSS și JS găsiți în {link}. Sfat: puteți mări editorul apăsând pe titlul panoului (configurația Lovely Card).",
       "styling_docs": "documentația de stiluri și șabloane",
       "editor_schema_title": "Opțional: schema editorului (YAML)",
       "yaml_error_title": "Eroare în schema YAML",
@@ -653,7 +653,7 @@
       "download_error": "Eroare la descărcarea modulului: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card este o colecție de carduri minimalistă și personalizabilă"
+      "description": "Lovely Card este o colecție de carduri minimalistă și personalizabilă"
     },
     "errors": {
       "card_type_required": "Trebuie să definiți un tip de card",
@@ -673,8 +673,8 @@
       "hidden_content": "Conținut ascuns în modul de editare pentru performanță"
     },
     "navigation": {
-      "group": "Pop-upuri Bubble Card",
-      "hash_hint": "Hash de pop-up Bubble Card"
+      "group": "Pop-upuri Lovely Card",
+      "hash_hint": "Hash de pop-up Lovely Card"
     }
   }
 }

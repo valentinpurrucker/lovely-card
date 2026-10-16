@@ -115,7 +115,7 @@
       "info_organize": "Gallwch drefnu is-fotymau'n unigol neu eu grwpio gyda'i gilydd. Gellir trefnu grwpiau mewn llinell (ochr yn ochr) neu mewn rhesi (wedi'u pentyrru'n fertigol), a gellir dangos botymau o fewn grwpiau mewn llinell neu mewn cynllun colofn.",
       "editor_title": "Golygydd is-fotymau",
       "rows_detected_title": "Canfuwyd cyfluniad rhesi",
-      "rows_detected_body": "Mae uchder y cerdyn (rhesi) wedi'i osod yn benodol yn eich cyfluniad. Bydd hyn yn atal addasiadau awtomatig i'r rhesi pan ychwanegir is-fotymau (er enghraifft, wrth ychwanegu is-fotymau gwaelod). Cliciwch y botwm isod i dynnu'r gosodiad a gadael i Bubble Card gyfrifo'r rhesi'n awtomatig.",
+      "rows_detected_body": "Mae uchder y cerdyn (rhesi) wedi'i osod yn benodol yn eich cyfluniad. Bydd hyn yn atal addasiadau awtomatig i'r rhesi pan ychwanegir is-fotymau (er enghraifft, wrth ychwanegu is-fotymau gwaelod). Cliciwch y botwm isod i dynnu'r gosodiad a gadael i Lovely Card gyfrifo'r rhesi'n awtomatig.",
       "remove_override": "Tynnu'r gosodiad a chyfrifo'n awtomatig",
       "card_specific": "Botymau penodol i'r cerdyn",
       "main_top": "Prif is-fotymau (brig)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Defnyddio YAML?",
       "notice_yaml_body": "Rhowch y fformat annibynnol yn lle hen gyfluniad y naidlen:",
       "notice_protip": "Awgrym:",
-      "notice_protip_body": "A dweud y gwir, os ydych yn dal i ddefnyddio YAML ar gyfer Bubble Card erbyn hyn, mae'n werth rhoi cynnig ar y golygydd newydd, mae'n gwneud creu a golygu naidlenni'n hawdd iawn! Rydych hefyd yn cael mynediad i'r Module Store. Rwyf wedi rhoi cymaint o gariad yn y golygydd hwn ❤️",
+      "notice_protip_body": "A dweud y gwir, os ydych yn dal i ddefnyddio YAML ar gyfer Lovely Card erbyn hyn, mae'n werth rhoi cynnig ar y golygydd newydd, mae'n gwneud creu a golygu naidlenni'n hawdd iawn! Rydych hefyd yn cael mynediad i'r Module Store. Rwyf wedi rhoi cymaint o gariad yn y golygydd hwn ❤️",
       "notice_enjoy": "Mwynhewch y diweddariad hwn! Iechyd da! 🍻",
       "notice_dismiss": "Iawn, peidiwch â dangos eto ar y golwg hwn",
       "notice_remind": "Atgoffwch fi'n hwyrach"
@@ -579,7 +579,7 @@
       "show_original": "Dangos y gwreiddiol",
       "show_translation": "Dangos y cyfieithiad",
       "translate_offer_title": "Cyfieithu testunau'r modiwlau",
-      "translate_offer_body": "Mae modiwlau'n cael eu cyhoeddi yn Saesneg. Gall Bubble Card gyfieithu eu disgrifiadau a'u dewisiadau i'ch iaith, ond mae hynny'n anfon y testun hwnnw at wasanaeth cyfieithu allanol. Mae'n aros i ffwrdd nes i chi ei droi ymlaen."
+      "translate_offer_body": "Mae modiwlau'n cael eu cyhoeddi yn Saesneg. Gall Lovely Card gyfieithu eu disgrifiadau a'u dewisiadau i'ch iaith, ond mae hynny'n anfon y testun hwnnw at wasanaeth cyfieithu allanol. Mae'n aros i ffwrdd nes i chi ei droi ymlaen."
     },
     "module_editor": {
       "create_module": "Creu modiwl newydd",
@@ -598,7 +598,7 @@
       "description_helper": "Mae'r disgrifiad hwn yn ymddangos yn eich modiwl ac yn y Module Store (os byddwch yn ei rannu), felly gwnewch yn siŵr ei fod yn glir ac yn gryno. {bold}, ond sylwch mai dim ond yn eich modiwl y caiff ei rendro; ni fydd y Module Store yn ei ddangos.",
       "description_helper_bold": "Gallwch ddefnyddio HTML a CSS mewnol",
       "code_title": "Cod (templed CSS/JS)",
-      "code_helper": "Mae mwy o wybodaeth ac enghreifftiau am bosibiliadau templedi CSS a JS i'w cael yn y {link}. Awgrym: gallwch ehangu'r golygydd drwy glicio ar deitl y panel (Bubble Card configuration).",
+      "code_helper": "Mae mwy o wybodaeth ac enghreifftiau am bosibiliadau templedi CSS a JS i'w cael yn y {link}. Awgrym: gallwch ehangu'r golygydd drwy glicio ar deitl y panel (Lovely Card configuration).",
       "styling_docs": "ddogfennaeth arddulliau a thempledi",
       "editor_schema_title": "Dewisol: sgema'r golygydd (YAML)",
       "yaml_error_title": "Gwall yn y sgema YAML",
@@ -653,7 +653,7 @@
       "download_error": "Gwall wrth lwytho'r modiwl i lawr: {error}"
     },
     "card_picker": {
-      "description": "Casgliad cardiau minimalaidd y gellir ei addasu yw Bubble Card"
+      "description": "Casgliad cardiau minimalaidd y gellir ei addasu yw Lovely Card"
     },
     "errors": {
       "card_type_required": "Mae angen i chi ddiffinio math o gerdyn",
@@ -673,8 +673,8 @@
       "hidden_content": "Mae'r cynnwys wedi'i guddio yn y modd golygu er mwyn perfformiad"
     },
     "navigation": {
-      "group": "Naidlenni Bubble Card",
-      "hash_hint": "Hash naidlen Bubble Card"
+      "group": "Naidlenni Lovely Card",
+      "hash_hint": "Hash naidlen Lovely Card"
     }
   }
 }

@@ -39,7 +39,7 @@ export function createCodeEntry({ onChange, onSubmit, onBack, maxLength = MAX_DI
     };
 }
 
-// Twelve round keys and a row of dots, drawn inside the menu of a dropdown in
+// Twelve softly rounded keys and a row of indicators, drawn inside the menu of a dropdown in
 // place of its options. Home Assistant asks for an alarm code in a dialog of
 // its own (dialog-enter-code.ts), this keeps the whole gesture in the menu.
 export function createCodeKeypad({ hass, submitLabel, onSubmit, onBack } = {}) {

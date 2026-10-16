@@ -24,7 +24,7 @@ afterEach(() => {
 describe('getStoredButtonWidth', () => {
     test('reads the width cached for that link', () => {
         const storage = createMemoryStorage();
-        storage.values.set('bubbleButtonWidth-#kitchen', '120');
+        storage.values.set('lovelyButtonWidth-#kitchen', '120');
         useStorage(storage);
 
         expect(getStoredButtonWidth('#kitchen')).toBe('120');
@@ -48,7 +48,7 @@ describe('storeButtonWidth', () => {
 
         storeButtonWidth('#kitchen', 120);
 
-        expect(storage.values.get('bubbleButtonWidth-#kitchen')).toBe('120');
+        expect(storage.values.get('lovelyButtonWidth-#kitchen')).toBe('120');
     });
 
     test('skips the write when the width has not moved', () => {

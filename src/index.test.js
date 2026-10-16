@@ -33,7 +33,7 @@ jest.unstable_mockModule('./tools/render-template.js', () => ({
     refreshTemplateStyles,
     TEMPLATE_STYLE: 2,
 }));
-jest.unstable_mockModule('./editor/bubble-card-editor.js', () => ({ default: class {} }));
+jest.unstable_mockModule('./editor/lovely-card-editor.js', () => ({ default: class {} }));
 jest.unstable_mockModule('./cards/pop-up/index.js', () => ({ cleanupPopUp: jest.fn(), handlePopUp: jest.fn() }));
 const handleButton = jest.fn();
 jest.unstable_mockModule('./cards/button/index.js', () => ({ handleButton }));
@@ -65,7 +65,7 @@ global.document = {
 
 const { updateCalendarSubscriptions } = await import('./cards/calendar/subscriptions.js');
 await import('./index.js');
-const BubbleCard = definedElements['bubble-card'];
+const BubbleCard = definedElements['lovely-card'];
 
 function createCard(config = { card_type: 'button' }) {
     const card = new BubbleCard();
@@ -137,8 +137,8 @@ describe('BubbleCard disconnect contract', () => {
 
         card.disconnectedCallback();
 
-        expect(window.removeEventListener).toHaveBeenCalledWith('bubble-card-modules-changed', handler);
-        expect(window.removeEventListener).toHaveBeenCalledWith('bubble-card-module-updated', handler);
+        expect(window.removeEventListener).toHaveBeenCalledWith('lovely-card-modules-changed', handler);
+        expect(window.removeEventListener).toHaveBeenCalledWith('lovely-card-module-updated', handler);
         expect(document.removeEventListener).toHaveBeenCalledWith('yaml-modules-updated', handler);
         expect(card._moduleChangeListenerAdded).toBe(false);
         expect(card._moduleChangeHandler).toBeNull();

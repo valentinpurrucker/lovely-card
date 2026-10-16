@@ -115,7 +115,7 @@
       "info_organize": "Mund t'i organizoni nën-butonat veçmas ose t'i gruponi së bashku. Grupet mund të vendosen në linjë (krah për krah) ose në rreshta (njëri mbi tjetrin), dhe butonat brenda grupeve mund të shfaqen në linjë ose në kolonë.",
       "editor_title": "Editori i nën-butonave",
       "rows_detected_title": "U zbulua konfigurimi i rreshtave",
-      "rows_detected_body": "Lartësia e kartës (rreshtat) është vendosur shprehimisht në konfigurimin tuaj. Kjo do të pengojë rregullimet automatike të rreshtave kur shtohen nën-butona (për shembull, kur shtoni nën-butona poshtë). Klikoni butonin më poshtë për të hequr vlerën e vendosur dhe për ta lënë Bubble Card t'i llogarisë rreshtat automatikisht.",
+      "rows_detected_body": "Lartësia e kartës (rreshtat) është vendosur shprehimisht në konfigurimin tuaj. Kjo do të pengojë rregullimet automatike të rreshtave kur shtohen nën-butona (për shembull, kur shtoni nën-butona poshtë). Klikoni butonin më poshtë për të hequr vlerën e vendosur dhe për ta lënë Lovely Card t'i llogarisë rreshtat automatikisht.",
       "remove_override": "Hiq vlerën dhe llogarit automatikisht",
       "card_specific": "Butonat specifikë të kartës",
       "main_top": "Nën-butonat kryesorë (lart)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Përdorni YAML?",
       "notice_yaml_body": "Zëvendësoni konfigurimin e vjetër të pop-up-it me formatin e pavarur:",
       "notice_protip": "Këshillë:",
-      "notice_protip_body": "Sinqerisht, nëse në këtë pikë ende përdorni YAML për Bubble Card, ia vlen ta provoni editorin e ri, me të krijimi dhe redaktimi i pop-up-eve bëhet shumë i thjeshtë! Përveç kësaj, përfitoni akses te Module Store. Kam derdhur shumë dashuri në këtë editor ❤️",
+      "notice_protip_body": "Sinqerisht, nëse në këtë pikë ende përdorni YAML për Lovely Card, ia vlen ta provoni editorin e ri, me të krijimi dhe redaktimi i pop-up-eve bëhet shumë i thjeshtë! Përveç kësaj, përfitoni akses te Module Store. Kam derdhur shumë dashuri në këtë editor ❤️",
       "notice_enjoy": "Shijoni këtë përditësim! Gëzuar! 🍻",
       "notice_dismiss": "E kuptova, mos e shfaq më në këtë pamje",
       "notice_remind": "Më kujto më vonë"
@@ -579,7 +579,7 @@
       "show_original": "Shfaq origjinalin",
       "show_translation": "Shfaq përkthimin",
       "translate_offer_title": "Përkthe tekstet e moduleve",
-      "translate_offer_body": "Modulet publikohen në anglisht. Bubble Card mund t'i përkthejë përshkrimet dhe opsionet e tyre në gjuhën tuaj, por kjo e dërgon atë tekst te një shërbim i jashtëm përkthimi. Mbetet i çaktivizuar derisa ta aktivizoni vetë."
+      "translate_offer_body": "Modulet publikohen në anglisht. Lovely Card mund t'i përkthejë përshkrimet dhe opsionet e tyre në gjuhën tuaj, por kjo e dërgon atë tekst te një shërbim i jashtëm përkthimi. Mbetet i çaktivizuar derisa ta aktivizoni vetë."
     },
     "module_editor": {
       "create_module": "Krijo modul të ri",
@@ -598,7 +598,7 @@
       "description_helper": "Ky përshkrim shfaqet në modulin tuaj dhe në Module Store (nëse e ndani), prandaj sigurohuni që të jetë i qartë dhe konciz. {bold}, por kini parasysh se do të shfaqet vetëm në modulin tuaj, Module Store nuk do ta shfaqë.",
       "description_helper_bold": "Mund të përdorni HTML dhe CSS inline",
       "code_title": "Kodi (shabllon CSS/JS)",
-      "code_helper": "Më shumë informacion dhe shembuj rreth mundësive të shablloneve CSS dhe JS mund të gjeni në {link}. Këshillë: Mund ta zmadhoni editorin duke klikuar mbi titullin e panelit (Bubble Card configuration).",
+      "code_helper": "Më shumë informacion dhe shembuj rreth mundësive të shablloneve CSS dhe JS mund të gjeni në {link}. Këshillë: Mund ta zmadhoni editorin duke klikuar mbi titullin e panelit (Lovely Card configuration).",
       "styling_docs": "dokumentacionin e stileve dhe shablloneve",
       "editor_schema_title": "Opsionale: Skema e editorit (YAML)",
       "yaml_error_title": "Gabim në skemën YAML",
@@ -653,7 +653,7 @@
       "download_error": "Gabim gjatë shkarkimit të modulit: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card është një koleksion kartash minimalist dhe i personalizueshëm"
+      "description": "Lovely Card është një koleksion kartash minimalist dhe i personalizueshëm"
     },
     "errors": {
       "card_type_required": "Duhet të përcaktoni një lloj karte",
@@ -673,8 +673,8 @@
       "hidden_content": "Përmbajtja është e fshehur në modalitetin e redaktimit për performancë"
     },
     "navigation": {
-      "group": "Pop-up-et e Bubble Card",
-      "hash_hint": "Hash-i i pop-up-it të Bubble Card"
+      "group": "Pop-up-et e Lovely Card",
+      "hash_hint": "Hash-i i pop-up-it të Lovely Card"
     }
   }
 }

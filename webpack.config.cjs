@@ -16,13 +16,13 @@ const performance = {
 }
 
 // Ships the per-language editor dictionaries (src/translations/editor/*.json)
-// as bubble-card-<lang>.json next to the bundle. They are fetched locally by
+// as lovely-card-<lang>.json next to the bundle. They are fetched locally by
 // src/tools/localize.js when the editor opens; en.json is bundled so it is
 // not emitted, and _-prefixed files are tooling artifacts.
 //
 // Flat, and not a translations/ subfolder, because every file of dist/ is also
 // attached to each release (.github/workflows/draft-release.yml), and a release
-// file cannot sit in a folder. HACS saves them all next to bubble-card.js. The
+// file cannot sit in a folder. HACS saves them all next to lovely-card.js. The
 // name is prefixed because the dev build writes into HA_PATH, which is a folder
 // shared with every other custom card.
 class EmitTranslationsPlugin {
@@ -37,7 +37,7 @@ class EmitTranslationsPlugin {
             if (!file.endsWith('.json') || file.startsWith('_') || file === 'en.json') continue;
             const minified = JSON.stringify(JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8')));
             compilation.emitAsset(
-              `bubble-card-${file}`,
+              `lovely-card-${file}`,
               new compiler.webpack.sources.RawSource(minified)
             );
           }
@@ -53,7 +53,7 @@ module.exports = [
   {
     mode: 'production',
     entry: {
-      'bubble-card': './src/index.js'
+      'lovely-card': './src/index.js'
     },
     module: {
       rules,
@@ -62,6 +62,7 @@ module.exports = [
     plugins,
     output: {
       path: path.resolve(__dirname, 'dist'),
+      clean: true,
       filename: '[name].js'
     }
   },
@@ -71,7 +72,7 @@ module.exports = [
   {
     mode: 'development',
     entry: {
-      'bubble-card': './src/index.js'
+      'lovely-card': './src/index.js'
     },
     module: {
       rules,

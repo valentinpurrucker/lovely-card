@@ -22,7 +22,7 @@
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black var(--bubble-calendar-mask-size, 16px), black calc(100% - var(--bubble-calendar-mask-size, 16px)), transparent 100%);
 }
 .card-content::after {
-  border-radius: 0 0 var(--bubble-calendar-border-radius, var(--bubble-border-radius, 32px)) var(--bubble-calendar-border-radius, var(--bubble-border-radius, 32px));
+  border-radius: 0 0 var(--bubble-calendar-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px)))) var(--bubble-calendar-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px))));
   content: "";
   display: flex;
   height: 32px;
@@ -67,7 +67,7 @@
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: var(--bubble-button-icon-border-radius, var(--bubble-icon-border-radius, var(--bubble-border-radius, 50%)));
+  border-radius: var(--bubble-button-icon-border-radius, var(--bubble-icon-border-radius, var(--bubble-border-radius, var(--lovely-radius-icon, var(--lovely-radius, 8px)))));
   background-color: var(--bubble-button-icon-background-color, var(--bubble-icon-background-color, var(--bubble-secondary-background-color, var(--card-background-color, var(--ha-card-background)))));
   position: relative;
 }
@@ -93,7 +93,7 @@
 }
 .bubble-day-events {
   width: 100%;
-  border-radius: var(--bubble-calendar-border-radius, var(--bubble-border-radius, 32px));
+  border-radius: var(--bubble-calendar-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px))));
   min-width: 0;
 }
 .bubble-event {
@@ -103,7 +103,7 @@
   align-items: flex-start;
   gap: 8px;
   padding: 4px 6px;
-  border-radius: var(--bubble-calendar-border-radius, var(--bubble-border-radius, 32px));
+  border-radius: var(--bubble-calendar-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px))));
   margin-inline-start: -6px;
   position: relative;
   line-height: 1em;
@@ -119,7 +119,7 @@
 .bubble-event-color {
   height: 12px;
   width: 12px;
-  border-radius: var(--bubble-calendar-border-radius, var(--bubble-border-radius, 32px));
+  border-radius: var(--bubble-calendar-indicator-border-radius, var(--lovely-radius-indicator, var(--lovely-radius, 2px)));
   flex-shrink: 0;
   flex-grow: 0;
 }

@@ -8,7 +8,7 @@
 // of them following the same pattern, because there was nothing else they could
 // have done.
 //
-// Its own module with no imports on purpose, because bubble-card.js calls it
+// Its own module with no imports on purpose, because lovely-card.js calls it
 // from disconnectedCallback, and pulling style-processor.js in there would drag
 // the whole style pipeline into that path.
 
@@ -45,7 +45,7 @@ export function runModuleTeardowns(context) {
     try {
       fn();
     } catch (error) {
-      console.warn('Bubble Card - A module teardown threw and was ignored:', error);
+      console.warn('Lovely Card - A module teardown threw and was ignored:', error);
     }
   }
 }

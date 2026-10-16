@@ -8,7 +8,7 @@
 // frame, which paints nothing and comes before the flip, so the cards are whole
 // by the time anything is on screen and the slide still renders nothing.
 //
-// Kept free of imports: bubble-card.js already imports the pop-up runtime, so the
+// Kept free of imports: lovely-card.js already imports the pop-up runtime, so the
 // registry cannot live in either of them without a cycle.
 const pendingCardUpdates = new Map();
 

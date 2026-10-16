@@ -178,7 +178,7 @@ function selectLegacyPopUpStackEntry(entries, options = {}) {
 export function isLegacyPopUpConfig(config) {
     return !!(
         config &&
-        config.type === 'custom:bubble-card' &&
+        config.type === 'custom:lovely-card' &&
         config.card_type === 'pop-up' &&
         !Array.isArray(config.cards)
     );
@@ -187,7 +187,7 @@ export function isLegacyPopUpConfig(config) {
 export function isStandalonePopUpConfig(config) {
     return !!(
         config &&
-        config.type === 'custom:bubble-card' &&
+        config.type === 'custom:lovely-card' &&
         config.card_type === 'pop-up' &&
         Array.isArray(config.cards)
     );
@@ -200,7 +200,7 @@ function isHorizontalStackCard(cardConfig) {
 function stripMigratedCardColumns(cardConfig) {
     const nextCardConfig = cloneConfig(cardConfig) || {};
 
-    if (nextCardConfig.type === 'custom:bubble-card') {
+    if (nextCardConfig.type === 'custom:lovely-card') {
         delete nextCardConfig.columns;
     }
 
@@ -222,7 +222,7 @@ function stripMigratedCardColumns(cardConfig) {
 }
 
 function shouldKeepMigratedCardAutoHeight(cardConfig) {
-    return cardConfig?.type !== 'custom:bubble-card';
+    return cardConfig?.type !== 'custom:lovely-card';
 }
 
 function applyMigratedLegacyGridLayout(cardConfig, columns = POPUP_GRID_COLUMN_COUNT) {
@@ -236,7 +236,7 @@ function applyMigratedLegacyGridLayout(cardConfig, columns = POPUP_GRID_COLUMN_C
     // sized themselves naturally. In the standalone grid, those cards can report
     // compact section defaults (often half-width or fixed row heights), which
     // squashes panels after migration. Make migrated non-Bubble cards full-width
-    // and auto-height explicitly while keeping Bubble Card's own row semantics.
+    // and auto-height explicitly while keeping Lovely Card's own row semantics.
     if (shouldKeepMigratedCardAutoHeight(nextCardConfig)) {
         gridOptions.rows = 'auto';
     }
@@ -621,7 +621,7 @@ async function migrateLegacyPopUpToStandalone(editor, originalHash) {
         }
     } catch (error) {
         editor._legacyStandaloneMigrationError = error?.message || t('editor.migration.failed_error');
-        console.error('Bubble Card: failed to migrate legacy pop-up', error);
+        console.error('Lovely Card: failed to migrate legacy pop-up', error);
     } finally {
         editor._legacyStandaloneMigrationBusy = false;
         editor.requestUpdate();
@@ -685,7 +685,7 @@ export function renderLegacyMigrationNotice(editor, originalHash) {
 // Migration Notice: one-shot dialog for unmigrated legacy pop-ups
 
 export function getMigrationNoticeStorageKey(hass = null) {
-    return `bubble-card-legacy-popup-notice-${getCurrentView(hass)}`;
+    return `lovely-card-legacy-popup-notice-${getCurrentView(hass)}`;
 }
 
 let _pending = false;
@@ -756,7 +756,7 @@ function _show() {
     _shownMigrationNoticeKeys.add(storageKey);
 
     const host = document.createElement('div');
-    host.id = 'bubble-card-migration-notice-host';
+    host.id = 'lovely-card-migration-notice-host';
     document.body.appendChild(host);
 
     /* ── Dialog element ──────────────────────────────────────────────────── */
@@ -781,7 +781,7 @@ function _show() {
     const hashTitle = escapeHtml(String(t('editor.migration.notice_available'))).replace(/"/g, '&quot;');
     const hashList = hashes.size > 0 ? `
         <p class="bubble-migration-notice-hashes" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px;">
-            ${[...hashes].map((popUpHash) => `<span title="${hashTitle}" style="display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 18px; white-space: nowrap; background-color: var(--mdc-text-field-disabled-line-color); font-size: 13px;">${escapeHtml(popUpHash)}</span>`).join('')}
+            ${[...hashes].map((popUpHash) => `<span title="${hashTitle}" style="display: inline-flex; align-items: center; padding: 4px 8px; border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px)); white-space: nowrap; background-color: var(--mdc-text-field-disabled-line-color); font-size: 13px;">${escapeHtml(popUpHash)}</span>`).join('')}
         </p>` : '';
 
     content.innerHTML = `
@@ -822,13 +822,13 @@ function _show() {
             ${t('editor.migration.notice_yaml_body')}
         </p>
         <pre style="margin: 0 0 12px; padding: 12px; background: var(--secondary-background-color); border-radius: 8px; overflow-x: auto; font-size: 0.85em;">
-- type: custom:bubble-card
+- type: custom:lovely-card
   card_type: pop-up
   name: My Pop-up
   icon: mdi:home
   hash: "#my-popup"
   cards:
-    - type: custom:bubble-card
+    - type: custom:lovely-card
       card_type: button
       entity: light.living_room
       name: Living Room

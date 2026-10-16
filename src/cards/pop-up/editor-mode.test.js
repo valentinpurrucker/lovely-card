@@ -13,7 +13,7 @@ const handlePopUpCards = jest.fn();
 const setStandalonePopUpCardsActive = jest.fn();
 jest.unstable_mockModule('./cards/index.js', () => ({ noteFoldCalibration: jest.fn(), handlePopUpCards, setStandalonePopUpCardsActive }));
 jest.unstable_mockModule('./helpers.js', () => ({
-    BUBBLE_URL_EVENT: 'bubble-card-location-changed',
+    BUBBLE_URL_EVENT: 'lovely-card-location-changed',
     restorePopupHostLayout: jest.fn(),
     suspendPopupHostLayout: jest.fn(),
 }));
@@ -189,7 +189,7 @@ describe('the nudge sent after an editor dialog closes', () => {
             jest.advanceTimersByTime(100);
 
             expect(window.dispatchEvent).toHaveBeenCalledTimes(1);
-            expect(window.dispatchEvent.mock.calls[0][0].type).toBe('bubble-card-location-changed');
+            expect(window.dispatchEvent.mock.calls[0][0].type).toBe('lovely-card-location-changed');
         } finally {
             jest.useRealTimers();
         }

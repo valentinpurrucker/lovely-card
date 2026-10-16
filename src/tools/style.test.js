@@ -25,7 +25,7 @@ function createInlineStyle() {
 
 // Home Assistant writes its theme inline on <html>; everything below reads the
 // computed values, which is where the substituted colors land. The observer
-// watching that attribute is what tells Bubble Card the theme moved, so the mock
+// watching that attribute is what tells Lovely Card the theme moved, so the mock
 // hands the test a way to replay a write the way the browser would.
 function mountTheme(themeVariables, { prefersDark = false } = {}) {
     const documentElement = { style: createInlineStyle() };
@@ -106,7 +106,7 @@ describe('createBubbleDefaultColor', () => {
 
     test('falls back on a dark background when only the text color is readable', async () => {
         // An unreadable background used to mean white, so a dark theme exposing a
-        // color format Bubble Card cannot parse lost its deep blue.
+        // color format Lovely Card cannot parse lost its deep blue.
         mountTheme({ '--primary-background-color': 'oklch(0.2 0.02 280)', '--primary-text-color': '#e1e1e1' });
         await loadModules();
 

@@ -3,9 +3,9 @@ import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 // The note is the only place a reader is ever told that module text leaves
 // their network, so what it says, and to whom, is the whole point of it.
 
-const TRANSLATE_KEY = 'bubble-card-module-translation';
-const BETA_KEY = 'bubble-card-store-translate';
-const NOTICE_KEY = 'bubble-card-translate-notice';
+const TRANSLATE_KEY = 'lovely-card-module-translation';
+const BETA_KEY = 'lovely-card-store-translate';
+const NOTICE_KEY = 'lovely-card-translate-notice';
 
 function createStorage(initial = {}) {
     const values = new Map(Object.entries(initial));

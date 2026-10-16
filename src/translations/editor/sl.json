@@ -115,7 +115,7 @@
       "info_organize": "Podgumbe lahko razporedite posamično ali jih združite v skupine. Skupine so lahko razporejene v vrsti (ena ob drugi) ali v vrsticah (ena pod drugo), gumbi znotraj skupin pa so lahko prikazani v vrsti ali v stolpcu.",
       "editor_title": "Urejevalnik podgumbov",
       "rows_detected_title": "Zaznana konfiguracija vrstic",
-      "rows_detected_body": "Višina kartice (rows) je v vaši konfiguraciji izrecno nastavljena. To bo preprečilo samodejno prilagajanje vrstic ob dodajanju podgumbov (na primer ob dodajanju spodnjih podgumbov). Kliknite spodnji gumb, da odstranite to nastavitev in prepustite Bubble Card samodejni izračun vrstic.",
+      "rows_detected_body": "Višina kartice (rows) je v vaši konfiguraciji izrecno nastavljena. To bo preprečilo samodejno prilagajanje vrstic ob dodajanju podgumbov (na primer ob dodajanju spodnjih podgumbov). Kliknite spodnji gumb, da odstranite to nastavitev in prepustite Lovely Card samodejni izračun vrstic.",
       "remove_override": "Odstrani nastavitev in izračunaj samodejno",
       "card_specific": "Gumbi, specifični za kartico",
       "main_top": "Glavni podgumbi (zgoraj)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Uporabljate YAML?",
       "notice_yaml_body": "Zamenjajte staro konfiguracijo pojavnega okna s samostojno obliko:",
       "notice_protip": "Namig:",
-      "notice_protip_body": "Iskreno, če za Bubble Card na tej točki še vedno uporabljate YAML, poskusite novi urejevalnik, z njim je ustvarjanje in urejanje pojavnih oken mala malica! Dobite tudi dostop do Module Store. V ta urejevalnik sem vložil ogromno ljubezni ❤️",
+      "notice_protip_body": "Iskreno, če za Lovely Card na tej točki še vedno uporabljate YAML, poskusite novi urejevalnik, z njim je ustvarjanje in urejanje pojavnih oken mala malica! Dobite tudi dostop do Module Store. V ta urejevalnik sem vložil ogromno ljubezni ❤️",
       "notice_enjoy": "Uživajte v tej posodobitvi! Na zdravje! 🍻",
       "notice_dismiss": "Razumem, ne prikaži več v tem pogledu",
       "notice_remind": "Opomni me pozneje"
@@ -579,7 +579,7 @@
       "show_original": "Prikaži izvirnik",
       "show_translation": "Prikaži prevod",
       "translate_offer_title": "Prevedi besedila modulov",
-      "translate_offer_body": "Moduli so objavljeni v angleščini. Bubble Card lahko njihove opise in možnosti prevede v vaš jezik, vendar to besedilo pošlje zunanji prevajalski storitvi. Ostane izklopljeno, dokler tega sami ne vklopite."
+      "translate_offer_body": "Moduli so objavljeni v angleščini. Lovely Card lahko njihove opise in možnosti prevede v vaš jezik, vendar to besedilo pošlje zunanji prevajalski storitvi. Ostane izklopljeno, dokler tega sami ne vklopite."
     },
     "module_editor": {
       "create_module": "Ustvari nov modul",
@@ -598,7 +598,7 @@
       "description_helper": "Ta opis se prikaže v vašem modulu in v Module Store (če ga delite), zato poskrbite, da bo jasen in jedrnat. {bold}, vendar upoštevajte, da bo izrisan samo v vašem modulu; Module Store ga ne bo prikazala.",
       "description_helper_bold": "Uporabite lahko HTML in vgrajeni CSS",
       "code_title": "Koda (predloga CSS/JS)",
-      "code_helper": "Več informacij in primerov o možnostih predlog CSS in JS najdete v {link}. Nasvet: urejevalnik lahko povečate s klikom na naslov plošče (konfiguracija Bubble Card).",
+      "code_helper": "Več informacij in primerov o možnostih predlog CSS in JS najdete v {link}. Nasvet: urejevalnik lahko povečate s klikom na naslov plošče (konfiguracija Lovely Card).",
       "styling_docs": "dokumentaciji o slogih in predlogah",
       "editor_schema_title": "Izbirno: shema urejevalnika (YAML)",
       "yaml_error_title": "Napaka v shemi YAML",
@@ -653,7 +653,7 @@
       "download_error": "Napaka pri prenosu modula: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card je minimalistična in prilagodljiva zbirka kartic"
+      "description": "Lovely Card je minimalistična in prilagodljiva zbirka kartic"
     },
     "errors": {
       "card_type_required": "Določiti morate vrsto kartice",
@@ -673,8 +673,8 @@
       "hidden_content": "Vsebina je v načinu urejanja skrita zaradi zmogljivosti"
     },
     "navigation": {
-      "group": "Pojavna okna Bubble Card",
-      "hash_hint": "Hash pojavnega okna Bubble Card"
+      "group": "Pojavna okna Lovely Card",
+      "hash_hint": "Hash pojavnega okna Lovely Card"
     }
   }
 }

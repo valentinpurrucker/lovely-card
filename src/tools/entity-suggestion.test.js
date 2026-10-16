@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 
 // The generated configurations are validated against the real
 // BubbleCard.setConfig, so the element module is imported with every card
-// handler mocked, mirroring the harness of bubble-card.test.js.
+// handler mocked, mirroring the harness of lovely-card.test.js.
 jest.unstable_mockModule('../var/version.js', () => ({ version: 'test' }));
 jest.unstable_mockModule('../tools/init.js', () => ({ initializeContent: jest.fn() }));
 jest.unstable_mockModule('../tools/tap-actions.js', () => ({ cleanupTapActions: jest.fn() }));
@@ -21,7 +21,7 @@ jest.unstable_mockModule('../tools/icon.js', () => ({
     registerForIconRefresh: jest.fn(),
     unregisterForIconRefresh: jest.fn(),
 }));
-jest.unstable_mockModule('../editor/bubble-card-editor.js', () => ({ default: class {} }));
+jest.unstable_mockModule('../editor/lovely-card-editor.js', () => ({ default: class {} }));
 jest.unstable_mockModule('../cards/pop-up/index.js', () => ({ cleanupPopUp: jest.fn(), handlePopUp: jest.fn() }));
 jest.unstable_mockModule('../cards/button/index.js', () => ({ handleButton: jest.fn() }));
 jest.unstable_mockModule('../cards/sub-buttons/index.js', () => ({ handleSubButtons: jest.fn() }));
@@ -51,7 +51,7 @@ global.document = {
 };
 
 await import('../index.js');
-const BubbleCard = definedElements['bubble-card'];
+const BubbleCard = definedElements['lovely-card'];
 
 const { getEntitySuggestion } = await import('./entity-suggestion.js');
 
@@ -170,7 +170,7 @@ describe('getEntitySuggestion', () => {
     test('every suggestion is half width, tiles also pin the validated height', () => {
         for (const entityId of Object.keys(STATES)) {
             for (const suggestion of suggestionsFor(entityId)) {
-                expect(suggestion.config.type).toBe('custom:bubble-card');
+                expect(suggestion.config.type).toBe('custom:lovely-card');
                 if (suggestion.classic) {
                     expect(suggestion.config.grid_options).toEqual({ columns: 6 });
                     expect(suggestion.config.styles).toBeUndefined();
@@ -194,7 +194,7 @@ describe('getEntitySuggestion', () => {
         expect(light.map((s) => s.label)).toEqual([undefined, 'Button', 'Slider']);
         expect(light[1].classic).toBe(true);
         expect(light[1].config).toEqual({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             entity: 'light.dimmable',
             grid_options: { columns: 6 },
@@ -207,7 +207,7 @@ describe('getEntitySuggestion', () => {
             'Temperature \u00b7 Preset mode', 'Climate', 'Button', 'Slider',
         ]);
         expect(climate[6].config).toEqual({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'climate',
             entity: 'climate.preset',
             grid_options: { columns: 6 },
@@ -223,7 +223,7 @@ describe('getEntitySuggestion', () => {
 
         const calendar = suggestionsFor('calendar.a');
         expect(calendar[1].config).toEqual({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'calendar',
             entities: [{ entity: 'calendar.a' }],
             grid_options: { columns: 6 },

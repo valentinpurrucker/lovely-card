@@ -115,7 +115,7 @@
       "info_organize": "Alamnuppe saab korraldada ükshaaval või rühmitada. Rühmad võivad paikneda reas (kõrvuti) või ridades (vertikaalselt virnastatuna) ning rühmades olevaid nuppe saab kuvada reas või veerupaigutuses.",
       "editor_title": "Alamnuppude redaktor",
       "rows_detected_title": "Ridade seadistus tuvastatud",
-      "rows_detected_body": "Kaardi kõrgus (read) on sinu seadistuses selgesõnaliselt määratud. See takistab ridade automaatset kohandamist alamnuppude lisamisel (näiteks alumiste alamnuppude lisamisel). Klõpsa allolevat nuppu, et eemaldada see määrang ja lasta Bubble Cardil read automaatselt arvutada.",
+      "rows_detected_body": "Kaardi kõrgus (read) on sinu seadistuses selgesõnaliselt määratud. See takistab ridade automaatset kohandamist alamnuppude lisamisel (näiteks alumiste alamnuppude lisamisel). Klõpsa allolevat nuppu, et eemaldada see määrang ja lasta Lovely Cardil read automaatselt arvutada.",
       "remove_override": "Eemalda määrang ja arvuta automaatselt",
       "card_specific": "Kaardipõhised nupud",
       "main_top": "Peamised alamnupud (üleval)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Kasutad YAML-i?",
       "notice_yaml_body": "Asenda vana hüpikakna seadistus eraldiseisva vorminguga:",
       "notice_protip": "Nõuanne:",
-      "notice_protip_body": "Ausalt öeldes, kui kasutad Bubble Cardi jaoks endiselt YAML-i, tasub uut redaktorit proovida, sellega on hüpikakende loomine ja muutmine imelihtne! Lisaks saad ligipääsu Module Store'ile. Olen sellesse redaktorisse pannud tohutult armastust ❤️",
+      "notice_protip_body": "Ausalt öeldes, kui kasutad Lovely Cardi jaoks endiselt YAML-i, tasub uut redaktorit proovida, sellega on hüpikakende loomine ja muutmine imelihtne! Lisaks saad ligipääsu Module Store'ile. Olen sellesse redaktorisse pannud tohutult armastust ❤️",
       "notice_enjoy": "Naudi seda uuendust! Terviseks! 🍻",
       "notice_dismiss": "Selge, ära näita seda vaadet enam uuesti",
       "notice_remind": "Tuleta hiljem meelde"
@@ -579,7 +579,7 @@
       "show_original": "Kuva originaal",
       "show_translation": "Kuva tõlge",
       "translate_offer_title": "Tõlgi moodulite tekstid",
-      "translate_offer_body": "Moodulid avaldatakse inglise keeles. Bubble Card oskab nende kirjeldused ja valikud sinu keelde tõlkida, kuid saadab selle teksti välisele tõlketeenusele. See jääb välja lülitatuks, kuni sa selle ise sisse lülitad."
+      "translate_offer_body": "Moodulid avaldatakse inglise keeles. Lovely Card oskab nende kirjeldused ja valikud sinu keelde tõlkida, kuid saadab selle teksti välisele tõlketeenusele. See jääb välja lülitatuks, kuni sa selle ise sisse lülitad."
     },
     "module_editor": {
       "create_module": "Loo uus moodul",
@@ -598,7 +598,7 @@
       "description_helper": "See kirjeldus kuvatakse sinu moodulis ja Module Store'is (kui seda jagad), seega veendu, et see oleks selge ja kokkuvõtlik. {bold}, kuid arvesta, et seda renderdatakse ainult sinu moodulis, Module Store seda ei kuva.",
       "description_helper_bold": "Võid kasutada HTML-i ja tekstisisest CSS-i",
       "code_title": "Kood (CSS/JS-mall)",
-      "code_helper": "Rohkem infot ja näiteid CSS- ja JS-mallide võimaluste kohta leiad {link}. Vihje: redaktorit saab suurendada, klõpsates paneeli pealkirjal (Bubble Card configuration).",
+      "code_helper": "Rohkem infot ja näiteid CSS- ja JS-mallide võimaluste kohta leiad {link}. Vihje: redaktorit saab suurendada, klõpsates paneeli pealkirjal (Lovely Card configuration).",
       "styling_docs": "stiilide ja mallide dokumentatsioonist",
       "editor_schema_title": "Valikuline: redaktori skeem (YAML)",
       "yaml_error_title": "Viga YAML-skeemis",
@@ -653,7 +653,7 @@
       "download_error": "Viga mooduli allalaadimisel: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card on minimalistlik ja kohandatav kaardikogu"
+      "description": "Lovely Card on minimalistlik ja kohandatav kaardikogu"
     },
     "errors": {
       "card_type_required": "Pead määrama kaardi tüübi",
@@ -673,8 +673,8 @@
       "hidden_content": "Sisu on jõudluse huvides redigeerimisrežiimis peidetud"
     },
     "navigation": {
-      "group": "Bubble Cardi hüpikaknad",
-      "hash_hint": "Bubble Cardi hüpikakna räsi"
+      "group": "Lovely Cardi hüpikaknad",
+      "hash_hint": "Lovely Cardi hüpikakna räsi"
     }
   }
 }

@@ -9,7 +9,7 @@ function sanitizeIncludePath(path) {
 
 function fetchIncludeContent(relativePath) {
   if (typeof XMLHttpRequest === 'undefined') {
-    console.warn('Bubble Card - XMLHttpRequest is unavailable, skipping !include resolution.');
+    console.warn('Lovely Card - XMLHttpRequest is unavailable, skipping !include resolution.');
     return null;
   }
 
@@ -24,9 +24,9 @@ function fetchIncludeContent(relativePath) {
     if (request.status === 200) {
       return request.responseText;
     }
-    console.error(`Bubble Card - Unable to resolve !include (${url}): HTTP ${request.status}`);
+    console.error(`Lovely Card - Unable to resolve !include (${url}): HTTP ${request.status}`);
   } catch (error) {
-    console.error(`Bubble Card - Error while loading included YAML (${url}):`, error);
+    console.error(`Lovely Card - Error while loading included YAML (${url}):`, error);
   }
   return null;
 }
@@ -48,7 +48,7 @@ export function getYamlIncludeSchema() {
       try {
         return YAML.load(fileContent, { schema: getYamlIncludeSchema() });
       } catch (error) {
-        console.error(`Bubble Card - Error parsing included YAML (${data}):`, error);
+        console.error(`Lovely Card - Error parsing included YAML (${data}):`, error);
         return null;
       }
     },
@@ -63,7 +63,7 @@ export function parseYamlWithIncludes(yamlString) {
   try {
     return YAML.load(yamlString, { schema: getYamlIncludeSchema() });
   } catch (error) {
-    console.error('Bubble Card - YAML parsing error:', error);
+    console.error('Lovely Card - YAML parsing error:', error);
     return null;
   }
 }

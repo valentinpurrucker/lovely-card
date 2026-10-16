@@ -46,7 +46,7 @@ export function renderTranslationNote(context, id, translated) {
 // English would otherwise never learn the option exists. The offer says what it
 // costs, in one sentence, and can be sent away for good.
 
-const NOTICE_STORAGE_KEY = 'bubble-card-translate-notice';
+const NOTICE_STORAGE_KEY = 'lovely-card-translate-notice';
 let noticeDismissed;
 
 function isOfferDismissed() {

@@ -55,7 +55,7 @@ describe('bridgeDialogCloseToParent', () => {
 
 describe('standalone popup dialog params', () => {
     const standalonePopup = {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'pop-up',
         hash: '#kitchen',
         cards: [
@@ -71,7 +71,7 @@ describe('standalone popup dialog params', () => {
             type: 'vertical-stack',
             cards: [
                 {
-                    type: 'custom:bubble-card',
+                    type: 'custom:lovely-card',
                     card_type: 'pop-up',
                     hash: '#bedroom',
                     cards: [],
@@ -113,13 +113,13 @@ describe('standalone popup dialog params', () => {
 
     test('reopens the second standalone popup in a stack with similar hashes on the correct path', () => {
         const firstPopup = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#alooo',
             cards: [{ type: 'button', entity: 'light.shelly' }],
         };
         const secondPopup = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#alooooo',
             cards: [{ type: 'calendar', entities: ['calendar.recycle'] }],
@@ -217,7 +217,7 @@ describe('standalone popup dialog params', () => {
 
     test('matches a freshly mutated standalone popup back to its unsaved stack wrapper by hash', () => {
         const secondPopup = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#pantry',
             cards: [
@@ -455,14 +455,14 @@ describe('standalone parent editor visual state', () => {
 
 describe('forceDialogDirtyState', () => {
     const originalConfig = {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'pop-up',
         hash: '#test',
         cards: [],
     };
 
     const editedConfig = {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'pop-up',
         hash: '#test',
         cards: [{ type: 'button', entity: 'light.kitchen' }],
@@ -604,7 +604,7 @@ describe('reopened pop-up dialog close flow', () => {
 
     // HA strips every top-level key left at its default. Without a
     // `getDefaultConfig` on the card class (the case for every custom card,
-    // Bubble Card included) that default is `false`.
+    // Lovely Card included) that default is `false`.
     function stripDefaults(value, defaults) {
         if (!value || typeof value !== 'object' || Array.isArray(value)) return value;
 
@@ -693,7 +693,7 @@ describe('reopened pop-up dialog close flow', () => {
     // top-level `false` is enough to make HA's normalizer differ from the raw
     // config, which is why this only reproduces on some setups.
     const originalPopup = {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'pop-up',
         hash: '#kitchen',
         close_by_clicking_outside: false,
@@ -744,7 +744,7 @@ describe('reopened pop-up dialog close flow', () => {
         const slice = dialog._dirtySlices.get(DEFAULT_KEY);
         expect(slice.initial).toEqual(originalPopup);
         expect(slice.normalizedInitial).toEqual({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             hash: '#kitchen',
             cards: [],
         });
@@ -781,7 +781,7 @@ describe('reopened pop-up dialog close flow', () => {
 describe('createStandaloneParentDialogParams original config isolation', () => {
     test('clones _originalCardConfig so it survives in-place mutations', () => {
         const popupConfig = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#kitchen',
             cards: [{ type: 'button', entity: 'light.kitchen' }],
@@ -807,7 +807,7 @@ describe('createStandaloneParentDialogParams original config isolation', () => {
 
     test('clones _standalonePopupConfig independently from cardConfig', () => {
         const popupConfig = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#test',
             cards: [],
@@ -824,7 +824,7 @@ describe('createStandaloneParentDialogParams original config isolation', () => {
 
     test('clones original config for nested popups inside stacks', () => {
         const nestedPopup = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#nested',
             cards: [{ type: 'button', entity: 'light.bedroom' }],
@@ -858,7 +858,7 @@ describe('findConfigPath serialization cost', () => {
         return {
             views: [{
                 cards: Array.from({ length: cardCount }, (_, index) => ({
-                    type: 'custom:bubble-card',
+                    type: 'custom:lovely-card',
                     card_type: 'pop-up',
                     hash: `#room-${index}`,
                     name: `Room ${index}`,
@@ -874,7 +874,7 @@ describe('findConfigPath serialization cost', () => {
         return {
             views: [{
                 cards: [{
-                    type: 'custom:bubble-card',
+                    type: 'custom:lovely-card',
                     card_type: 'pop-up',
                     hash: '#kitchen',
                     cards: Array.from({ length: cardCount }, (_, index) => ({
@@ -911,14 +911,14 @@ describe('findConfigPath serialization cost', () => {
     });
 
     test('still reports no path when the target is the root itself', () => {
-        const popup = { type: 'custom:bubble-card', card_type: 'pop-up', hash: '#kitchen' };
+        const popup = { type: 'custom:lovely-card', card_type: 'pop-up', hash: '#kitchen' };
 
         expect(findConfigPath(popup, popup)).toBe(null);
     });
 
     test('does not match a card that only shares its type', () => {
         const dashboard = buildDashboard(3);
-        const target = { type: 'custom:bubble-card', card_type: 'pop-up', hash: '#absent' };
+        const target = { type: 'custom:lovely-card', card_type: 'pop-up', hash: '#absent' };
 
         expect(findConfigPath(dashboard, target)).toBe(null);
     });

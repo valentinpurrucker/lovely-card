@@ -1,6 +1,6 @@
-# Bubble Card module documentation
+# Lovely Card module documentation
 
-This documentation covers everything you need to write a Bubble Card module: the editor schema that builds your configuration UI, how to read those values from your code, the entity suggestions you can contribute to the Home Assistant card picker, and how to keep your module fast and compatible.
+This documentation covers everything you need to write a Lovely Card module: the editor schema that builds your configuration UI, how to read those values from your code, the entity suggestions you can contribute to the Home Assistant card picker, and how to keep your module fast and compatible.
 
 <img width="455" alt="image" src="https://github.com/user-attachments/assets/6c04ebef-d8f7-4816-9006-808f80a7e14e" />
 
@@ -99,7 +99,7 @@ editor:
 
 ## Accessing configuration values in your module code
 
-When creating a Bubble Card module, you'll need to access the values configured by users through the editor. These values are available in your module's code through the `this.config` object.
+When creating a Lovely Card module, you'll need to access the values configured by users through the editor. These values are available in your module's code through the `this.config` object.
 
 ### Accessing configuration in JavaScript templates
 
@@ -271,7 +271,7 @@ Two consequences worth knowing:
 
 `visible` hides a field while its condition does not hold, which is how an
 option that cannot do anything where the card stands stays out of the way.
-Home Assistant evaluates it, so it needs nothing from Bubble Card. Home
+Home Assistant evaluates it, so it needs nothing from Lovely Card. Home
 Assistant 2026.9 supports it and 2026.3 does not, and a version without it
 ignores the key and shows every field, so your form has to stay usable with
 all of them visible.
@@ -312,7 +312,7 @@ Two traps:
 You can define fields using either the legacy type syntax or the modern selector syntax.
 
 > [!IMPORTANT]
-> **Not** all selector types have been tested with Bubble Card modules. Some selectors might not work correctly or might not be fully compatible. If you encounter an issue, please report it [here](https://github.com/Clooos/Bubble-Card/issues).
+> **Not** all selector types have been tested with Lovely Card modules. Some selectors might not work correctly or might not be fully compatible. If you encounter an issue, please report it [here](https://github.com/valentinpurrucker/lovely-card/issues).
 
 ### Selector-based fields
 
@@ -493,7 +493,7 @@ if (!elementConfig?.condition || checkConditionsMet([].concat(elementConfig.cond
 normally evaluates them on the server. Every condition type the native condition
 builder offers is supported: the Lovelace ones (`state`, `numeric_state`,
 `screen`, `user`, `time`, `location`, `view_columns`, `and`, `or`, `not`, plus
-the Bubble Card `template` one) and the ones the integrations provide
+the Lovely Card `template` one) and the ones the integrations provide
 (`sun.is_up`, `light.is_on`, `select.is_option_selected`, `climate.is_heating`,
 `moon.is_phase`, ...) with their `target`, `behavior` and `for` options. The
 legacy `sun` and `zone` conditions, which the builder no longer offers but which
@@ -508,7 +508,7 @@ astral library Home Assistant uses:
   ones published by `sun.sun`. It is exact until the event has passed, then off
   by the few minutes the event drifts in a day.
 
-A condition type Home Assistant adds after a Bubble Card release reads as false
+A condition type Home Assistant adds after a Lovely Card release reads as false
 and logs a warning in the browser console naming the type, so a condition that
 never matches is never silent.
 
@@ -862,7 +862,7 @@ without a `group` render at the top level as usual:
 
 | Option | Type | Description |
 |--------|------|-------------|
-| `fields` | object | Map of field keys to field schemas. Each field supports a `label`, a `description`, a nested `selector` (any selector type), and an optional `group`. Keys starting with `__` or `bc_group_` are reserved for the editor's internal UI state. |
+| `fields` | object | Map of field keys to field schemas. Each field supports a `label`, a `description`, a nested `selector` (any selector type), and an optional `group`. Keys starting with `__` or `lc_group_` are reserved for the editor's internal UI state. |
 | `fields.*.group` | string | Renders the field inside a collapsible section with this title. Fields sharing the same `group` end up in the same section. UI-only: the stored value stays flat. |
 | `fields.*.group_icon` | string | Optional icon (Material Design Icons) for the field's group section. |
 | `fields.*.visible_if` | string | JS expression evaluated against the item's current data as `item`, the live `hass` object and the card's config as `card` (e.g. `item.target === 'card'`). `hass` and `card` may be `undefined` (early renders, dialogs the card config can't be found from), so guard them (`card && card.entity`). The field only renders while the expression is truthy; sections whose fields are all hidden disappear. Re-evaluated live on every change. Broken expressions fail open (field stays visible). |
@@ -1174,7 +1174,7 @@ You can create collapsible sections:
 ## Entity suggestions
 
 Home Assistant (2026.6+) suggests cards when a user picks an entity in the card picker, and
-Bubble Card answers with a set of built-in tile recipes. Your module can join that list by
+Lovely Card answers with a set of built-in tile recipes. Your module can join that list by
 declaring a `suggestions:` key next to `name`, `code` and `editor`. Suggested cards appear
 in the **Community** section of the picker, rendered as live previews.
 
@@ -1252,7 +1252,7 @@ bubble_popup_suggestions:
         name: helpers.areaName(area),
         icon: 'mdi:sofa-outline',
         cards: ids.map((id) => ({
-          type: 'custom:bubble-card',
+          type: 'custom:lovely-card',
           card_type: 'button',
           entity: id,
           name: helpers.friendlyName(id),
@@ -1278,7 +1278,7 @@ Return an **array of `{ label, config }` entries**, a **single entry**, or `null
 normalized:
 
 - The entry is dropped unless `config` is an object carrying a truthy `card_type`.
-- `config.type` is forced to `custom:bubble-card`.
+- `config.type` is forced to `custom:lovely-card`.
 - `supported:` and `unsupported:` are honored, exactly like a declarative rule.
 - `label` is composed as `<module name> · <label>`, so your entries read as one family in
   the picker. Without a label, the entry is named after your module alone.
@@ -1299,7 +1299,7 @@ happens for a moment after a hard reload.
 
 | Helper | Returns |
 |--------|---------|
-| `t(key, params)` | Translated string for a Bubble Card translation key, in the user's language. `params` fills the `{placeholders}` of the value, e.g. `t('editor.card_picker.suggestions.controls', { area: 'Kitchen' })`. Unknown keys come back as the key itself |
+| `t(key, params)` | Translated string for a Lovely Card translation key, in the user's language. `params` fills the `{placeholders}` of the value, e.g. `t('editor.card_picker.suggestions.controls', { area: 'Kitchen' })`. Unknown keys come back as the key itself |
 | `domainOf(entityId)` | `'light'` for `'light.salon'`, an empty string when there is no domain |
 | `friendlyName(entityId)` | `attributes.friendly_name`, falling back to a readable object id (`light.living_room_lamp` gives `living room lamp`), like Home Assistant does |
 | `hasModule(moduleId)` | Whether another module is installed. Use it to offer a variant built on someone else's module and stay silent otherwise: listing a module that is not installed is harmless at render time, but offering the variant is not, since the user would pick it and get a card identical to the plain one |
@@ -1307,7 +1307,7 @@ happens for a moment after a hard reload.
 | `areaName(areaId)` | The display name of an area, falling back to the id |
 | `areas()` | `[{ area_id, name, icon }]` for every area, sorted by name. `icon` is `null` when the area has none |
 | `areaEntities(areaId, options)` | The entity ids assigned to that area, directly or through their device, sorted by friendly name. Entities missing from `hass.states` are skipped. `options.domains` filters by domain (`{ domains: ['light'] }`), `options.includeHidden` (default `false`) keeps registry-hidden entities, `options.includeDiagnostic` (default `false`) keeps the `diagnostic` and `config` entity categories |
-| `nativeSuggestions(entityId)` | The built-in Bubble Card recipes for any entity, as a fresh copy you can freely reshape. Entries are `{ label, config }`, plus an internal `classic: true` marker on the legacy shortcuts (the dedicated card, plain Button and Slider entries) so you can filter them out with `.filter((s) => !s.classic)` |
+| `nativeSuggestions(entityId)` | The built-in Lovely Card recipes for any entity, as a fresh copy you can freely reshape. Entries are `{ label, config }`, plus an internal `classic: true` marker on the legacy shortcuts (the dedicated card, plain Button and Slider entries) so you can filter them out with `.filter((s) => !s.classic)` |
 
 Good to know:
 
@@ -1433,7 +1433,7 @@ Registering from a card's own `styles:` works the same way, with its own slot.
 
 Your `code:` is compiled with a fixed list of names in scope (`hass`, `entity`,
 `state`, `card`, and the helpers below). **Referencing a name that the installed
-version does not provide throws, and Bubble Card then skips your whole module**,
+version does not provide throws, and Lovely Card then skips your whole module**,
 so a card loses all of your styling rather than just that one feature. If you
 share your module, its users are on many different versions.
 

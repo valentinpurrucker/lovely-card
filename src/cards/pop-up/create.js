@@ -429,11 +429,11 @@ export function prepareStructure(context) {
     }
     _applyPopupVariables(context);
     registerPopupContext(context);
-    window.popUpError = false;
+    window.__lovelyPopUpError = false;
   } catch (e) {
     console.warn(e);
 
-    window.popUpError = true;
+    window.__lovelyPopUpError = true;
 
     mountPopupOnboarding(context);
   }

@@ -115,7 +115,7 @@
       "info_organize": "子按钮可以单独排布，也可以组合成分组。分组可以内联排列 (并排) 或按行排列 (垂直堆叠)，分组内的按钮可以内联显示或按列布局显示。",
       "editor_title": "子按钮编辑器",
       "rows_detected_title": "检测到行数 (rows) 配置",
-      "rows_detected_body": "你的配置中明确设置了卡片高度 (rows)。这会导致添加子按钮时 (例如添加底部子按钮时) 无法自动调整行数。点击下方按钮可移除该设置，让 Bubble Card 自动计算行数。",
+      "rows_detected_body": "你的配置中明确设置了卡片高度 (rows)。这会导致添加子按钮时 (例如添加底部子按钮时) 无法自动调整行数。点击下方按钮可移除该设置，让 Lovely Card 自动计算行数。",
       "remove_override": "移除设置并自动计算",
       "card_specific": "卡片专用按钮",
       "main_top": "主子按钮 (顶部)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "在使用 YAML 吗？",
       "notice_yaml_body": "将旧版弹窗配置替换为独立格式:",
       "notice_protip": "专业提示:",
-      "notice_protip_body": "老实说，如果你到现在还在用 YAML 写 Bubble Card，不妨试试新的编辑器，创建和编辑弹窗会变得轻而易举！你还可以使用 Module Store。我在这个编辑器上倾注了满满的心血 ❤️",
+      "notice_protip_body": "老实说，如果你到现在还在用 YAML 写 Lovely Card，不妨试试新的编辑器，创建和编辑弹窗会变得轻而易举！你还可以使用 Module Store。我在这个编辑器上倾注了满满的心血 ❤️",
       "notice_enjoy": "祝你使用愉快！干杯！🍻",
       "notice_dismiss": "知道了，不要在此视图中再显示",
       "notice_remind": "稍后提醒我"
@@ -579,7 +579,7 @@
       "show_original": "显示原文",
       "show_translation": "显示翻译",
       "translate_offer_title": "翻译模块文本",
-      "translate_offer_body": "模块以英文发布。Bubble Card 可以把它们的描述和选项翻译成你的语言，但这会把该文本发送到外部翻译服务。在你自己开启之前，它一直是关闭的。"
+      "translate_offer_body": "模块以英文发布。Lovely Card 可以把它们的描述和选项翻译成你的语言，但这会把该文本发送到外部翻译服务。在你自己开启之前，它一直是关闭的。"
     },
     "module_editor": {
       "create_module": "创建新模块",
@@ -598,7 +598,7 @@
       "description_helper": "此描述会显示在你的模块中，以及 Module Store 中 (如果你分享它)，所以请确保清晰简洁。{bold}，但请注意它只会在你的模块中渲染，Module Store 不会显示这些效果。",
       "description_helper_bold": "你可以使用 HTML 和内联 CSS",
       "code_title": "代码 (CSS/JS 模板)",
-      "code_helper": "有关 CSS 和 JS 模板可实现效果的更多信息和示例，请参阅{link}。提示：点击面板标题 (Bubble Card configuration) 可放大编辑器。",
+      "code_helper": "有关 CSS 和 JS 模板可实现效果的更多信息和示例，请参阅{link}。提示：点击面板标题 (Lovely Card configuration) 可放大编辑器。",
       "styling_docs": "样式与模板文档",
       "editor_schema_title": "可选：编辑器架构 (YAML)",
       "yaml_error_title": "YAML 架构错误",
@@ -653,7 +653,7 @@
       "download_error": "下载模块出错：{error}"
     },
     "card_picker": {
-      "description": "Bubble Card 是一套极简且可自定义的卡片集合"
+      "description": "Lovely Card 是一套极简且可自定义的卡片集合"
     },
     "errors": {
       "card_type_required": "需要指定卡片类型",
@@ -673,8 +673,8 @@
       "hidden_content": "为提升性能，编辑模式下已隐藏内容"
     },
     "navigation": {
-      "group": "Bubble Card 弹窗",
-      "hash_hint": "Bubble Card 弹窗哈希"
+      "group": "Lovely Card 弹窗",
+      "hash_hint": "Lovely Card 弹窗哈希"
     }
   }
 }

@@ -60,7 +60,7 @@ const warnedQuotas = new Set();
 function warnOnce(moduleId, error) {
   if (warnedModules.has(moduleId)) return;
   warnedModules.add(moduleId);
-  console.warn(`Bubble Card - Ignoring the entity suggestions of the module "${moduleId}":`, error);
+  console.warn(`Lovely Card - Ignoring the entity suggestions of the module "${moduleId}":`, error);
 }
 
 // Separate budget from warnOnce: a module that hits the quota is not broken,
@@ -69,7 +69,7 @@ function warnQuotaOnce(moduleId, count) {
   if (warnedQuotas.has(moduleId)) return;
   warnedQuotas.add(moduleId);
   console.warn(
-    `Bubble Card - The module "${moduleId}" offered ${count} entity suggestions, only the first ${MAX_SUGGESTIONS_PER_MODULE} are kept.`,
+    `Lovely Card - The module "${moduleId}" offered ${count} entity suggestions, only the first ${MAX_SUGGESTIONS_PER_MODULE} are kept.`,
   );
 }
 
@@ -303,7 +303,7 @@ function buildCodeSuggestions(moduleId, module, hass, entityId, stateObj, helper
     const label = typeof entry.label === 'string' && entry.label ? entry.label : undefined;
     suggestions.push({
       label: composeLabel(moduleName, label),
-      config: { ...authored, type: 'custom:bubble-card' },
+      config: { ...authored, type: 'custom:lovely-card' },
     });
   }
   return suggestions;
@@ -343,7 +343,7 @@ function buildRuleSuggestions(moduleId, module, rule, hass, entityId, stateObj, 
 
   if (!rule.config || typeof rule.config !== 'object' || !rule.config.card_type) return [];
   const config = substituteEntity(deepClone(rule.config), entityId);
-  config.type = 'custom:bubble-card';
+  config.type = 'custom:lovely-card';
   if (config.entity === undefined && config.card_type !== 'calendar') config.entity = entityId;
   config.modules = ensureModuleListed(config.modules, moduleId);
   if (!supportsCardType(module, config.card_type)) return [];

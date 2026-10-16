@@ -115,7 +115,7 @@
       "info_organize": "Bạn có thể sắp xếp các nút phụ riêng lẻ hoặc gộp chúng thành nhóm. Các nhóm có thể được xếp trên cùng hàng (cạnh nhau) hoặc theo hàng (xếp chồng theo chiều dọc), và các nút trong nhóm có thể hiển thị trên cùng hàng hoặc theo bố cục cột.",
       "editor_title": "Trình chỉnh sửa nút phụ",
       "rows_detected_title": "Phát hiện cấu hình hàng",
-      "rows_detected_body": "Chiều cao thẻ (rows) được đặt rõ ràng trong cấu hình của bạn. Điều này sẽ ngăn việc tự động điều chỉnh hàng khi thêm nút phụ (ví dụ, khi thêm nút phụ dưới cùng). Nhấp vào nút bên dưới để xóa thiết lập này và để Bubble Card tự động tính số hàng.",
+      "rows_detected_body": "Chiều cao thẻ (rows) được đặt rõ ràng trong cấu hình của bạn. Điều này sẽ ngăn việc tự động điều chỉnh hàng khi thêm nút phụ (ví dụ, khi thêm nút phụ dưới cùng). Nhấp vào nút bên dưới để xóa thiết lập này và để Lovely Card tự động tính số hàng.",
       "remove_override": "Xóa thiết lập và tự động tính",
       "card_specific": "Nút riêng của thẻ",
       "main_top": "Nút phụ chính (trên cùng)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Đang dùng YAML?",
       "notice_yaml_body": "Thay cấu hình pop-up kiểu cũ bằng định dạng độc lập:",
       "notice_protip": "Mẹo hay:",
-      "notice_protip_body": "Thành thật mà nói, nếu đến giờ bạn vẫn dùng YAML cho Bubble Card, hãy thử trình chỉnh sửa mới, việc tạo và chỉnh sửa pop-up trở nên cực kỳ nhẹ nhàng! Bạn cũng sẽ dùng được Module Store. Tôi đã đặt rất nhiều tâm huyết vào trình chỉnh sửa này ❤️",
+      "notice_protip_body": "Thành thật mà nói, nếu đến giờ bạn vẫn dùng YAML cho Lovely Card, hãy thử trình chỉnh sửa mới, việc tạo và chỉnh sửa pop-up trở nên cực kỳ nhẹ nhàng! Bạn cũng sẽ dùng được Module Store. Tôi đã đặt rất nhiều tâm huyết vào trình chỉnh sửa này ❤️",
       "notice_enjoy": "Chúc bạn vui với bản cập nhật này! Cạn ly! 🍻",
       "notice_dismiss": "Đã hiểu, không hiện lại trên khung nhìn này",
       "notice_remind": "Nhắc tôi sau"
@@ -579,7 +579,7 @@
       "show_original": "Hiển thị bản gốc",
       "show_translation": "Hiển thị bản dịch",
       "translate_offer_title": "Dịch văn bản của mô-đun",
-      "translate_offer_body": "Mô-đun được xuất bản bằng tiếng Anh. Bubble Card có thể dịch phần mô tả và tùy chọn của chúng sang ngôn ngữ của bạn, nhưng việc đó sẽ gửi văn bản ấy tới một dịch vụ dịch thuật bên ngoài. Tính năng vẫn tắt cho tới khi bạn tự bật."
+      "translate_offer_body": "Mô-đun được xuất bản bằng tiếng Anh. Lovely Card có thể dịch phần mô tả và tùy chọn của chúng sang ngôn ngữ của bạn, nhưng việc đó sẽ gửi văn bản ấy tới một dịch vụ dịch thuật bên ngoài. Tính năng vẫn tắt cho tới khi bạn tự bật."
     },
     "module_editor": {
       "create_module": "Tạo mô-đun mới",
@@ -598,7 +598,7 @@
       "description_helper": "Mô tả này xuất hiện trong mô-đun của bạn và trong Module Store (nếu bạn chia sẻ nó), vì vậy hãy đảm bảo nó rõ ràng và ngắn gọn. {bold}, nhưng lưu ý rằng nó chỉ được hiển thị trong mô-đun của bạn, Module Store sẽ không hiển thị nó.",
       "description_helper_bold": "Bạn có thể dùng HTML và CSS nội tuyến",
       "code_title": "Mã (mẫu CSS/JS)",
-      "code_helper": "Thông tin và ví dụ thêm về các khả năng của mẫu CSS và JS có trong {link}. Mẹo: Bạn có thể phóng to trình chỉnh sửa bằng cách nhấp vào tiêu đề bảng (Bubble Card configuration).",
+      "code_helper": "Thông tin và ví dụ thêm về các khả năng của mẫu CSS và JS có trong {link}. Mẹo: Bạn có thể phóng to trình chỉnh sửa bằng cách nhấp vào tiêu đề bảng (Lovely Card configuration).",
       "styling_docs": "tài liệu về Kiểu dáng và Mẫu",
       "editor_schema_title": "Tùy chọn: Lược đồ trình chỉnh sửa (YAML)",
       "yaml_error_title": "Lỗi trong lược đồ YAML",
@@ -653,7 +653,7 @@
       "download_error": "Lỗi khi tải mô-đun xuống: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card là bộ sưu tập thẻ tối giản và có thể tùy chỉnh"
+      "description": "Lovely Card là bộ sưu tập thẻ tối giản và có thể tùy chỉnh"
     },
     "errors": {
       "card_type_required": "Bạn cần xác định loại thẻ",
@@ -673,8 +673,8 @@
       "hidden_content": "Nội dung được ẩn ở chế độ chỉnh sửa để tăng hiệu năng"
     },
     "navigation": {
-      "group": "Pop-up của Bubble Card",
-      "hash_hint": "Hash pop-up của Bubble Card"
+      "group": "Pop-up của Lovely Card",
+      "hash_hint": "Hash pop-up của Lovely Card"
     }
   }
 }

@@ -83,8 +83,8 @@ function createContext(element) {
 
 // Mirrors the cleanup contract of BubbleCard.disconnectedCallback.
 function simulateDisconnect(context) {
-    window.removeEventListener('bubble-card-modules-changed', context._moduleChangeHandler);
-    window.removeEventListener('bubble-card-module-updated', context._moduleChangeHandler);
+    window.removeEventListener('lovely-card-modules-changed', context._moduleChangeHandler);
+    window.removeEventListener('lovely-card-module-updated', context._moduleChangeHandler);
     document.removeEventListener('yaml-modules-updated', context._moduleChangeHandler);
     context._moduleChangeHandler = null;
     context._moduleChangeListenerAdded = false;
@@ -120,7 +120,7 @@ describe('handleCustomStyles refresh listener registration', () => {
         handleCustomStyles(context, element);
 
         const windowEvents = window.addEventListener.mock.calls.map(([type]) => type);
-        expect(windowEvents).toEqual(expect.arrayContaining(['bubble-card-modules-changed', 'bubble-card-module-updated']));
+        expect(windowEvents).toEqual(expect.arrayContaining(['lovely-card-modules-changed', 'lovely-card-module-updated']));
         expect(document.addEventListener).toHaveBeenCalledWith('yaml-modules-updated', context._moduleChangeHandler);
         expect(context._moduleChangeListenerAdded).toBe(true);
     });
@@ -166,7 +166,7 @@ describe('handleCustomStyles refresh listener registration', () => {
         handleCustomStyles(context, element);
 
         const moduleChangeRegistrations = window.addEventListener.mock.calls
-            .filter(([type]) => type === 'bubble-card-modules-changed');
+            .filter(([type]) => type === 'lovely-card-modules-changed');
         expect(moduleChangeRegistrations).toHaveLength(1);
     });
 

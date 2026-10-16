@@ -1,7 +1,7 @@
 name: Draft release
 
 # Prepares the release of each pushed tag as a draft that already carries every
-# file of dist/ at that tag. Once a release has files, HACS installs Bubble Card
+# file of dist/ at that tag. Once a release has files, HACS installs Lovely Card
 # from them instead of from the tag, and counts their downloads.
 #
 # HACS takes nothing but the release files as soon as there is one, so a release
@@ -23,7 +23,7 @@ jobs:
   draft:
     name: Draft the release with the dist files
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'Clooos'
+    if: github.repository == 'valentinpurrucker/lovely-card'
     permissions:
       contents: write
     env:
@@ -52,7 +52,7 @@ jobs:
           ref: ${{ github.ref }}
 
       # Release files cannot sit in folders, and HACS saves them all next to
-      # bubble-card.js, so dist/ has to be flat and hold the card itself.
+      # lovely-card.js, so dist/ has to be flat and hold the card itself.
       - name: Check dist
         if: steps.check.outputs.skip == 'false'
         run: |
@@ -60,8 +60,8 @@ jobs:
             echo "::error::dist/ has subfolders, and a release cannot carry them."
             exit 1
           fi
-          if [ ! -f dist/bubble-card.js ]; then
-            echo "::error::dist/bubble-card.js is missing."
+          if [ ! -f dist/lovely-card.js ]; then
+            echo "::error::dist/lovely-card.js is missing."
             exit 1
           fi
           echo "$(ls dist | wc -l) files in dist/"
@@ -74,7 +74,7 @@ jobs:
           prerelease=()
           case "$TAG" in *-*) prerelease=(--prerelease) ;; esac
           gh release create "$TAG" dist/* --draft --verify-tag \
-            --title "Bubble Card $TAG" --notes "" "${prerelease[@]}"
+            --title "Lovely Card $TAG" --notes "" "${prerelease[@]}"
 
       - name: Compare the draft with dist
         if: steps.check.outputs.skip == 'false'

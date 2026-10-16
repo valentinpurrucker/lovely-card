@@ -115,7 +115,7 @@
       "info_organize": "Alt düğmeleri tek tek düzenleyebilir veya birlikte gruplayabilirsiniz. Gruplar satır içi (yan yana) veya satırlar halinde (dikey olarak yığılmış) düzenlenebilir ve gruplardaki düğmeler satır içi veya sütun düzeninde görüntülenebilir.",
       "editor_title": "Alt düğme düzenleyici",
       "rows_detected_title": "Satır yapılandırması algılandı",
-      "rows_detected_body": "Kart yüksekliği (satırlar) yapılandırmanızda açıkça ayarlanmış. Bu, alt düğmeler eklendiğinde (örneğin alt kısma alt düğmeler eklerken) otomatik satır ayarlamalarını engeller. Geçersiz kılmayı kaldırmak ve satırları Bubble Card'ın otomatik hesaplamasına izin vermek için aşağıdaki düğmeye tıklayın.",
+      "rows_detected_body": "Kart yüksekliği (satırlar) yapılandırmanızda açıkça ayarlanmış. Bu, alt düğmeler eklendiğinde (örneğin alt kısma alt düğmeler eklerken) otomatik satır ayarlamalarını engeller. Geçersiz kılmayı kaldırmak ve satırları Lovely Card'ın otomatik hesaplamasına izin vermek için aşağıdaki düğmeye tıklayın.",
       "remove_override": "Geçersiz kılmayı kaldır ve otomatik hesapla",
       "card_specific": "Karta özgü düğmeler",
       "main_top": "Ana alt düğmeler (üst)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML mı kullanıyorsunuz?",
       "notice_yaml_body": "Eski pop-up yapılandırmasını bağımsız biçimle değiştirin:",
       "notice_protip": "İpucu:",
-      "notice_protip_body": "Açıkçası, bu noktada Bubble Card için hâlâ YAML kullanıyorsanız yeni düzenleyiciyi denemenizi öneririm, pop-up oluşturmayı ve düzenlemeyi çocuk oyuncağı hâline getiriyor! Ayrıca Module Store erişimi de kazanırsınız. Bu düzenleyiciye çok sevgi kattım ❤️",
+      "notice_protip_body": "Açıkçası, bu noktada Lovely Card için hâlâ YAML kullanıyorsanız yeni düzenleyiciyi denemenizi öneririm, pop-up oluşturmayı ve düzenlemeyi çocuk oyuncağı hâline getiriyor! Ayrıca Module Store erişimi de kazanırsınız. Bu düzenleyiciye çok sevgi kattım ❤️",
       "notice_enjoy": "Bu güncellemenin tadını çıkarın! Şerefe! 🍻",
       "notice_dismiss": "Anladım, bu görünümde bir daha gösterme",
       "notice_remind": "Daha sonra hatırlat"
@@ -579,7 +579,7 @@
       "show_original": "Orijinali göster",
       "show_translation": "Çeviriyi göster",
       "translate_offer_title": "Modül metinlerini çevir",
-      "translate_offer_body": "Modüller İngilizce yayımlanır. Bubble Card açıklamalarını ve seçeneklerini kendi dilinize çevirebilir, ancak bu metni harici bir çeviri hizmetine gönderir. Siz açana kadar kapalı kalır."
+      "translate_offer_body": "Modüller İngilizce yayımlanır. Lovely Card açıklamalarını ve seçeneklerini kendi dilinize çevirebilir, ancak bu metni harici bir çeviri hizmetine gönderir. Siz açana kadar kapalı kalır."
     },
     "module_editor": {
       "create_module": "Yeni modül oluştur",
@@ -598,7 +598,7 @@
       "description_helper": "Bu açıklama modülünüzde ve (paylaşırsanız) Module Store'da görünür, bu yüzden açık ve öz olduğundan emin olun. {bold}, ancak bunun yalnızca modülünüzde işleneceğini, Module Store'un bunu göstermeyeceğini unutmayın.",
       "description_helper_bold": "HTML ve satır içi CSS kullanabilirsiniz",
       "code_title": "Kod (CSS/JS şablonu)",
-      "code_helper": "CSS ve JS şablonu olanakları hakkında daha fazla bilgi ve örnek {link} bulunabilir. İpucu: Panel başlığına (Bubble Card configuration) tıklayarak düzenleyiciyi büyütebilirsiniz.",
+      "code_helper": "CSS ve JS şablonu olanakları hakkında daha fazla bilgi ve örnek {link} bulunabilir. İpucu: Panel başlığına (Lovely Card configuration) tıklayarak düzenleyiciyi büyütebilirsiniz.",
       "styling_docs": "Stil ve şablon belgelerinde",
       "editor_schema_title": "İsteğe bağlı: Düzenleyici şeması (YAML)",
       "yaml_error_title": "YAML şemasında hata",
@@ -653,7 +653,7 @@
       "download_error": "Modül indirilirken hata oluştu: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card, minimalist ve özelleştirilebilir bir kart koleksiyonudur"
+      "description": "Lovely Card, minimalist ve özelleştirilebilir bir kart koleksiyonudur"
     },
     "errors": {
       "card_type_required": "Bir kart türü tanımlamanız gerekiyor",
@@ -673,8 +673,8 @@
       "hidden_content": "İçerik, performans için düzenleme modunda gizlendi"
     },
     "navigation": {
-      "group": "Bubble Card pop-up'ları",
-      "hash_hint": "Bubble Card pop-up hash'i"
+      "group": "Lovely Card pop-up'ları",
+      "hash_hint": "Lovely Card pop-up hash'i"
     }
   }
 }

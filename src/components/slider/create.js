@@ -521,7 +521,7 @@ export function createSliderStructure(context, config = {}) {
       detachPointerListeners();
       options.targetElement.classList.remove('is-dragging');
       context.dragging = false;
-      window.isScrolling = false;
+      window.__lovelyIsScrolling = false;
       resetSliderRectCache();
       return;
     }
@@ -532,7 +532,7 @@ export function createSliderStructure(context, config = {}) {
       e.preventDefault();
     }
 
-    window.isScrolling = true;
+    window.__lovelyIsScrolling = true;
 
     const rangedPercentage = onSliderChange(context, calculateMoveCoordinate(e), false, getSliderRect());
 
@@ -614,7 +614,7 @@ export function createSliderStructure(context, config = {}) {
     }
 
     context.dragging = false;
-    window.isScrolling = false;
+    window.__lovelyIsScrolling = false;
   }
 
   function onPointerUp(e) {
@@ -684,7 +684,7 @@ export function createSliderStructure(context, config = {}) {
     draggingTimeout = setTimeout(() => {
       if (context) {
         context.dragging = false;
-        window.isScrolling = false;
+        window.__lovelyIsScrolling = false;
         // Every state that landed while the finger was still down was ignored,
         // and the entity can already be back where it started, which is what an
         // automation that resets a value does (#2493). updateSlider moves the
@@ -744,7 +744,7 @@ export function createSliderStructure(context, config = {}) {
     }
 
     context.dragging = true;
-    window.isScrolling = true;
+    window.__lovelyIsScrolling = true;
     dragStartTime = Date.now(); // Record when drag started for iOS cancel grace period
     initialTouchX = getEventPageX(e);
     initialTouchY = getEventPageY(e);
@@ -840,7 +840,7 @@ export function createSliderStructure(context, config = {}) {
 
     options.targetElement.addEventListener('pointerdown', (e) => {
       if (isSidebarSwipeStart(e)) return;
-      const bubbleAction = e.target.closest('.bubble-action');
+      const bubbleAction = e.target.closest('.lovely-action');
       const noSlide = e.target.closest('.bubble-sub-button')?.hasAttribute('no-slide');
 
       if (noSlide || (bubbleAction && bubbleAction.getAttribute('data-hold-action') !== '{"action":"none"}')) return;
@@ -967,7 +967,7 @@ export function createSliderStructure(context, config = {}) {
       lockTouchActions();
       
       context.dragging = true;
-      window.isScrolling = true;
+      window.__lovelyIsScrolling = true;
       initialTouchX = getEventPageX(e);
       initialTouchY = getEventPageY(e);
       resetGestureIntent();

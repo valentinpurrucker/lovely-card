@@ -18,7 +18,7 @@ export function normalizePopUpHash(hash) {
 }
 
 function isPopUpConfig(node) {
-    return node?.type === 'custom:bubble-card' && node.card_type === 'pop-up';
+    return node?.type === 'custom:lovely-card' && node.card_type === 'pop-up';
 }
 
 // A template is text to render, not a name to show. The card renders it once

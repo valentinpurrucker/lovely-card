@@ -65,7 +65,7 @@ const SWIPE_LOCKED_CLASSES = [
     'forecast',
 ];
 
-// Bubble Card's sliders are not on that list, and cannot be. `.slider-container`
+// Lovely Card's sliders are not on that list, and cannot be. `.slider-container`
 // is the whole button card, so blocking it would take slide-to-close away from
 // most of a pop-up. A horizontal slider declares `touch-action: pan-y` and hands
 // the cross axis back on its own, which is exactly the axis this gesture wants.
@@ -697,7 +697,7 @@ export function configurePopupSlideToClose(context, closePopup) {
         document.addEventListener('touchmove', handleTouchMove, { passive: false });
         // The end does not. A card that stops the propagation of its own
         // touchend would otherwise leave the drag running forever, and the shell
-        // parked wherever the finger left it. Bubble Card's own media player mute
+        // parked wherever the finger left it. Lovely Card's own media player mute
         // button does exactly that, and any third-party card may. Capture reaches
         // the document before any of them can swallow anything.
         document.addEventListener('touchend', handleTouchEnd, { capture: true, passive: true });

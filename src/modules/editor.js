@@ -19,13 +19,13 @@ import { renderTranslationNote, isShowingOriginal, renderTranslationOffer } from
 import { ensureBCTProviderAvailable, isBCTAvailableSync, writeModuleYaml, getAllModulesLastModified } from './bct-provider.js';
 import setupTranslation from '../tools/localize.js';
 
-// Storage sensor entity ID for Bubble Card modules
+// Storage sensor entity ID for Lovely Card modules
 const MODULES_SENSOR_ENTITY_ID = 'sensor.bubble_card_modules';
 
 // Ordered identifiers used for the module editor tabs
 const MODULE_TAB_IDS = ['modules', 'store'];
 const BCT_CHECK_RETRY_MS = 5000;
-const FORCE_UNSUPPORTED_STORAGE_KEY = 'bubble-card-force-unsupported-modules';
+const FORCE_UNSUPPORTED_STORAGE_KEY = 'lovely-card-force-unsupported-modules';
 const HA_MODULE_EDITOR_LAYOUT_VERSION = '2026.3';
 
 // Function to detect if sl-tab-group is available in the current HA version
@@ -188,7 +188,7 @@ function _getFilteredAndSortedModules(context) {
   // Sort modules - load from localStorage or use 'default' as default
   if (!context._myModulesSortOrder) {
     try {
-      const savedOrder = localStorage.getItem('bubble-card-modules-sort-order');
+      const savedOrder = localStorage.getItem('lovely-card-modules-sort-order');
       context._myModulesSortOrder = savedOrder || 'default';
     } catch (e) {
       context._myModulesSortOrder = 'default';
@@ -272,7 +272,7 @@ export function makeModulesEditor(context) {
   // Initialize sort order from localStorage
   if (typeof context._myModulesSortOrder === 'undefined') {
     try {
-      const savedOrder = localStorage.getItem('bubble-card-modules-sort-order');
+      const savedOrder = localStorage.getItem('lovely-card-modules-sort-order');
       context._myModulesSortOrder = savedOrder || 'default';
     } catch (e) {
       context._myModulesSortOrder = 'default';
@@ -292,7 +292,7 @@ export function makeModulesEditor(context) {
     }
   }
 
-  const tabGroupId = "bubble-card-module-editor-tab-group";
+  const tabGroupId = "lovely-card-module-editor-tab-group";
   const tabVariant = getTabImplementation();
   const isHaTabGroupVariant = tabVariant === 'ha-tab-group';
   const useModernHaTabGroupOffsets = isHaTabGroupVariant &&
@@ -558,7 +558,7 @@ export function makeModulesEditor(context) {
     try {
       const yamlContent = context._manualYamlContent;
       if (!yamlContent || yamlContent.trim() === '') {
-        fireEvent(context, "bubble-card-error", { message: t('editor.modules.no_yaml_content') });
+        fireEvent(context, "lovely-card-error", { message: t('editor.modules.no_yaml_content') });
         return;
       }
       
@@ -818,7 +818,7 @@ export function makeModulesEditor(context) {
                           e.stopPropagation();
                           context._myModulesSortOrder = 'default';
                           try {
-                            localStorage.setItem('bubble-card-modules-sort-order', 'default');
+                            localStorage.setItem('lovely-card-modules-sort-order', 'default');
                           } catch (err) {}
                           context.requestUpdate();
                         }
@@ -832,7 +832,7 @@ export function makeModulesEditor(context) {
                           e.stopPropagation();
                           context._myModulesSortOrder = 'alphabetical';
                           try {
-                            localStorage.setItem('bubble-card-modules-sort-order', 'alphabetical');
+                            localStorage.setItem('lovely-card-modules-sort-order', 'alphabetical');
                           } catch (err) {}
                           context.requestUpdate();
                         }
@@ -846,7 +846,7 @@ export function makeModulesEditor(context) {
                           e.stopPropagation();
                           context._myModulesSortOrder = 'recent-first';
                           try {
-                            localStorage.setItem('bubble-card-modules-sort-order', 'recent-first');
+                            localStorage.setItem('lovely-card-modules-sort-order', 'recent-first');
                           } catch (err) {}
                           context.requestUpdate();
                         }

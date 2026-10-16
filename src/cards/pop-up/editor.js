@@ -296,7 +296,7 @@ function createPopUpExampleCards(hass) {
 
     return suitableEntities.length > 0
         ? suitableEntities.map((entity) => ({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             button_type: entity.supportsBrightness ? 'slider' : 'switch',
             entity: entity.entity,
@@ -305,7 +305,7 @@ function createPopUpExampleCards(hass) {
         }))
         : [
             {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'button',
                 button_type: 'name',
                 name: setupTranslation(hass)('editor.popup.example_lamp'),
@@ -419,33 +419,33 @@ function renderBottomOffsetOption(editor) {
 }
 
 function getEditorSession(configHash) {
-    const session = window.__bubbleEditorSession;
+    const session = window.__lovelyEditorSession;
     if (session) {
         if (session.originalHash === configHash) return session;
         if (session.lastChangedHash === configHash && !session.committed) return session;
     }
-    window.__bubbleEditorSession = {
+    window.__lovelyEditorSession = {
         originalHash: configHash,
         lastChangedHash: configHash,
         committed: false
     };
-    return window.__bubbleEditorSession;
+    return window.__lovelyEditorSession;
 }
 
 function commitEditorSessionHash(hashValue) {
-    if (!window.__bubbleEditorSession) {
+    if (!window.__lovelyEditorSession) {
         return;
     }
 
-    window.__bubbleEditorSession.originalHash = hashValue;
-    window.__bubbleEditorSession.lastChangedHash = hashValue;
-    window.__bubbleEditorSession.committed = true;
+    window.__lovelyEditorSession.originalHash = hashValue;
+    window.__lovelyEditorSession.lastChangedHash = hashValue;
+    window.__lovelyEditorSession.committed = true;
 }
 
 function syncHashInputState(editor, originalHash, rawValue) {
     const hashInput = editor.shadowRoot?.querySelector('#hash-input');
     const warning = editor.shadowRoot?.querySelector('#duplicate-hash-warning');
-    const currentRawValue = rawValue ?? hashInput?.value ?? window.__bubbleEditorSession?.lastChangedHash ?? '';
+    const currentRawValue = rawValue ?? hashInput?.value ?? window.__lovelyEditorSession?.lastChangedHash ?? '';
 
     const hashState = getPopUpHashInputState(currentRawValue, originalHash);
     if (hashInput) {
@@ -519,7 +519,7 @@ function createPopUpConfig(editor, originalConfig) {
         if (includeExample) {
             const t = setupTranslation(editor.hass);
             editor._config = {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 ...popupBehaviorConfig,
                 name: t('editor.popup.example_room'),
@@ -527,7 +527,7 @@ function createPopUpConfig(editor, originalConfig) {
                 hash: hashValue,
                 cards: [
                     {
-                        type: 'custom:bubble-card',
+                        type: 'custom:lovely-card',
                         card_type: 'separator',
                         name: t('editor.popup.example_lights'),
                         icon: 'mdi:lightbulb-outline',
@@ -538,7 +538,7 @@ function createPopUpConfig(editor, originalConfig) {
         } else {
             // Create an empty standalone pop-up.
             editor._config = {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 ...popupBehaviorConfig,
                 hash: hashValue,
@@ -546,8 +546,8 @@ function createPopUpConfig(editor, originalConfig) {
             };
 
             // Keep brand-new pop-ups visible in preview.
-            window.bubbleNewlyCreatedHashes = window.bubbleNewlyCreatedHashes || new Set();
-            window.bubbleNewlyCreatedHashes.add(hashValue);
+            window.lovelyNewlyCreatedHashes = window.lovelyNewlyCreatedHashes || new Set();
+            window.lovelyNewlyCreatedHashes.add(hashValue);
         }
 
         commitEditorSessionHash(hashValue);
@@ -557,7 +557,7 @@ function createPopUpConfig(editor, originalConfig) {
         console.error("Error creating pop-up:", error);
         // Restore original config if there's an error
         editor._config = originalConfig;
-        editor._config.hash = normalizePopUpHashInputValue(window.__bubbleEditorSession?.lastChangedHash || '');
+        editor._config.hash = normalizePopUpHashInputValue(window.__lovelyEditorSession?.lastChangedHash || '');
         fireEvent(editor, "config-changed", { config: editor._config });
     }
 }
@@ -592,8 +592,8 @@ export function renderPopUpEditor(editor) {
                     @value-changed=${(ev) => {
                         const rawValue = ev.detail.value.hash ?? '';
                         const hashState = syncHashInputState(editor, session.originalHash, rawValue);
-                        if (window.__bubbleEditorSession) {
-                            window.__bubbleEditorSession.lastChangedHash = hashState.normalizedValue;
+                        if (window.__lovelyEditorSession) {
+                            window.__lovelyEditorSession.lastChangedHash = hashState.normalizedValue;
                         }
                     }}
                 ></ha-form>
@@ -664,9 +664,9 @@ export function renderPopUpEditor(editor) {
                     const hashState = getPopUpHashInputState(rawValue, session.originalHash);
                     const displayValue = getPopUpHashInputDisplayValue(rawValue);
                     editor._config.hash = hashState.normalizedValue;
-                    if (window.__bubbleEditorSession) {
-                        window.__bubbleEditorSession.lastChangedHash = hashState.normalizedValue;
-                        window.__bubbleEditorSession.committed = true;
+                    if (window.__lovelyEditorSession) {
+                        window.__lovelyEditorSession.lastChangedHash = hashState.normalizedValue;
+                        window.__lovelyEditorSession.committed = true;
                     }
                     fireEvent(editor, 'config-changed', { config: editor._config });
                 }}
@@ -1098,7 +1098,7 @@ export function renderPopupOnboarding(context) {
         aspect-ratio: 210 / 130;
         background: var(--primary-background-color);
         border: 1.5px solid var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
-        border-radius: 11.7cqw;
+        border-radius: 5.71cqw;
         overflow: hidden;
         container-type: inline-size;
       }
@@ -1111,7 +1111,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-bg-row {
         flex: 1;
-        border-radius: 9.52cqw;
+        border-radius: 4.29cqw;
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
         opacity: 0.3;
       }
@@ -1127,7 +1127,7 @@ export function renderPopupOnboarding(context) {
         position: absolute;
         inset: auto 0 0;
         height: 48.57cqw;
-        border-radius: 11.43cqw 11.43cqw 0 0;
+        border-radius: 5.71cqw 5.71cqw 0 0;
         background: var(--ha-card-background, var(--card-background-color));
         display: flex;
         flex-direction: column;
@@ -1149,14 +1149,14 @@ export function renderPopupOnboarding(context) {
       .bhp-popup-header-card {
         flex: 1;
         height: 16.67cqw;
-        border-radius: 8.57cqw;
+        border-radius: 2.86cqw;
         background: var(--bubble-pop-up-main-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color))));
       }
       /* close button — mirrors .bubble-header-action-button */
       .bhp-popup-close-btn {
         width: 16.67cqw;
         height: 16.67cqw;
-        border-radius: 8.57cqw;
+        border-radius: 2.86cqw;
         background: var(--bubble-pop-up-main-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color))));
         flex-shrink: 0;
         position: relative;
@@ -1190,7 +1190,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-popup-row {
         flex: 1;
-        border-radius: 9.52cqw;
+        border-radius: 4.29cqw;
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
       }
       /* === default mode (full-height bottom sheet) === */
@@ -1202,14 +1202,14 @@ export function renderPopupOnboarding(context) {
       .bubble-popup-onboarding[data-mode="centered"] .bhp-popup {
         inset: 50% 4.76cqw auto;
         height: 48.57cqw;
-        border-radius: 11.43cqw;
+        border-radius: 5.71cqw;
         transform: translateY(-50%) scale(0.85);
         opacity: 0;
         animation: bhp-center 5s ease infinite;
       }
       .bubble-popup-onboarding[data-mode="centered"][data-full-width="true"] .bhp-popup {
         inset: 50% 0 auto;
-        border-radius: 11.43cqw;
+        border-radius: 5.71cqw;
       }
       /* === adaptive-dialog (alternates: centered dialog → bottom sheet) === */
       .bubble-popup-onboarding[data-mode="adaptive-dialog"] .bhp-popup {
@@ -1221,7 +1221,7 @@ export function renderPopupOnboarding(context) {
       @media (max-width: 767px) {
         .bubble-popup-onboarding[data-mode="centered"][data-full-width="true"] .bhp-popup {
           inset: auto 0 0;
-          border-radius: 11.43cqw 11.43cqw 0 0;
+          border-radius: 5.71cqw 5.71cqw 0 0;
         }
       }
       /* === trigger button === */
@@ -1232,7 +1232,7 @@ export function renderPopupOnboarding(context) {
         gap: 4.76cqw;
         width: 100%;
         height: 20.95cqw;
-        border-radius: 10.48cqw;
+        border-radius: 4.29cqw;
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
         padding: 0 4.29cqw;
         box-sizing: border-box;
@@ -1242,7 +1242,7 @@ export function renderPopupOnboarding(context) {
       .bhp-icon {
         width: 13.33cqw;
         height: 13.33cqw;
-        border-radius: 50%;
+        border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
         background: var(--primary-background-color);
         flex-shrink: 0;
       }
@@ -1254,7 +1254,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-text-line {
         height: 3.33cqw;
-        border-radius: 1.9cqw;
+        border-radius: 0.48cqw;
         background: var(--primary-text-color);
         opacity: 0.12;
       }
@@ -1295,7 +1295,7 @@ export function renderPopupOnboarding(context) {
         flex-shrink: 0;
         width: 20px;
         height: 20px;
-        border-radius: 50%;
+        border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
         background: var(--primary-color);
         color: var(--on-primary-color, white);
         font-size: 12px;
@@ -1321,32 +1321,32 @@ export function renderPopupOnboarding(context) {
       @keyframes bhp-adaptive {
         /* === centered dialog phase (first 5s mapped to 0-50%) === */
         /* 0%,15% of bhp-center → 0%,7.5% */
-        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* 28%,55% of bhp-center → 14%,27.5% */
-        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
+        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
         /* 65%,100% of bhp-center → 32.5%,49% */
-        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* snap to bottom while invisible */
-        50%        { inset: auto 0 0; height: 48.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 0; }
+        50%        { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 0; }
         /* === bottom-sheet phase (second 5s mapped to 50-100%) === */
         /* 0%,15% of bhp-slide → 50%,57.5% */
-        57.5%      { inset: auto 0 0; height: 48.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 1; }
+        57.5%      { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
         /* 28%,55% of bhp-slide → 64%,77.5% */
-        64%, 77.5% { inset: auto 0 0; height: 48.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(0);    opacity: 1; }
+        64%, 77.5% { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(0);    opacity: 1; }
         /* 65%,100% of bhp-slide → 82.5%,100% */
-        82.5%, 100%{ inset: auto 0 0; height: 48.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 1; }
+        82.5%, 100%{ inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
       }
       @keyframes bhp-adaptive-offset {
         /* === centered dialog phase — same as bhp-adaptive === */
-        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
-        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
-        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 11.43cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
+        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* snap to bottom while invisible */
-        50%        { inset: auto 0 0; height: 58.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 0; }
+        50%        { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 0; }
         /* === bottom-sheet phase — 58.57cqw to show offset === */
-        57.5%      { inset: auto 0 0; height: 58.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 1; }
-        64%, 77.5% { inset: auto 0 0; height: 58.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(0);    opacity: 1; }
-        82.5%, 100%{ inset: auto 0 0; height: 58.57cqw; border-radius: 11.43cqw 11.43cqw 0 0; transform: translateY(100%); opacity: 1; }
+        57.5%      { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
+        64%, 77.5% { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(0);    opacity: 1; }
+        82.5%, 100%{ inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
       }
       @keyframes bhp-overlay {
         0%,  15% { opacity: 0; }

@@ -115,7 +115,7 @@
       "info_organize": "Je kunt subknoppen afzonderlijk ordenen of ze groeperen. Groepen kunnen naast elkaar (inline) of in rijen (verticaal gestapeld) worden geplaatst, en knoppen binnen groepen kunnen naast elkaar of in een kolom worden weergegeven.",
       "editor_title": "Subknoppen-editor",
       "rows_detected_title": "Rijenconfiguratie gedetecteerd",
-      "rows_detected_body": "De kaarthoogte (rows) is expliciet ingesteld in je configuratie. Dit voorkomt automatische aanpassing van de rijen wanneer subknoppen worden toegevoegd (bijvoorbeeld bij het toevoegen van onderste subknoppen). Klik op de knop hieronder om de handmatige instelling te verwijderen en Bubble Card de rijen automatisch te laten berekenen.",
+      "rows_detected_body": "De kaarthoogte (rows) is expliciet ingesteld in je configuratie. Dit voorkomt automatische aanpassing van de rijen wanneer subknoppen worden toegevoegd (bijvoorbeeld bij het toevoegen van onderste subknoppen). Klik op de knop hieronder om de handmatige instelling te verwijderen en Lovely Card de rijen automatisch te laten berekenen.",
       "remove_override": "Handmatige instelling verwijderen en automatisch berekenen",
       "card_specific": "Kaartspecifieke knoppen",
       "main_top": "Hoofd-subknoppen (boven)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Gebruik je YAML?",
       "notice_yaml_body": "Vervang de oude pop-upconfiguratie door het zelfstandige formaat:",
       "notice_protip": "Pro-tip:",
-      "notice_protip_body": "Eerlijk gezegd, als je op dit punt nog steeds YAML gebruikt voor Bubble Card, probeer dan eens de nieuwe editor, daarmee maak en bewerk je pop-ups in een handomdraai! Je krijgt ook toegang tot de Module Store. Ik heb zoveel liefde in deze editor gestoken ❤️",
+      "notice_protip_body": "Eerlijk gezegd, als je op dit punt nog steeds YAML gebruikt voor Lovely Card, probeer dan eens de nieuwe editor, daarmee maak en bewerk je pop-ups in een handomdraai! Je krijgt ook toegang tot de Module Store. Ik heb zoveel liefde in deze editor gestoken ❤️",
       "notice_enjoy": "Veel plezier met deze update! Proost! 🍻",
       "notice_dismiss": "Begrepen, niet meer tonen in deze weergave",
       "notice_remind": "Later herinneren"
@@ -579,7 +579,7 @@
       "show_original": "Origineel tonen",
       "show_translation": "Vertaling tonen",
       "translate_offer_title": "Moduleteksten vertalen",
-      "translate_offer_body": "Modules worden in het Engels gepubliceerd. Bubble Card kan hun beschrijvingen en opties naar jouw taal vertalen, maar dat stuurt die tekst naar een externe vertaaldienst. Het blijft uit totdat je het zelf aanzet."
+      "translate_offer_body": "Modules worden in het Engels gepubliceerd. Lovely Card kan hun beschrijvingen en opties naar jouw taal vertalen, maar dat stuurt die tekst naar een externe vertaaldienst. Het blijft uit totdat je het zelf aanzet."
     },
     "module_editor": {
       "create_module": "Nieuwe module maken",
@@ -598,7 +598,7 @@
       "description_helper": "Deze beschrijving verschijnt in je module en in de Module Store (als je hem deelt), zorg er dus voor dat hij duidelijk en beknopt is. {bold}, maar houd er rekening mee dat dit alleen in je module wordt weergegeven, de Module Store toont het niet.",
       "description_helper_bold": "Je kunt HTML en inline CSS gebruiken",
       "code_title": "Code (CSS/JS-sjabloon)",
-      "code_helper": "Meer informatie en voorbeelden over de mogelijkheden van CSS- en JS-sjablonen vind je in de {link}. Tip: je kunt de editor vergroten door op de paneeltitel te klikken (Bubble Card-configuratie).",
+      "code_helper": "Meer informatie en voorbeelden over de mogelijkheden van CSS- en JS-sjablonen vind je in de {link}. Tip: je kunt de editor vergroten door op de paneeltitel te klikken (Lovely Card-configuratie).",
       "styling_docs": "documentatie over stijlen en sjablonen",
       "editor_schema_title": "Optioneel: editorschema (YAML)",
       "yaml_error_title": "Fout in YAML-schema",
@@ -653,7 +653,7 @@
       "download_error": "Fout bij het downloaden van de module: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card is een minimalistische en aanpasbare kaartencollectie"
+      "description": "Lovely Card is een minimalistische en aanpasbare kaartencollectie"
     },
     "errors": {
       "card_type_required": "Je moet een kaarttype opgeven",
@@ -673,8 +673,8 @@
       "hidden_content": "Inhoud verborgen in bewerkmodus voor betere prestaties"
     },
     "navigation": {
-      "group": "Bubble Card pop-ups",
-      "hash_hint": "Bubble Card pop-up-hash"
+      "group": "Lovely Card pop-ups",
+      "hash_hint": "Lovely Card pop-up-hash"
     }
   }
 }

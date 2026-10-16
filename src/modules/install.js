@@ -8,7 +8,7 @@ import setupTranslation from '../tools/localize.js';
 // Broadcast a focused module update event so listeners can refresh fast
 function broadcastModuleUpdate(moduleId, moduleData) {
   try {
-    window.dispatchEvent(new CustomEvent('bubble-card-module-updated', {
+    window.dispatchEvent(new CustomEvent('lovely-card-module-updated', {
       detail: { moduleId, moduleData }
     }));
   } catch (e) {

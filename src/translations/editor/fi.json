@@ -115,7 +115,7 @@
       "info_organize": "Voit järjestää alipainikkeet yksitellen tai ryhmitellä ne. Ryhmät voidaan asettaa riviin (vierekkäin) tai riveihin (pinottuna pystysuunnassa), ja ryhmien painikkeet voidaan näyttää rivissä tai sarakeasettelussa.",
       "editor_title": "Alipainike-editori",
       "rows_detected_title": "Rivimääritys havaittu",
-      "rows_detected_body": "Kortin korkeus (rivit) on nimenomaisesti asetettu määrityksessäsi. Tämä estää rivien automaattiset säädöt, kun alipainikkeita lisätään (esimerkiksi alaosan alipainikkeita lisättäessä). Napsauta alla olevaa painiketta poistaaksesi ohituksen, jolloin Bubble Card laskee rivit automaattisesti.",
+      "rows_detected_body": "Kortin korkeus (rivit) on nimenomaisesti asetettu määrityksessäsi. Tämä estää rivien automaattiset säädöt, kun alipainikkeita lisätään (esimerkiksi alaosan alipainikkeita lisättäessä). Napsauta alla olevaa painiketta poistaaksesi ohituksen, jolloin Lovely Card laskee rivit automaattisesti.",
       "remove_override": "Poista ohitus ja laske automaattisesti",
       "card_specific": "Korttikohtaiset painikkeet",
       "main_top": "Pääalipainikkeet (ylhäällä)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Käytätkö YAML:ää?",
       "notice_yaml_body": "Korvaa vanha ponnahdusikkunan määritys itsenäisellä muodolla:",
       "notice_protip": "Vinkki:",
-      "notice_protip_body": "Rehellisesti sanottuna, jos käytät Bubble Cardille edelleen YAML:ää, kannattaa kokeilla uutta editoria, sillä se tekee ponnahdusikkunoiden luomisesta ja muokkaamisesta todella helppoa! Saat myös pääsyn Module Storeen. Olen laittanut tähän editoriin valtavasti rakkautta ❤️",
+      "notice_protip_body": "Rehellisesti sanottuna, jos käytät Lovely Cardille edelleen YAML:ää, kannattaa kokeilla uutta editoria, sillä se tekee ponnahdusikkunoiden luomisesta ja muokkaamisesta todella helppoa! Saat myös pääsyn Module Storeen. Olen laittanut tähän editoriin valtavasti rakkautta ❤️",
       "notice_enjoy": "Nauti tästä päivityksestä! Kippis! 🍻",
       "notice_dismiss": "Selvä, älä näytä enää tässä näkymässä",
       "notice_remind": "Muistuta myöhemmin"
@@ -579,7 +579,7 @@
       "show_original": "Näytä alkuperäinen",
       "show_translation": "Näytä käännös",
       "translate_offer_title": "Käännä moduulien tekstit",
-      "translate_offer_body": "Moduulit julkaistaan englanniksi. Bubble Card voi kääntää niiden kuvaukset ja asetukset omalle kielellesi, mutta se lähettää tekstin ulkoiseen käännöspalveluun. Toiminto pysyy pois päältä, kunnes otat sen itse käyttöön."
+      "translate_offer_body": "Moduulit julkaistaan englanniksi. Lovely Card voi kääntää niiden kuvaukset ja asetukset omalle kielellesi, mutta se lähettää tekstin ulkoiseen käännöspalveluun. Toiminto pysyy pois päältä, kunnes otat sen itse käyttöön."
     },
     "module_editor": {
       "create_module": "Luo uusi moduuli",
@@ -598,7 +598,7 @@
       "description_helper": "Tämä kuvaus näkyy moduulissasi ja Module Storessa (jos jaat sen), joten varmista, että se on selkeä ja ytimekäs. {bold}, mutta huomaa, että se hahmonnetaan vain moduulissasi, Module Store ei näytä sitä.",
       "description_helper_bold": "Voit käyttää HTML:ää ja inline-CSS:ää",
       "code_title": "Koodi (CSS/JS-malli)",
-      "code_helper": "Lisätietoja ja esimerkkejä CSS- ja JS-mallien mahdollisuuksista löytyy {link}. Vinkki: Voit suurentaa editoria napsauttamalla paneelin otsikkoa (Bubble Card configuration).",
+      "code_helper": "Lisätietoja ja esimerkkejä CSS- ja JS-mallien mahdollisuuksista löytyy {link}. Vinkki: Voit suurentaa editoria napsauttamalla paneelin otsikkoa (Lovely Card configuration).",
       "styling_docs": "tyylien ja mallien dokumentaatiosta",
       "editor_schema_title": "Valinnainen: Editorin skeema (YAML)",
       "yaml_error_title": "Virhe YAML-skeemassa",
@@ -653,7 +653,7 @@
       "download_error": "Virhe moduulia ladattaessa: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card on minimalistinen ja mukautettava korttikokoelma"
+      "description": "Lovely Card on minimalistinen ja mukautettava korttikokoelma"
     },
     "errors": {
       "card_type_required": "Sinun täytyy määrittää kortin tyyppi",
@@ -673,8 +673,8 @@
       "hidden_content": "Sisältö on piilotettu muokkaustilassa suorituskyvyn vuoksi"
     },
     "navigation": {
-      "group": "Bubble Cardin ponnahdusikkunat",
-      "hash_hint": "Bubble Card -ponnahdusikkunan hash"
+      "group": "Lovely Cardin ponnahdusikkunat",
+      "hash_hint": "Lovely Card -ponnahdusikkunan hash"
     }
   }
 }

@@ -115,7 +115,7 @@
       "info_organize": "Podeu organitzar els subbotons individualment o agrupar-los. Els grups es poden disposar en línia (un al costat de l'altre) o en files (apilats verticalment), i els botons dins dels grups es poden mostrar en línia o en columna.",
       "editor_title": "Editor de subbotons",
       "rows_detected_title": "S'ha detectat una configuració de files",
-      "rows_detected_body": "L'alçada de la targeta (rows) està definida explícitament a la vostra configuració. Això impedirà els ajustos automàtics de les files quan s'afegeixin subbotons (per exemple, en afegir subbotons inferiors). Feu clic al botó de sota per eliminar aquesta definició i deixar que Bubble Card calculi les files automàticament.",
+      "rows_detected_body": "L'alçada de la targeta (rows) està definida explícitament a la vostra configuració. Això impedirà els ajustos automàtics de les files quan s'afegeixin subbotons (per exemple, en afegir subbotons inferiors). Feu clic al botó de sota per eliminar aquesta definició i deixar que Lovely Card calculi les files automàticament.",
       "remove_override": "Elimina la definició i calcula automàticament",
       "card_specific": "Botons específics de la targeta",
       "main_top": "Subbotons principals (a dalt)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Feu servir YAML?",
       "notice_yaml_body": "Substituïu la configuració antiga del pop-up pel format independent:",
       "notice_protip": "Consell:",
-      "notice_protip_body": "Sincerament, si a hores d'ara encara feu servir YAML per a Bubble Card, val la pena que proveu el nou editor, fa que crear i editar pop-ups sigui bufar i fer ampolles! També teniu accés al Module Store. He posat molt d'amor en aquest editor ❤️",
+      "notice_protip_body": "Sincerament, si a hores d'ara encara feu servir YAML per a Lovely Card, val la pena que proveu el nou editor, fa que crear i editar pop-ups sigui bufar i fer ampolles! També teniu accés al Module Store. He posat molt d'amor en aquest editor ❤️",
       "notice_enjoy": "Gaudiu d'aquesta actualització! Salut! 🍻",
       "notice_dismiss": "Entesos, no ho mostris més en aquesta vista",
       "notice_remind": "Recorda-m'ho més tard"
@@ -579,7 +579,7 @@
       "show_original": "Mostra l'original",
       "show_translation": "Mostra la traducció",
       "translate_offer_title": "Tradueix els textos dels mòduls",
-      "translate_offer_body": "Els mòduls es publiquen en anglès. Bubble Card en pot traduir les descripcions i les opcions a la vostra llengua, però això envia aquest text a un servei de traducció extern. Es manté desactivat fins que l'activeu."
+      "translate_offer_body": "Els mòduls es publiquen en anglès. Lovely Card en pot traduir les descripcions i les opcions a la vostra llengua, però això envia aquest text a un servei de traducció extern. Es manté desactivat fins que l'activeu."
     },
     "module_editor": {
       "create_module": "Crea un mòdul nou",
@@ -598,7 +598,7 @@
       "description_helper": "Aquesta descripció apareix al vostre mòdul i al Module Store (si el compartiu), així que assegureu-vos que sigui clara i concisa. {bold}, però tingueu en compte que només es renderitzarà al vostre mòdul, el Module Store no ho mostrarà.",
       "description_helper_bold": "Podeu utilitzar HTML i CSS en línia",
       "code_title": "Codi (plantilla CSS/JS)",
-      "code_helper": "Podeu trobar més informació i exemples sobre les possibilitats de les plantilles CSS i JS a la {link}. Consell: podeu engrandir l'editor fent clic al títol del panell (configuració de Bubble Card).",
+      "code_helper": "Podeu trobar més informació i exemples sobre les possibilitats de les plantilles CSS i JS a la {link}. Consell: podeu engrandir l'editor fent clic al títol del panell (configuració de Lovely Card).",
       "styling_docs": "documentació d'estils i plantilles",
       "editor_schema_title": "Opcional: esquema de l'editor (YAML)",
       "yaml_error_title": "Error a l'esquema YAML",
@@ -653,7 +653,7 @@
       "download_error": "Error en baixar el mòdul: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card és una col·lecció de targetes minimalista i personalitzable"
+      "description": "Lovely Card és una col·lecció de targetes minimalista i personalitzable"
     },
     "errors": {
       "card_type_required": "Heu de definir un tipus de targeta",
@@ -673,8 +673,8 @@
       "hidden_content": "Contingut ocult en mode d'edició per rendiment"
     },
     "navigation": {
-      "group": "Pop-ups de Bubble Card",
-      "hash_hint": "Hash del pop-up de Bubble Card"
+      "group": "Pop-ups de Lovely Card",
+      "hash_hint": "Hash del pop-up de Lovely Card"
     }
   }
 }

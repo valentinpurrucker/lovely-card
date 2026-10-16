@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 
 // The rest of the pop-up suite disables this listener on purpose
-// (window.__bubbleLocationDeduperAdded = true before the import), so nothing
+// (window.__lovelyLocationDeduperAdded = true before the import), so nothing
 // covered it and issue #2563 lived here undisturbed. This file is the opposite:
 // it imports helpers.js with the deduper enabled and drives it directly.
 
@@ -29,7 +29,7 @@ window.localStorage = global.localStorage;
 global.navigator = { hardwareConcurrency: 2, deviceMemory: 2 };
 
 // Only the dialog listener is disabled, the deduper is left to register.
-window.__bubbleDialogListenerAdded = true;
+window.__lovelyDialogListenerAdded = true;
 
 // The mock factories below are the ones the main pop-up suite uses, so this
 // file loads helpers.js exactly the same way. Only the deduper differs: it is
@@ -149,7 +149,7 @@ describe('the location deduper, and the orphaned history entry of #2563', () => 
     });
 
     // #2606: a re-tap does not move the URL, so it stopped announcing itself as
-    // a navigation and travels on Bubble Card's own event type. The deduper has
+    // a navigation and travels on Lovely Card's own event type. The deduper has
     // to keep hearing it, because it is what tells it the entry on the stack
     // belongs to the first open and not to the close about to happen. Registered
     // for the private type too, this behaves exactly as it did before.

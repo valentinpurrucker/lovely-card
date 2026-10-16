@@ -15,7 +15,7 @@ const CHUNK_MAX = 1200;   // per-request payload cap (keeps GET URLs well under 
 const TOTAL_MAX = 8000;   // beyond this, the remainder stays untranslated
 const REQUEST_SPACING_MS = 350;      // serial queue spacing between endpoint calls
 const RATE_LIMIT_COOLDOWN_MS = 5 * 60 * 1000; // back off after a 429
-const STORAGE_KEY = 'bubble-card-translations-cache';
+const STORAGE_KEY = 'lovely-card-translations-cache';
 const STORAGE_MAX_ENTRIES = 1000; // store descriptions + module labels
 
 // Persistent cache: module descriptions are stable, so a translation is only
@@ -73,11 +73,11 @@ const SERVICE_LANG = {
 // install must never reach out on its own. The on-device engine sits behind the
 // same switch, so the user answers the question once and it covers every engine.
 //
-// A key of its own, and not the beta's bubble-card-store-translate: that one
+// A key of its own, and not the beta's lovely-card-store-translate: that one
 // switched a display preference on a feature that was already running, so an
 // account holding it cannot be read as anyone having agreed to anything. Every
 // install starts from off and is asked the question once.
-const ENABLED_STORAGE_KEY = 'bubble-card-module-translation';
+const ENABLED_STORAGE_KEY = 'lovely-card-module-translation';
 let translationEnabled;
 
 export function isModuleTranslationEnabled() {
@@ -106,10 +106,10 @@ export function getTranslationTargetLang(hass) {
 }
 
 // Segments that must never be translated: fenced/inline code, code-ish
-// elements, any HTML tag, URLs, brand/product names, and Bubble Card's own
+// elements, any HTML tag, URLs, brand/product names, and Lovely Card's own
 // vocabulary, so descriptions keep the wording used by the editor itself
 // (e.g. "pop-up", never a translation engine's synonym).
-const PROTECT_RE = /(```[\s\S]*?```|<code-block>[\s\S]*?<\/code-block>|<pre>[\s\S]*?<\/pre>|<code>[\s\S]*?<\/code>|`[^`\n]*`|<[^>\n]+>|https?:\/\/\S+|Bubble Card Tools|Bubble Card|Module Store|Home Assistant|GitHub|Patreon|YAML)/g;
+const PROTECT_RE = /(```[\s\S]*?```|<code-block>[\s\S]*?<\/code-block>|<pre>[\s\S]*?<\/pre>|<code>[\s\S]*?<\/code>|`[^`\n]*`|<[^>\n]+>|https?:\/\/\S+|Bubble Card Tools|Lovely Card|Module Store|Home Assistant|GitHub|Patreon|YAML)/g;
 
 // Engines render "pop-up" with their own synonyms ("fenêtre contextuelle",
 // "ventana emergente", ...). Descriptions must use the same word as the

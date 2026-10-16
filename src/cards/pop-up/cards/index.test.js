@@ -87,7 +87,7 @@ describe('standalone popup cards', () => {
             isStandalonePopUp: true,
             _standalonePopUpCardsActive: true,
             config: {
-                cards: [{ type: 'custom:bubble-card' }],
+                cards: [{ type: 'custom:lovely-card' }],
             },
         };
 

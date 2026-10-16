@@ -5,7 +5,7 @@
    ===================================================================== */
 
 mwc-list-item {
-    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, 24px));
+    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     margin: 0 8px;
 }
 
@@ -15,10 +15,10 @@ mwc-list-item[selected] {
 }
 
 ha-select {
-    --mdc-shape-medium: var(--bubble-select-list-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2)));
+    --mdc-shape-medium: var(--bubble-select-list-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     --mdc-theme-surface: var(--bubble-select-list-background-color, var(--bubble-select-main-background-color, var(--bubble-main-background-color, var(--card-background-color, var(--secondary-background-color)))));
-    --mdc-shape-large: 32px;
-    --mdc-shape-small: 64px;
+    --mdc-shape-large: var(--lovely-radius-control, var(--lovely-radius, 8px));
+    --mdc-shape-small: var(--lovely-radius-control, var(--lovely-radius, 8px));
     --mdc-menu-max-width: min-content;
     --mdc-menu-min-width: var(--bubble-select-list-width, 200px);
     --mdc-select-max-width: min-content;
@@ -112,7 +112,7 @@ ha-dropdown {
 /* ha-dropdown menu panel: match old mwc-menu appearance */
 ha-dropdown::part(menu) {
     border: none !important;
-    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, 32px)) !important;
+    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px)))) !important;
     min-width: var(--bubble-select-list-width, 200px) !important;
     padding: 8px 0 !important;
     scrollbar-width: none;
@@ -128,7 +128,7 @@ ha-dropdown::part(menu)::-webkit-scrollbar {
 ha-dropdown-item {
     /* Match old mwc-list-item min-height */
     min-height: 48px !important;
-    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, 24px)) !important;
+    border-radius: var(--bubble-select-list-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px)))) !important;
     margin: 0 8px;
     overflow: hidden;
     /* Suppress any default webawesome border on items */
@@ -152,7 +152,7 @@ ha-dropdown-item[selected]:focus:not(:hover) {
 ha-dropdown-item[selected] {
     /* Override primary color (used for text/icons) to match HA primary text */
     --primary-color: var(--primary-text-color);
-    /* Override background fill to use the Bubble Card accent color */
+    /* Override background fill to use the Lovely Card accent color */
     --ha-color-fill-primary-quiet-resting: var(--bubble-select-list-item-accent-color, var(--bubble-list-item-accent-color, var(--bubble-accent-color, var(--bubble-default-color))));
     --ha-color-fill-primary-quiet-hover: var(--bubble-select-list-item-accent-color, var(--bubble-list-item-accent-color, var(--bubble-accent-color, var(--bubble-default-color))));
 }
@@ -191,7 +191,7 @@ ha-dropdown-item[selected] {
 .bubble-keypad-dot {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
+    border-radius: var(--lovely-radius-indicator, var(--lovely-radius, 2px));
     background-color: var(--primary-text-color);
 }
 
@@ -213,7 +213,7 @@ ha-dropdown-item[selected] {
     justify-content: center;
     width: var(--bubble-keypad-key-size);
     height: var(--bubble-keypad-key-size);
-    border-radius: 50%;
+    border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
     background-color: color-mix(in srgb, var(--primary-text-color) 10%, transparent);
     color: var(--primary-text-color);
     font-size: 18px;
@@ -280,7 +280,7 @@ ha-dropdown-item[selected] {
     height: 36px;
     width: 36px;
     pointer-events: none;
-    border-radius: var(--bubble-select-button-border-radius, var(--bubble-border-radius, 20px));
+    border-radius: var(--bubble-select-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
     align-items: center;
     justify-content: center;
     transition: background 0.2s, transform 0.2s;
@@ -300,12 +300,12 @@ ha-dropdown-item[selected] {
     width: 100%;
     height: 100%;
     border: var(--bubble-select-border, solid 2px var(--bubble-accent-color, var(--bubble-default-color)));
-    border-radius: var(--bubble-border-radius, 28px);
+    border-radius: var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px)));
     box-sizing: border-box;
     pointer-events: none;
 }
 
 .bubble-sub-button .bubble-dropdown-inner-border,
 .bubble-sub-button-group .bubble-dropdown-inner-border {
-    border-radius: var(--bubble-border-radius, 18px);
+    border-radius: var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px)));
 }

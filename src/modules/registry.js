@@ -20,7 +20,7 @@ function warnAboutMissingLegacyYaml(fullUrl) {
   legacyYaml404WarningShown = true;
 
   console.warn(
-    "Bubble Card - The legacy modules file '/local/bubble/bubble-modules.yaml' was not found (404). " +
+    "Lovely Card - The legacy modules file '/local/bubble/bubble-modules.yaml' was not found (404). " +
     "This check happens when Bubble Card Tools is not installed or not available. " +
     "Install Bubble Card Tools to manage modules and stop seeing this 404 in the console: " +
     "https://github.com/Clooos/Bubble-Card-Tools",
@@ -33,17 +33,17 @@ document.addEventListener('yaml-modules-updated', () => {
   modulesInitialized = false;
   allModules = null;
   initPromise = null;
-  try { window.dispatchEvent(new CustomEvent('bubble-card-modules-changed')); } catch (_) {}
+  try { window.dispatchEvent(new CustomEvent('lovely-card-modules-changed')); } catch (_) {}
 });
 
 // Update a single module from editor and notify listeners
-window.addEventListener('bubble-card-module-updated', (event) => {
+window.addEventListener('lovely-card-module-updated', (event) => {
   if (event?.detail?.moduleId && event?.detail?.moduleData) {
     yamlKeysMap.set(event.detail.moduleId, event.detail.moduleData);
     if (!moduleSourceMap.has(event.detail.moduleId)) {
       moduleSourceMap.set(event.detail.moduleId, 'editor');
     }
-    try { window.dispatchEvent(new CustomEvent('bubble-card-modules-changed')); } catch (_) {}
+    try { window.dispatchEvent(new CustomEvent('lovely-card-modules-changed')); } catch (_) {}
   }
 });
 
@@ -58,7 +58,7 @@ export const loadYAML = async (urls) => {
         if (response.status === 404 && url === '/local/bubble/bubble-modules.yaml') {
           warnAboutMissingLegacyYaml(fullUrl);
         }
-        try { window.bubbleYamlWarning = true; } catch (_) {}
+        try { window.lovelyYamlWarning = true; } catch (_) {}
         continue;
       }
       const yamlText = await response.text();
@@ -74,7 +74,7 @@ export const loadYAML = async (urls) => {
       return parsedYAML;
     } catch (error) {
       console.warn(`Error fetching 'bubble-modules.yaml' from ${fullUrl}:`, error);
-      try { window.bubbleYamlWarning = true; } catch (_) {}
+      try { window.lovelyYamlWarning = true; } catch (_) {}
     }
   }
   return null;
@@ -185,7 +185,7 @@ export async function initializeModules(context) {
     const hass = await waitForHass(context);
     const bctAvailable = await ensureBCTProviderAvailable(hass);
     if (bctAvailable) {
-      try { await migrateIfNeeded(hass); } catch (e) { console.warn('Bubble Card - Migration check failed:', e); }
+      try { await migrateIfNeeded(hass); } catch (e) { console.warn('Lovely Card - Migration check failed:', e); }
 
       // Stale-while-revalidate using aggregated cache
       const cachedAggregated = getCachedAggregatedModules();

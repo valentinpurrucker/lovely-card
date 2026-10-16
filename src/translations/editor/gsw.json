@@ -115,7 +115,7 @@
       "info_organize": "Du chasch Sub-Buttons einzeln aordne oder gruppiere. Gruppe chönd näbenand (inline) oder i Ziile (vertikal gstaplet) aordnet wärde, und Buttons innerhalb vo Gruppe chönd näbenand oder als Spalte azeigt wärde.",
       "editor_title": "Sub-Button-Editor",
       "rows_detected_title": "Ziile-Konfiguration erkännt",
-      "rows_detected_body": "D Charte-Höchi (rows) isch i dinere Konfiguration explizit gsetzt. Das verhinderet automatischi Ziile-Aapassige, wänn Sub-Buttons hinzuegfüegt wärde (zum Bispil bi untere Sub-Buttons). Klick uf de Button unde zum d Überschriibig entferne und Bubble Card d Ziile automatisch berächne lah.",
+      "rows_detected_body": "D Charte-Höchi (rows) isch i dinere Konfiguration explizit gsetzt. Das verhinderet automatischi Ziile-Aapassige, wänn Sub-Buttons hinzuegfüegt wärde (zum Bispil bi untere Sub-Buttons). Klick uf de Button unde zum d Überschriibig entferne und Lovely Card d Ziile automatisch berächne lah.",
       "remove_override": "Überschriibig entferne und automatisch berächne",
       "card_specific": "Charte-spezifischi Buttons",
       "main_top": "Haupt-Sub-Buttons (obe)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Bruuchsch YAML?",
       "notice_yaml_body": "Ersetz di alt Pop-up-Konfiguration dur s eigeständige Format:",
       "notice_protip": "Profi-Tipp:",
-      "notice_protip_body": "Ehrlich gseit, wänn du zu dem Ziitpunkt no immer YAML für Bubble Card bruuchsch, sölltsch de neu Editor emal probiere, demit erstellsch und bearbeitisch Pop-ups im Handumdrehe! Zuedem überchunnsch Zuegriff uf de Module Store. Ich ha so vil Liebi i de Editor gsteckt ❤️",
+      "notice_protip_body": "Ehrlich gseit, wänn du zu dem Ziitpunkt no immer YAML für Lovely Card bruuchsch, sölltsch de neu Editor emal probiere, demit erstellsch und bearbeitisch Pop-ups im Handumdrehe! Zuedem überchunnsch Zuegriff uf de Module Store. Ich ha so vil Liebi i de Editor gsteckt ❤️",
       "notice_enjoy": "Vil Spass mit dem Update! Proscht! 🍻",
       "notice_dismiss": "Verstande, i dere Aasicht nüme azeige",
       "notice_remind": "Spöter erinnere"
@@ -579,7 +579,7 @@
       "show_original": "Original azeige",
       "show_translation": "Übersetzig azeige",
       "translate_offer_title": "Modultäxt übersetze",
-      "translate_offer_body": "Modul wärded uf Änglisch veröffentlicht. Bubble Card cha ihri Beschriibige und Optione i dini Sprach übersetze, schickt dr Täxt debii aber an en externe Übersetzigsdienst. Es bliibt us, bis dus sälber ischaltisch."
+      "translate_offer_body": "Modul wärded uf Änglisch veröffentlicht. Lovely Card cha ihri Beschriibige und Optione i dini Sprach übersetze, schickt dr Täxt debii aber an en externe Übersetzigsdienst. Es bliibt us, bis dus sälber ischaltisch."
     },
     "module_editor": {
       "create_module": "Neus Modul erstelle",
@@ -598,7 +598,7 @@
       "description_helper": "Die Beschriibig erschiint i dim Modul und im Module Store (wänn du's teilsch), also lueg, dass sie klar und knapp isch. {bold}, aber beacht, dass das nur i dim Modul gränderet wird, de Module Store zeigt's nöd aa.",
       "description_helper_bold": "Du chasch HTML und Inline-CSS bruche",
       "code_title": "Code (CSS/JS-Template)",
-      "code_helper": "Meh Informatione und Bispil zu de CSS- und JS-Template-Möglichkeite findsch i de {link}. Tipp: Du chasch de Editor vergrössere, indäm du uf de Panel-Titel klicksch (Bubble Card-Konfiguration).",
+      "code_helper": "Meh Informatione und Bispil zu de CSS- und JS-Template-Möglichkeite findsch i de {link}. Tipp: Du chasch de Editor vergrössere, indäm du uf de Panel-Titel klicksch (Lovely Card-Konfiguration).",
       "styling_docs": "Styling- und Template-Dokumentation",
       "editor_schema_title": "Optional: Editor-Schema (YAML)",
       "yaml_error_title": "Fehler im YAML-Schema",
@@ -653,7 +653,7 @@
       "download_error": "Fehler bim Abelade vom Modul: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card isch e minimalistischi und aapassbari Charte-Sammlig"
+      "description": "Lovely Card isch e minimalistischi und aapassbari Charte-Sammlig"
     },
     "errors": {
       "card_type_required": "Du muesch en Charte-Typ definiere",
@@ -673,8 +673,8 @@
       "hidden_content": "Inhalt im Bearbeitigsmodus us Performance-Gründ usblendet"
     },
     "navigation": {
-      "group": "Bubble Card Pop-ups",
-      "hash_hint": "Bubble Card Pop-up-Hash"
+      "group": "Lovely Card Pop-ups",
+      "hash_hint": "Lovely Card Pop-up-Hash"
     }
   }
 }

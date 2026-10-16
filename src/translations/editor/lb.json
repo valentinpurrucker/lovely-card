@@ -115,7 +115,7 @@
       "info_organize": "Dir kënnt Sub-Knäppercher eenzel uerdnen oder gruppéieren. Gruppe kënnen niefteneen (inline) oder a Reien (vertikal gestapelt) arrangéiert ginn, a Knäppercher a Gruppe kënnen niefteneen oder als Kolonn ugewise ginn.",
       "editor_title": "Sub-Knäppchen-Editeur",
       "rows_detected_title": "Reie-Konfiguratioun detektéiert",
-      "rows_detected_body": "D'Kaartenhéicht (rows) ass an Ärer Konfiguratioun explizit gesat. Dat verhënnert automatesch Reien-Upassungen, wa Sub-Knäppercher dobäigesat ginn (zum Beispill bei ënneschte Sub-Knäppercher). Klickt op de Knäppchen ënnen, fir d'Iwwerschreiwung ze läschen an d'Reie vu Bubble Card automatesch berechnen ze loossen.",
+      "rows_detected_body": "D'Kaartenhéicht (rows) ass an Ärer Konfiguratioun explizit gesat. Dat verhënnert automatesch Reien-Upassungen, wa Sub-Knäppercher dobäigesat ginn (zum Beispill bei ënneschte Sub-Knäppercher). Klickt op de Knäppchen ënnen, fir d'Iwwerschreiwung ze läschen an d'Reie vu Lovely Card automatesch berechnen ze loossen.",
       "remove_override": "Iwwerschreiwung läschen an automatesch berechnen",
       "card_specific": "Kaartespezifesch Knäppercher",
       "main_top": "Haapt-Sub-Knäppercher (uewen)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Benotzt Dir YAML?",
       "notice_yaml_body": "Ersetzt déi al Pop-up-Konfiguratioun duerch dat eegestännegt Format:",
       "notice_protip": "Profi-Tipp:",
-      "notice_protip_body": "Éierlech gesot, wann Dir zu dësem Zäitpunkt nach ëmmer YAML fir Bubble Card benotzt, sollt Dir den neien Editeur emol probéieren, domat erstellt a bearbecht Dir Pop-ups am Handëmdréinen! Dir kritt ausserdeem Zougrëff op de Module Store. Ech hunn esou vill Léift an dësen Editeur gestach ❤️",
+      "notice_protip_body": "Éierlech gesot, wann Dir zu dësem Zäitpunkt nach ëmmer YAML fir Lovely Card benotzt, sollt Dir den neien Editeur emol probéieren, domat erstellt a bearbecht Dir Pop-ups am Handëmdréinen! Dir kritt ausserdeem Zougrëff op de Module Store. Ech hunn esou vill Léift an dësen Editeur gestach ❤️",
       "notice_enjoy": "Vill Spaass mat dësem Update! Prost! 🍻",
       "notice_dismiss": "Verstanen, an dëser Vue net méi weisen",
       "notice_remind": "Méi spéit erënneren"
@@ -579,7 +579,7 @@
       "show_original": "Original uweisen",
       "show_translation": "Iwwersetzung uweisen",
       "translate_offer_title": "Modultexter iwwersetzen",
-      "translate_offer_body": "Moduler ginn op Englesch verëffentlecht. Bubble Card kann hir Beschreiwungen an Optiounen an deng Sprooch iwwersetzen, schéckt den Text dobäi awer un en externen Iwwersetzungsdéngscht. Et bleift aus, bis du et selwer uschalts."
+      "translate_offer_body": "Moduler ginn op Englesch verëffentlecht. Lovely Card kann hir Beschreiwungen an Optiounen an deng Sprooch iwwersetzen, schéckt den Text dobäi awer un en externen Iwwersetzungsdéngscht. Et bleift aus, bis du et selwer uschalts."
     },
     "module_editor": {
       "create_module": "Neie Modul erstellen",
@@ -598,7 +598,7 @@
       "description_helper": "Dës Beschreiwung erschéngt an Ärem Modul an am Module Store (wann Dir en deelt), also passt op, datt se kloer a präzis ass. {bold}, mee bedenkt, datt dat nëmmen an Ärem Modul gerendert gëtt, de Module Store weist et net un.",
       "description_helper_bold": "Dir kënnt HTML an Inline-CSS benotzen",
       "code_title": "Code (CSS/JS-Template)",
-      "code_helper": "Méi Informatiounen a Beispiller zu de CSS- a JS-Template-Méiglechkeete fannt Dir an der {link}. Tipp: Dir kënnt den Editeur vergréisseren, andeems Dir op de Paneltitel klickt (Bubble Card-Konfiguratioun).",
+      "code_helper": "Méi Informatiounen a Beispiller zu de CSS- a JS-Template-Méiglechkeete fannt Dir an der {link}. Tipp: Dir kënnt den Editeur vergréisseren, andeems Dir op de Paneltitel klickt (Lovely Card-Konfiguratioun).",
       "styling_docs": "Styling- an Template-Dokumentatioun",
       "editor_schema_title": "Optional: Editeur-Schema (YAML)",
       "yaml_error_title": "Feeler am YAML-Schema",
@@ -653,7 +653,7 @@
       "download_error": "Feeler beim Erofluede vum Modul: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card ass eng minimalistesch a personaliséierbar Kaarte-Sammlung"
+      "description": "Lovely Card ass eng minimalistesch a personaliséierbar Kaarte-Sammlung"
     },
     "errors": {
       "card_type_required": "Dir musst e Kaartentyp definéieren",
@@ -673,8 +673,8 @@
       "hidden_content": "Inhalt am Editiounsmodus aus Performancegrënn verstoppt"
     },
     "navigation": {
-      "group": "Bubble Card Pop-ups",
-      "hash_hint": "Bubble Card Pop-up-Hash"
+      "group": "Lovely Card Pop-ups",
+      "hash_hint": "Lovely Card Pop-up-Hash"
     }
   }
 }

@@ -350,7 +350,7 @@ export function setupActions(element, options) {
   // Ensure ripple feedback on slider toggler even when no explicit actions are configured
   if (options.subButtonType === 'slider' && !options.alwaysVisible) {
     // Make sure we have an action handler target for global pointer listener
-    element.classList.add('bubble-action');
+    element.classList.add('lovely-action');
     element.style.cursor = 'pointer';
     element.style.pointerEvents = 'auto';
     if (!element.haRipple) {

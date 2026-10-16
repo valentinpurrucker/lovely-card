@@ -3,8 +3,8 @@ import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 // Machine translation reaches outside the user's network, so the tests that
 // matter are the ones proving no engine is reachable while the switch is off.
 
-const STORAGE_KEY = 'bubble-card-module-translation';
-const BETA_KEY = 'bubble-card-store-translate';
+const STORAGE_KEY = 'lovely-card-module-translation';
+const BETA_KEY = 'lovely-card-store-translate';
 
 function createStorage(initial = {}) {
     const values = new Map(Object.entries(initial));

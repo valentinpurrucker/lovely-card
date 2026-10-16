@@ -9,7 +9,7 @@
 // unguarded, a failure here took down the whole horizontal-buttons-stack
 // handler: no styles, no light colors, no status, until reload.
 
-const KEY_PREFIX = 'bubbleButtonWidth-';
+const KEY_PREFIX = 'lovelyButtonWidth-';
 
 export function getStoredButtonWidth(link) {
     try {

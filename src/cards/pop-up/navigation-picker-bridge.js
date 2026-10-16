@@ -1,6 +1,6 @@
 import { tGlobal } from '../../tools/localize.js';
 import { getCurrentViewPopUps, normalizePopUpHash } from './view-popups.js';
-const POPUP_NAVIGATION_SECTION_ID = 'bubble_popups';
+const POPUP_NAVIGATION_SECTION_ID = 'lovely_popups';
 const getNavigationGroupLabel = () => tGlobal('editor.navigation.group');
 
 function getCurrentPagePath() {
@@ -89,7 +89,7 @@ function injectPopUpHashes(picker) {
         bubbleItems.sort((a, b) => picker._sortBySortingLabel(a, b));
     }
 
-    picker.__bubblePopUpNavigationItems = bubbleItems;
+    picker.__lovelyPopUpNavigationItems = bubbleItems;
     picker._navigationItems = [...nativeItems, ...bubbleItems];
 }
 
@@ -97,7 +97,7 @@ function updatePickerSections(picker) {
     const genericPicker = picker.renderRoot?.querySelector('ha-generic-picker');
     if (!genericPicker) return;
 
-    const hasBubbleItems = picker.__bubblePopUpNavigationItems?.length > 0;
+    const hasBubbleItems = picker.__lovelyPopUpNavigationItems?.length > 0;
     const sections = Array.isArray(genericPicker.sections) ? genericPicker.sections : [];
     const filtered = sections.filter(s => s?.id !== POPUP_NAVIGATION_SECTION_ID);
 
@@ -123,14 +123,14 @@ function refreshNavigationPickers() {
 }
 
 function patchInstanceGetItems(instance) {
-    if (instance.__bubbleGetItemsPatched) return;
+    if (instance.__lovelyGetItemsPatched) return;
     const originalGetItems = instance._getItems;
     if (typeof originalGetItems !== 'function') return;
 
     instance._getItems = function (searchString, section) {
         injectPopUpHashes(instance);
         const bubbleItems = filterItemsBySearch(
-            instance.__bubblePopUpNavigationItems || [], searchString
+            instance.__lovelyPopUpNavigationItems || [], searchString
         );
 
         if (section === POPUP_NAVIGATION_SECTION_ID) return bubbleItems;
@@ -139,7 +139,7 @@ function patchInstanceGetItems(instance) {
         if (section || !bubbleItems.length) return items;
         return [...items, getNavigationGroupLabel(), ...bubbleItems];
     };
-    instance.__bubbleGetItemsPatched = true;
+    instance.__lovelyGetItemsPatched = true;
 }
 
 function patchNavigationPicker() {
@@ -147,7 +147,7 @@ function patchNavigationPicker() {
     if (!HaNavigationPicker?.prototype) return false;
 
     const proto = HaNavigationPicker.prototype;
-    if (proto.__bubblePopUpHashesPatched) return true;
+    if (proto.__lovelyPopUpHashesPatched) return true;
 
     const originalLoad = proto._loadNavigationItems;
     const originalUpdated = proto.updated;
@@ -170,13 +170,13 @@ function patchNavigationPicker() {
         }
     };
 
-    proto.__bubblePopUpHashesPatched = true;
+    proto.__lovelyPopUpHashesPatched = true;
     return true;
 }
 
 export function initPopUpHashNavigationBridge() {
-    if (window.__bubblePopUpHashNavigationBridgeInitialized) return;
-    window.__bubblePopUpHashNavigationBridgeInitialized = true;
+    if (window.__lovelyPopUpHashNavigationBridgeInitialized) return;
+    window.__lovelyPopUpHashNavigationBridgeInitialized = true;
 
     if (!patchNavigationPicker()) {
         customElements.whenDefined('ha-navigation-picker').then(() => {

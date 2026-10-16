@@ -20,7 +20,7 @@ function makeHass(attributes = { hvac_modes: ['off', 'heat', 'cool'] }) {
     };
 }
 
-// Minimal stand-in for the Bubble Card editor element: only what the climate
+// Minimal stand-in for the Lovely Card editor element: only what the climate
 // editor template touches while it is being evaluated.
 function makeEditor(config, hass = makeHass()) {
     return {

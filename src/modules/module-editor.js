@@ -95,7 +95,7 @@ function refreshStyles(context) {
 }
 
 function broadcastModuleUpdate(moduleId, moduleData) {
-  window.dispatchEvent(new CustomEvent('bubble-card-module-updated', {
+  window.dispatchEvent(new CustomEvent('lovely-card-module-updated', {
     detail: { moduleId, moduleData }
   }));
 }
@@ -182,7 +182,7 @@ export function validateSuggestionsCode(source) {
 // over once has to come back untouched, whatever path the author leaves by.
 // ---------------------------------------------------------------------------
 
-// The mount lives in the dialog's shadow root, where none of Bubble Card's
+// The mount lives in the dialog's shadow root, where none of Lovely Card's
 // stylesheets reach, so everything it needs is inline. Home Assistant's own
 // `hui-card` rule in that shadow root applies to the cards built here too,
 // which is why they need no sizing of their own.
@@ -208,7 +208,7 @@ const PREVIEW_EMPTY_STYLE = [
 ].join(';');
 
 // Built the way Home Assistant builds the previews of its own picker, and for
-// the same reasons: `hui-card` is what resolves `custom:bubble-card`, forwards
+// the same reasons: `hui-card` is what resolves `custom:lovely-card`, forwards
 // `preview` (and the `editMode` alias behind it) and re-renders the element
 // when it is handed a new hass.
 //
@@ -238,7 +238,7 @@ function createPreviewCard(config, hass) {
     if (typeof card.load === 'function') card.load();
     return card;
   } catch (error) {
-    console.warn('Bubble Card - Could not build an entity suggestion preview card:', error);
+    console.warn('Lovely Card - Could not build an entity suggestion preview card:', error);
     return null;
   }
 }
@@ -427,7 +427,7 @@ export function buildSuggestionsPreview(hass, entityId, moduleId, module) {
       }
     });
   } catch (error) {
-    console.warn('Bubble Card - Could not build the entity suggestions preview:', error);
+    console.warn('Lovely Card - Could not build the entity suggestions preview:', error);
     return [];
   } finally {
     yamlKeysMap.clear();

@@ -11,7 +11,7 @@
 // 7.2 s to 3.7 s cold on an iPad 6, and its per-execution cost from 30.7 ms to
 // 6.8 ms.
 //
-// Only the module knows what its work depends on, so it says so and Bubble Card
+// Only the module knows what its work depends on, so it says so and Lovely Card
 // remembers the answer per card.
 
 // Same separator the sub-button state key already uses. A control character

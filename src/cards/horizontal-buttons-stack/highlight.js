@@ -1,6 +1,6 @@
 // The "current view" highlight of the horizontal buttons stack.
 //
-// Its own module rather than a part of create.js, because bubble-card.js has to
+// Its own module rather than a part of create.js, because lovely-card.js has to
 // release the listener on disconnect and create.js imports styles.css, which
 // only webpack can read. Nothing is imported here on purpose, so the disconnect
 // path stays free of the card's asset graph.
@@ -27,7 +27,7 @@ function refreshButtonHighlights(context) {
 
 // Registered once per card and released on disconnect, rather than once per
 // button and never released. The handler closes over the context, which is the
-// bubble-card element itself, so a leaked one pins that element and its last
+// lovely-card element itself, so a leaked one pins that element and its last
 // hass for the lifetime of the page. Called on every render, so switching the
 // option in the editor takes effect without rebuilding the card.
 export function syncButtonHighlightListener(context) {

@@ -115,7 +115,7 @@
       "info_organize": "Jy kan subknoppies afsonderlik rangskik of hulle groepeer. Groepe kan langs mekaar (inlyn) of in rye (vertikaal gestapel) gerangskik word, en knoppies binne groepe kan inlyn of in 'n kolomuitleg vertoon word.",
       "editor_title": "Subknoppie-redigeerder",
       "rows_detected_title": "Ryekonfigurasie bespeur",
-      "rows_detected_body": "Die kaarthoogte (rows) is uitdruklik in jou konfigurasie gestel. Dit sal outomatiese ry-aanpassings verhoed wanneer subknoppies bygevoeg word (byvoorbeeld wanneer onderste subknoppies bygevoeg word). Klik op die knoppie hieronder om die oorskrywing te verwyder en Bubble Card die rye outomaties te laat bereken.",
+      "rows_detected_body": "Die kaarthoogte (rows) is uitdruklik in jou konfigurasie gestel. Dit sal outomatiese ry-aanpassings verhoed wanneer subknoppies bygevoeg word (byvoorbeeld wanneer onderste subknoppies bygevoeg word). Klik op die knoppie hieronder om die oorskrywing te verwyder en Lovely Card die rye outomaties te laat bereken.",
       "remove_override": "Verwyder oorskrywing en bereken outomaties",
       "card_specific": "Kaartspesifieke knoppies",
       "main_top": "Hoof-subknoppies (bo)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Gebruik jy YAML?",
       "notice_yaml_body": "Vervang die ou opspringerkonfigurasie met die selfstandige formaat:",
       "notice_protip": "Pro-wenk:",
-      "notice_protip_body": "Eerlik, as jy op hierdie stadium nog steeds YAML vir Bubble Card gebruik, is dit die moeite werd om die nuwe redigeerder te probeer, dit maak die skep en redigeer van opspringers 'n plesier! Jy kry ook toegang tot die Module Store. Ek het soveel liefde in hierdie redigeerder gesit ❤️",
+      "notice_protip_body": "Eerlik, as jy op hierdie stadium nog steeds YAML vir Lovely Card gebruik, is dit die moeite werd om die nuwe redigeerder te probeer, dit maak die skep en redigeer van opspringers 'n plesier! Jy kry ook toegang tot die Module Store. Ek het soveel liefde in hierdie redigeerder gesit ❤️",
       "notice_enjoy": "Geniet hierdie opdatering! Gesondheid! 🍻",
       "notice_dismiss": "Reg so, moenie weer in hierdie aansig wys nie",
       "notice_remind": "Herinner my later"
@@ -579,7 +579,7 @@
       "show_original": "Wys oorspronklike",
       "show_translation": "Wys vertaling",
       "translate_offer_title": "Vertaal moduletekste",
-      "translate_offer_body": "Modules word in Engels gepubliseer. Bubble Card kan hul beskrywings en opsies na jou taal vertaal, maar dit stuur daardie teks na 'n eksterne vertaaldiens. Dit bly af totdat jy dit self aanskakel."
+      "translate_offer_body": "Modules word in Engels gepubliseer. Lovely Card kan hul beskrywings en opsies na jou taal vertaal, maar dit stuur daardie teks na 'n eksterne vertaaldiens. Dit bly af totdat jy dit self aanskakel."
     },
     "module_editor": {
       "create_module": "Skep nuwe module",
@@ -598,7 +598,7 @@
       "description_helper": "Hierdie beskrywing verskyn in jou module en in die Module Store (as jy dit deel), maak dus seker dit is duidelik en bondig. {bold}, maar let daarop dat dit slegs in jou module weergegee sal word, die Module Store sal dit nie vertoon nie.",
       "description_helper_bold": "Jy kan HTML en inlyn-CSS gebruik",
       "code_title": "Kode (CSS/JS-sjabloon)",
-      "code_helper": "Meer inligting en voorbeelde oor die CSS- en JS-sjabloonmoontlikhede kan in die {link} gevind word. Wenk: jy kan die redigeerder vergroot deur op die paneeltitel te klik (Bubble Card-konfigurasie).",
+      "code_helper": "Meer inligting en voorbeelde oor die CSS- en JS-sjabloonmoontlikhede kan in die {link} gevind word. Wenk: jy kan die redigeerder vergroot deur op die paneeltitel te klik (Lovely Card-konfigurasie).",
       "styling_docs": "Styl- en sjabloondokumentasie",
       "editor_schema_title": "Opsioneel: redigeerderskema (YAML)",
       "yaml_error_title": "Fout in YAML-skema",
@@ -653,7 +653,7 @@
       "download_error": "Fout met die aflaai van die module: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card is 'n minimalistiese en aanpasbare kaartversameling"
+      "description": "Lovely Card is 'n minimalistiese en aanpasbare kaartversameling"
     },
     "errors": {
       "card_type_required": "Jy moet 'n kaarttipe definieer",
@@ -673,8 +673,8 @@
       "hidden_content": "Inhoud in wysigmodus versteek vir beter werkverrigting"
     },
     "navigation": {
-      "group": "Bubble Card-opspringers",
-      "hash_hint": "Bubble Card-opspringer se hutswaarde"
+      "group": "Lovely Card-opspringers",
+      "hash_hint": "Lovely Card-opspringer se hutswaarde"
     }
   }
 }

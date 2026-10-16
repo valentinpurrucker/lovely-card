@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 
-const CURRENT_KEY = 'bubble-card-bct-cache-v2:localhost';
-const LEGACY_KEY = 'bubble-card-bct-cache-v1:localhost';
+const CURRENT_KEY = 'lovely-card-bct-cache-v2:localhost';
+const LEGACY_KEY = 'lovely-card-bct-cache-v1:localhost';
 const CODE = 'A'.repeat(64);
 
 // bct-provider keeps per-session state (availability, the parsed-cache memo,
@@ -121,13 +121,13 @@ describe('stale cache versions', () => {
         const { getCachedAggregatedModules } = await loadProvider();
         storage.values.set(LEGACY_KEY, '{}');
         storage.values.set(CURRENT_KEY, cacheBlob({ 'modules/a.yaml': fileEntry('1', 'alpha', 'AAA') }));
-        storage.values.set('bubble-card-modules-sort-order', 'default');
-        storage.values.set('bubbleButtonWidth-#kitchen', '120');
+        storage.values.set('lovely-card-modules-sort-order', 'default');
+        storage.values.set('lovelyButtonWidth-#kitchen', '120');
 
         expect(getCachedAggregatedModules()).toEqual({ alpha: { name: 'alpha', code: 'AAA' } });
         expect(storage.values.has(LEGACY_KEY)).toBe(false);
-        expect(storage.values.get('bubble-card-modules-sort-order')).toBe('default');
-        expect(storage.values.get('bubbleButtonWidth-#kitchen')).toBe('120');
+        expect(storage.values.get('lovely-card-modules-sort-order')).toBe('default');
+        expect(storage.values.get('lovelyButtonWidth-#kitchen')).toBe('120');
     });
 });
 

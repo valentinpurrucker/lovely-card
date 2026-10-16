@@ -6,13 +6,13 @@
     height: 100%;
     width: 100%;
     cursor: ew-resize;
-    border-radius: calc(var(--bubble-button-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2))));
+    border-radius: calc(var(--bubble-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px)))));
     overflow: hidden;
 }
 
 .bubble-background {
     background-color: var(--bubble-button-background-color);
-    border-radius: calc(var(--bubble-button-border-radius, var(--bubble-border-radius, calc(var(--row-height,56px)/2))));
+    border-radius: calc(var(--bubble-button-border-radius, var(--bubble-border-radius, var(--lovely-radius-card, var(--lovely-radius, 12px)))));
 }
 
 .bubble-buttons-container {

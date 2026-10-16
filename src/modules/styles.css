@@ -21,7 +21,7 @@
   gap: 12px;
   margin-bottom: 16px;
   background-color: var(--card-background-color);
-  border-radius: 16px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
   padding: 16px;
   border: 1px solid var(--divider-color);
   box-shadow: var(--shadow-elevation-1dp);
@@ -86,7 +86,7 @@
 
 .store-refresh-button {
   color: var(--primary-text-color);
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   width: 36px;
   height: 36px;
   display: flex;
@@ -106,7 +106,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  border-radius: 32px;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   overflow: hidden;
 }
 
@@ -150,7 +150,7 @@
 .store-module-card {
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
   border: 1px solid var(--divider-color);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -258,7 +258,7 @@
 .author-avatar {
   width: 24px;
   height: 24px;
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
   margin: 0;
   border: 1px solid rgba(0,0,0,0.1);
 }
@@ -276,7 +276,7 @@
 }
 
 .module-preview-image {
-  border-radius: 12px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
   max-height: 220px;
   width: 100%;
   object-fit: contain;
@@ -289,7 +289,7 @@
   position: relative;
   margin-top: 8px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
 }
 
 .module-preview-zoom-btn {
@@ -298,7 +298,7 @@
   inset-inline-end: 8px;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   background-color: var(--primary-color);
   color: white;
   display: flex;
@@ -677,7 +677,7 @@ sl-tab {
   inset-inline-end: 20px;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
@@ -714,7 +714,7 @@ sl-tab {
   gap: 24px;
   position: relative;
   background-color: var(--card-background-color);
-  border-radius: 16px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
   border: 1px solid var(--divider-color);
   box-shadow: var(--shadow-elevation-1dp);
   overflow: hidden;
@@ -758,7 +758,7 @@ sl-tab {
   width: 100%;
   height: 100%;
   border: 2px dashed rgba(var(--rgb-primary-color), 0.2);
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   animation: orbitRotation 8s linear infinite;
 }
 
@@ -767,7 +767,7 @@ sl-tab {
   width: 12px;
   height: 12px;
   background-color: var(--info-color);
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
   top: -6px;
   left: calc(50% - 6px);
   box-shadow: 0 0 10px rgba(var(--rgb-info-color), 0.7);
@@ -787,7 +787,7 @@ sl-tab {
 .bubble-progress-track {
   height: 10px;
   background-color: rgba(var(--rgb-primary-color), 0.12);
-  border-radius: 10px;
+  border-radius: var(--lovely-radius-indicator, var(--lovely-radius, 2px));
   overflow: hidden;
   position: relative;
   backdrop-filter: blur(4px);
@@ -799,7 +799,7 @@ sl-tab {
 
 .bubble-progress-bar {
   background: var(--info-color);
-  border-radius: 10px;
+  border-radius: var(--lovely-radius-indicator, var(--lovely-radius, 2px));
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 10px;
 }
@@ -838,7 +838,7 @@ sl-tab {
 .bubble-progress-dots .dot {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: var(--lovely-radius-indicator, var(--lovely-radius, 2px));
   background-color: var(--primary-color);
   opacity: 0.5;
 }
@@ -1031,7 +1031,7 @@ sl-tab {
 .module-actions .icon-button {
   width: 36px;
   height: 36px;
-  border-radius: 18px;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1229,7 +1229,7 @@ ha-expansion-panel.recently-toggled {
 
 ha-formfield.apply-module-button {
   height: 40px;
-  border-radius: 32px;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   padding: 0 16px;
   background-color: rgba(0, 0, 0, 0.1);;
 }
@@ -1316,7 +1316,7 @@ ha-formfield.apply-module-button {
   gap: 12px;
   margin-bottom: 16px;
   background-color: var(--card-background-color);
-  border-radius: 16px;
+  border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
   padding: 16px;
   border: 1px solid var(--divider-color);
   box-shadow: var(--shadow-elevation-1dp);
@@ -1332,7 +1332,7 @@ ha-formfield.apply-module-button {
   flex: 1;
   display: flex;
   align-items: center;
-  border-radius: 32px;
+  border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
   overflow: hidden;
 }
 

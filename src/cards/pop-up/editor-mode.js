@@ -52,7 +52,7 @@ function createEditorPlaceholder(context) {
     const hass = context._hass ?? getGlobalHass();
     // Dashboard edit mode can show this placeholder before any editor dialog
     // opened, so the dictionary fetch must be triggered from here too; its
-    // arrival fires bubble-card-language-changed, which rebuilds this DOM.
+    // arrival fires lovely-card-language-changed, which rebuilds this DOM.
     ensureEditorTranslations(hass);
     const t = setupTranslation(hass);
 
@@ -194,13 +194,13 @@ export function changeEditor(context) {
 
     context.bubbleInstanceId = context.bubbleInstanceId || Math.random().toString(36).slice(2, 15);
 
-    window.bubbleNewlyCreatedInstances = window.bubbleNewlyCreatedInstances || new Set();
+    window.lovelyNewlyCreatedInstances = window.lovelyNewlyCreatedInstances || new Set();
 
-    const isNewlyCreated = window.bubbleNewlyCreatedInstances.has(context.bubbleInstanceId) ||
-        (window.bubbleNewlyCreatedHashes?.has(config.hash) && isInPreview);
+    const isNewlyCreated = window.lovelyNewlyCreatedInstances.has(context.bubbleInstanceId) ||
+        (window.lovelyNewlyCreatedHashes?.has(config.hash) && isInPreview);
 
     if (isNewlyCreated && isInPreview) {
-        window.bubbleNewlyCreatedInstances.add(context.bubbleInstanceId);
+        window.lovelyNewlyCreatedInstances.add(context.bubbleInstanceId);
     }
 
     // A closed pop-up collapses its hui-card wrapper with an inline display,
@@ -239,11 +239,11 @@ export function changeEditor(context) {
             onEditorChange(context);
         }
 
-        if (!window.__bubblePopupEditorDialogListenerAdded) {
+        if (!window.__lovelyPopupEditorDialogListenerAdded) {
             window.addEventListener('dialog-closed', () => {
                 setTimeout(() => {
-                    window.bubbleNewlyCreatedInstances?.clear();
-                    window.bubbleNewlyCreatedHashes?.clear();
+                    window.lovelyNewlyCreatedInstances?.clear();
+                    window.lovelyNewlyCreatedHashes?.clear();
                     // Nudges our own pop-up runtime to re-read the URL after an
                     // editor dialog closed. The URL has not changed, so this
                     // must not be announced as a navigation: in edit mode Home
@@ -253,7 +253,7 @@ export function changeEditor(context) {
                     window.dispatchEvent(new Event(BUBBLE_URL_EVENT));
                 }, 100);
             }, { capture: true });
-            window.__bubblePopupEditorDialogListenerAdded = true;
+            window.__lovelyPopupEditorDialogListenerAdded = true;
         }
 
         const keepContentMounted = isInPreview || isNewlyCreated;

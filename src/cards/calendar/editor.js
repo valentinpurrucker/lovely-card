@@ -1,6 +1,6 @@
 import { html } from "lit";
 import setupTranslation from '../../tools/localize.js';
-import "../../components/editor/ha-selector-calendar_entity.js";
+import "../../components/editor/ha-selector-lc_calendar_entity.js";
 
 export function renderCalendarEditor(editor){
     const t = setupTranslation(editor.hass);
@@ -19,7 +19,7 @@ export function renderCalendarEditor(editor){
                   {
                     name: "entities",
                     title: t('editor.calendar.entities'),
-                    selector: { calendar_entity: {} },
+                    selector: { lc_calendar_entity: {} },
                   },
                 ]}   
                 .computeLabel=${editor._computeLabelCallback}

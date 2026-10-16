@@ -140,11 +140,11 @@ function scheduleWakeResumedPopupsSync() {
 }
 
 function ensureWakeSyncListeners() {
-    if (typeof window === 'undefined' || window.__bubbleWakeSyncListenersAdded) {
+    if (typeof window === 'undefined' || window.__lovelyWakeSyncListenersAdded) {
         return;
     }
 
-    window.__bubbleWakeSyncListenersAdded = true;
+    window.__lovelyWakeSyncListenersAdded = true;
 
     window.addEventListener('focus', scheduleWakeResumedPopupsSync);
     window.addEventListener('pageshow', scheduleWakeResumedPopupsSync);

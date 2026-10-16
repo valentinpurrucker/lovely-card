@@ -42,7 +42,7 @@ jest.unstable_mockModule('./navigation-picker-bridge.js', () => ({
 jest.unstable_mockModule('./migration.js', () => ({
     isStandalonePopUpConfig: jest.fn((config) => !!(
         config &&
-        config.type === 'custom:bubble-card' &&
+        config.type === 'custom:lovely-card' &&
         config.card_type === 'pop-up' &&
         Array.isArray(config.cards)
     )),
@@ -558,7 +558,7 @@ describe('handlePopUp performance guards', () => {
     test('re-evaluates trigger state when the app regains focus', async () => {
         const previousWindow = global.window;
         const mockWindow = new EventTarget();
-        delete mockWindow.__bubbleWakeSyncListenersAdded;
+        delete mockWindow.__lovelyWakeSyncListenersAdded;
         global.window = mockWindow;
         jest.useFakeTimers();
 
@@ -580,7 +580,7 @@ describe('handlePopUp performance guards', () => {
     test('wake sync sees popups registered after the cache was built', async () => {
         const previousWindow = global.window;
         const mockWindow = new EventTarget();
-        delete mockWindow.__bubbleWakeSyncListenersAdded;
+        delete mockWindow.__lovelyWakeSyncListenersAdded;
         global.window = mockWindow;
         jest.useFakeTimers();
 
@@ -667,7 +667,7 @@ describe('handlePopUp performance guards', () => {
             isStandalonePopUp: true,
             getRootNode: () => rootNode,
             config: {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 hash: '#kitchen-popup',
                 cards: [{ type: 'gauge', entity: 'sensor.temperature' }],
@@ -745,7 +745,7 @@ describe('handlePopUp performance guards', () => {
             isStandalonePopUp: true,
             getRootNode: () => rootNode,
             config: {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 cards: [{ type: 'gauge', entity: 'sensor.temperature' }],
             },

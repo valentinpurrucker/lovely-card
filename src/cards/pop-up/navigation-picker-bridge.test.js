@@ -53,7 +53,7 @@ globalThis.customElements = {
 
 const { initPopUpHashNavigationBridge, registerPopUpHash } = await import('./navigation-picker-bridge.js');
 
-const listed = (picker) => picker.__bubblePopUpNavigationItems.map((item) => item.id);
+const listed = (picker) => picker.__lovelyPopUpNavigationItems.map((item) => item.id);
 
 const openPicker = async () => {
     const picker = new FakeNavigationPicker();
@@ -86,14 +86,14 @@ afterEach(() => {
     location.pathname = '/lovelace/v';
 });
 
-describe('Bubble Card pop-ups in the navigation picker', () => {
+describe('Lovely Card pop-ups in the navigation picker', () => {
     // A closed legacy pop-up takes itself out of the page, so it never
     // registers, and the picker used to leave it out.
     test('lists every pop-up of the view as configured, rendered or not', async () => {
         const picker = await openPicker();
 
         expect(listed(picker)).toEqual(['#grid-legacy', '#stack-legacy']);
-        expect(picker.__bubblePopUpNavigationItems[0]).toMatchObject({ primary: 'In a grid', secondary: '#grid-legacy', icon: 'mdi:sofa' });
+        expect(picker.__lovelyPopUpNavigationItems[0]).toMatchObject({ primary: 'In a grid', secondary: '#grid-legacy', icon: 'mdi:sofa' });
     });
 
     test('follows the view as it changes, without reloading the page', async () => {
@@ -137,12 +137,12 @@ describe('Bubble Card pop-ups in the navigation picker', () => {
         viewPopUps = [{ hash: '#room', name: null, icon: null, legacy: false }];
         let picker = await openPicker();
 
-        expect(picker.__bubblePopUpNavigationItems[0]).toMatchObject({ primary: '#room', icon: 'mdi:pound' });
+        expect(picker.__lovelyPopUpNavigationItems[0]).toMatchObject({ primary: '#room', icon: 'mdi:pound' });
 
         render('#room', { name: 'Living room', icon: 'mdi:sofa' });
         picker = await openPicker();
 
-        expect(picker.__bubblePopUpNavigationItems[0]).toMatchObject({ primary: 'Living room', secondary: '#room', icon: 'mdi:sofa' });
+        expect(picker.__lovelyPopUpNavigationItems[0]).toMatchObject({ primary: 'Living room', secondary: '#room', icon: 'mdi:sofa' });
     });
 
     test('leaves out a card rendered for another view', async () => {
@@ -165,7 +165,7 @@ describe('Bubble Card pop-ups in the navigation picker', () => {
     test('keeps the pop-ups in their own section and in search results', async () => {
         const picker = await openPicker();
 
-        expect(picker._getItems('', 'bubble_popups').map((item) => item.id)).toEqual(['#grid-legacy', '#stack-legacy']);
-        expect(picker._getItems('stack', 'bubble_popups').map((item) => item.id)).toEqual(['#stack-legacy']);
+        expect(picker._getItems('', 'lovely_popups').map((item) => item.id)).toEqual(['#grid-legacy', '#stack-legacy']);
+        expect(picker._getItems('stack', 'lovely_popups').map((item) => item.id)).toEqual(['#stack-legacy']);
     });
 });

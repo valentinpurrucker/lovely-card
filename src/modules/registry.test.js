@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 
-const CURRENT_KEY = 'bubble-card-bct-cache-v2:localhost';
+const CURRENT_KEY = 'lovely-card-bct-cache-v2:localhost';
 
 // registry keeps per-session state (allModules, modulesInitialized, the init
 // promise), so every test gets a fresh module instance.

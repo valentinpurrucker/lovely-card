@@ -115,7 +115,7 @@
       "info_organize": "Pod-dugmad možete organizovati pojedinačno ili ih grupisati zajedno. Grupe se mogu rasporediti u liniji (jedna pored druge) ili u redovima (složene vertikalno), a dugmad unutar grupa se mogu prikazati u liniji ili u rasporedu kolone.",
       "editor_title": "Uređivač pod-dugmadi",
       "rows_detected_title": "Otkrivena je konfiguracija redova",
-      "rows_detected_body": "Visina kartice (redovi) je izričito postavljena u vašoj konfiguraciji. Ovo će sprečiti automatsko prilagođavanje redova kada se dodaju pod-dugmad (na primer, pri dodavanju donjih pod-dugmadi). Kliknite na dugme ispod da biste uklonili izmenu i dozvolili da Bubble Card automatski izračuna redove.",
+      "rows_detected_body": "Visina kartice (redovi) je izričito postavljena u vašoj konfiguraciji. Ovo će sprečiti automatsko prilagođavanje redova kada se dodaju pod-dugmad (na primer, pri dodavanju donjih pod-dugmadi). Kliknite na dugme ispod da biste uklonili izmenu i dozvolili da Lovely Card automatski izračuna redove.",
       "remove_override": "Ukloni izmenu i automatski izračunaj",
       "card_specific": "Dugmad specifična za karticu",
       "main_top": "Glavna pod-dugmad (gore)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Koristite YAML?",
       "notice_yaml_body": "Zamenite staru konfiguraciju iskačućeg prozora samostalnim formatom:",
       "notice_protip": "Savet:",
-      "notice_protip_body": "Iskreno, ako u ovom trenutku još uvek koristite YAML za Bubble Card, isprobajte novi uređivač, sa njim je pravljenje i uređivanje iskačućih prozora pravi lak posao! Dobijate i pristup Module Store. U ovaj uređivač sam uložio mnogo ljubavi ❤️",
+      "notice_protip_body": "Iskreno, ako u ovom trenutku još uvek koristite YAML za Lovely Card, isprobajte novi uređivač, sa njim je pravljenje i uređivanje iskačućih prozora pravi lak posao! Dobijate i pristup Module Store. U ovaj uređivač sam uložio mnogo ljubavi ❤️",
       "notice_enjoy": "Uživajte u ovom ažuriranju! Živeli! 🍻",
       "notice_dismiss": "Razumem, ne prikazuj ponovo u ovom prikazu",
       "notice_remind": "Podseti me kasnije"
@@ -579,7 +579,7 @@
       "show_original": "Prikaži original",
       "show_translation": "Prikaži prevod",
       "translate_offer_title": "Prevod tekstova modula",
-      "translate_offer_body": "Moduli se objavljuju na engleskom. Bubble Card može da prevede njihove opise i opcije na vaš jezik, ali to šalje taj tekst spoljnoj usluzi prevođenja. Ostaje isključeno dok ga sami ne uključite."
+      "translate_offer_body": "Moduli se objavljuju na engleskom. Lovely Card može da prevede njihove opise i opcije na vaš jezik, ali to šalje taj tekst spoljnoj usluzi prevođenja. Ostaje isključeno dok ga sami ne uključite."
     },
     "module_editor": {
       "create_module": "Napravi novi modul",
@@ -598,7 +598,7 @@
       "description_helper": "Ovaj opis se pojavljuje u vašem modulu i u Module Store-u (ako ga delite), pa se pobrinite da bude jasan i sažet. {bold}, ali imajte u vidu da će biti prikazan samo u vašem modulu, Module Store ga neće prikazati.",
       "description_helper_bold": "Možete koristiti HTML i inline CSS",
       "code_title": "Kod (CSS/JS šablon)",
-      "code_helper": "Više informacija i primera o mogućnostima CSS i JS šablona možete pronaći u {link}. Savet: uređivač možete povećati klikom na naslov panela (Bubble Card konfiguracija).",
+      "code_helper": "Više informacija i primera o mogućnostima CSS i JS šablona možete pronaći u {link}. Savet: uređivač možete povećati klikom na naslov panela (Lovely Card konfiguracija).",
       "styling_docs": "dokumentaciji o stilovima i šablonima",
       "editor_schema_title": "Opciono: šema uređivača (YAML)",
       "yaml_error_title": "Greška u YAML šemi",
@@ -653,7 +653,7 @@
       "download_error": "Greška pri preuzimanju modula: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card je minimalistička i prilagodljiva kolekcija kartica"
+      "description": "Lovely Card je minimalistička i prilagodljiva kolekcija kartica"
     },
     "errors": {
       "card_type_required": "Morate definisati tip kartice",
@@ -673,8 +673,8 @@
       "hidden_content": "Sadržaj je sakriven u režimu uređivanja radi performansi"
     },
     "navigation": {
-      "group": "Bubble Card iskačući prozori",
-      "hash_hint": "Heš Bubble Card iskačućeg prozora"
+      "group": "Lovely Card iskačući prozori",
+      "hash_hint": "Heš Lovely Card iskačućeg prozora"
     }
   }
 }

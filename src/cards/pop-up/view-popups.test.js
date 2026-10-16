@@ -10,8 +10,8 @@ jest.unstable_mockModule('../../tools/lovelace-view.js', () => ({
 
 const { collectPopUps, getCurrentViewPopUps, normalizePopUpHash } = await import('./view-popups.js');
 
-const popUp = (hash, extra = {}) => ({ type: 'custom:bubble-card', card_type: 'pop-up', hash, ...extra });
-const button = { type: 'custom:bubble-card', card_type: 'button', entity: 'light.kitchen' };
+const popUp = (hash, extra = {}) => ({ type: 'custom:lovely-card', card_type: 'pop-up', hash, ...extra });
+const button = { type: 'custom:lovely-card', card_type: 'button', entity: 'light.kitchen' };
 
 beforeEach(() => {
     currentView = null;

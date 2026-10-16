@@ -25,7 +25,7 @@ const { _createHuiCard, _isStandalonePopupCardConfig, createCardElements, create
 describe('_isStandalonePopupCardConfig', () => {
     test('detects standalone bubble pop-up child configs', () => {
         expect(_isStandalonePopupCardConfig({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             cards: [],
         })).toBe(true);
@@ -33,7 +33,7 @@ describe('_isStandalonePopupCardConfig', () => {
 
     test('ignores other bubble card types and non-bubble cards', () => {
         expect(_isStandalonePopupCardConfig({
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
         })).toBe(false);
         expect(_isStandalonePopupCardConfig({
@@ -95,7 +95,7 @@ function createContext(cardConfig, cardElement, cardWrapper, hass = { states: {}
 describe('updateCardElements', () => {
     test('skips config and layout work when popup card config is unchanged', () => {
         const cardConfig = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             button_type: 'switch',
             entity: 'light.kitchen',
@@ -123,7 +123,7 @@ describe('updateCardElements', () => {
 
     test('updates config and layout when popup card config changes', () => {
         const initialCardConfig = {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'button',
             button_type: 'switch',
             entity: 'light.kitchen',

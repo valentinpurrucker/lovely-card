@@ -11,7 +11,7 @@ const { createEditorActions } = await import('./helpers.js');
 function createPopupContext(extra = {}) {
     return {
         config: {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#kitchen',
             name: 'Kitchen',
@@ -25,7 +25,7 @@ function createPopupEditor(hash, openDialog = jest.fn()) {
     return {
         isConnected: true,
         _config: {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash,
             cards: [],
@@ -45,7 +45,7 @@ function createPopupBridgeEditor(openDialogForPopup = jest.fn()) {
     return {
         isConnected: true,
         _config: {
-            type: 'custom:bubble-card',
+            type: 'custom:lovely-card',
             card_type: 'pop-up',
             hash: '#alooo',
             cards: [],
@@ -67,8 +67,8 @@ describe('standalone popup card editor actions', () => {
         originalDocument = global.document;
         originalCustomElements = global.customElements;
         global.window = {
-            __bubbleCardEditorInstances: new Set(),
-            __bubbleStandalonePopupEditorOpeners: new Map(),
+            __lovelyCardEditorInstances: new Set(),
+            __lovelyStandalonePopupEditorOpeners: new Map(),
         };
         delete global.document;
         delete global.customElements;
@@ -109,7 +109,7 @@ describe('standalone popup card editor actions', () => {
     test('opens Add card immediately from the registered matching popup editor', () => {
         const openDialog = jest.fn();
         const editor = createPopupEditor('#kitchen', openDialog);
-        window.__bubbleCardEditorInstances.add(editor);
+        window.__lovelyCardEditorInstances.add(editor);
         const actions = createEditorActions(createPopupContext(), jest.fn());
 
         actions.addCard();
@@ -120,7 +120,7 @@ describe('standalone popup card editor actions', () => {
 
     test('opens nested card edit from the remembered popup opener when the editor UI is hidden', () => {
         const openDialog = jest.fn();
-        window.__bubbleStandalonePopupEditorOpeners.set('#kitchen', openDialog);
+        window.__lovelyStandalonePopupEditorOpeners.set('#kitchen', openDialog);
         const actions = createEditorActions(createPopupContext(), jest.fn());
 
         actions.editCard(0);
@@ -132,8 +132,8 @@ describe('standalone popup card editor actions', () => {
     test('chooses the registered editor matching the popup hash for nested card edit', () => {
         const wrongOpenDialog = jest.fn();
         const rightOpenDialog = jest.fn();
-        window.__bubbleCardEditorInstances.add(createPopupEditor('#bedroom', wrongOpenDialog));
-        window.__bubbleCardEditorInstances.add(createPopupEditor('#kitchen', rightOpenDialog));
+        window.__lovelyCardEditorInstances.add(createPopupEditor('#bedroom', wrongOpenDialog));
+        window.__lovelyCardEditorInstances.add(createPopupEditor('#kitchen', rightOpenDialog));
         const actions = createEditorActions(createPopupContext(), jest.fn());
 
         actions.editCard(0);
@@ -148,13 +148,13 @@ describe('standalone popup card editor actions', () => {
         const bridgeEditor = createPopupBridgeEditor(openDialogForPopup);
         const secondPopupContext = createPopupContext({
             config: {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 hash: '#alooooo',
                 cards: [{ type: 'calendar', entities: ['calendar.recycle'] }],
             },
         });
-        window.__bubbleCardEditorInstances.add(bridgeEditor);
+        window.__lovelyCardEditorInstances.add(bridgeEditor);
         const actions = createEditorActions(secondPopupContext, jest.fn());
 
         actions.addCard();
@@ -168,13 +168,13 @@ describe('standalone popup card editor actions', () => {
         const openDialogForPopup = jest.fn();
         const secondPopupContext = createPopupContext({
             config: {
-                type: 'custom:bubble-card',
+                type: 'custom:lovely-card',
                 card_type: 'pop-up',
                 hash: '#alooooo',
                 cards: [{ type: 'calendar', entities: ['calendar.recycle'] }],
             },
         });
-        window.__bubbleCardEditorInstances.add(createPopupBridgeEditor(openDialogForPopup));
+        window.__lovelyCardEditorInstances.add(createPopupBridgeEditor(openDialogForPopup));
         const actions = createEditorActions(secondPopupContext, jest.fn());
 
         actions.editCard(0);
@@ -192,10 +192,10 @@ describe('standalone popup card editor actions', () => {
             _openStandaloneCardDialogForPopup: openDialogForPopup,
         };
         global.customElements = {
-            get: jest.fn((tagName) => tagName === 'bubble-card-editor' ? function BubbleCardEditor() {} : undefined),
+            get: jest.fn((tagName) => tagName === 'lovely-card-editor' ? function BubbleCardEditor() {} : undefined),
         };
         global.document = {
-            createElement: jest.fn((tagName) => tagName === 'bubble-card-editor' ? transientBridge : {}),
+            createElement: jest.fn((tagName) => tagName === 'lovely-card-editor' ? transientBridge : {}),
         };
         const context = createPopupContext({
             _hass: { states: {} },
@@ -204,7 +204,7 @@ describe('standalone popup card editor actions', () => {
 
         actions.editCard(0);
 
-        expect(document.createElement).toHaveBeenCalledWith('bubble-card-editor');
+        expect(document.createElement).toHaveBeenCalledWith('lovely-card-editor');
         expect(transientBridge.setConfig).toHaveBeenCalledWith(context.config);
         expect(openDialogForPopup).toHaveBeenCalledWith(context.config, { type: 'edit', index: 0 });
         expect(warnSpy).not.toHaveBeenCalled();
@@ -229,7 +229,7 @@ describe('standalone popup card editor actions', () => {
     test('routes direct card removal through the registered editor when the preview updater was not attached yet', () => {
         const updateCardsForPopup = jest.fn(() => true);
         const editor = createPopupEditorWithUpdater('#kitchen', updateCardsForPopup);
-        window.__bubbleCardEditorInstances.add(editor);
+        window.__lovelyCardEditorInstances.add(editor);
         const rebuildCards = jest.fn();
         const context = createPopupContext();
         const actions = createEditorActions(context, rebuildCards);
@@ -252,10 +252,10 @@ describe('standalone popup card editor actions', () => {
             _updateStandaloneCardsForPopup: updateCardsForPopup,
         };
         global.customElements = {
-            get: jest.fn((tagName) => tagName === 'bubble-card-editor' ? function BubbleCardEditor() {} : undefined),
+            get: jest.fn((tagName) => tagName === 'lovely-card-editor' ? function BubbleCardEditor() {} : undefined),
         };
         global.document = {
-            createElement: jest.fn((tagName) => tagName === 'bubble-card-editor' ? transientBridge : {}),
+            createElement: jest.fn((tagName) => tagName === 'lovely-card-editor' ? transientBridge : {}),
         };
         const rebuildCards = jest.fn();
         const context = createPopupContext({
@@ -276,7 +276,7 @@ describe('standalone popup card editor actions', () => {
 
         actions.editCard(0);
 
-        expect(warnSpy).toHaveBeenCalledWith('Bubble Card: standalone pop-up editor unavailable for nested card edit');
+        expect(warnSpy).toHaveBeenCalledWith('Lovely Card: standalone pop-up editor unavailable for nested card edit');
     });
 
     test('does not open a nested editor from a disconnected popup preview', () => {
@@ -285,12 +285,12 @@ describe('standalone popup card editor actions', () => {
             isConnected: false,
             _standaloneOpenCardDialog: openDialog,
         });
-        window.__bubbleCardEditorInstances.add(createPopupEditor('#kitchen', openDialog));
+        window.__lovelyCardEditorInstances.add(createPopupEditor('#kitchen', openDialog));
         const actions = createEditorActions(context, jest.fn());
 
         actions.editCard(0);
 
         expect(openDialog).not.toHaveBeenCalled();
-        expect(warnSpy).toHaveBeenCalledWith('Bubble Card: standalone pop-up editor unavailable for nested card edit');
+        expect(warnSpy).toHaveBeenCalledWith('Lovely Card: standalone pop-up editor unavailable for nested card edit');
     });
 });

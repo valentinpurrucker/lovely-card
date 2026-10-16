@@ -25,7 +25,7 @@
 //      reports a card exactly as it arrives, which is the one moment it is too
 //      late to build it.
 //
-// Kept free of imports, like deferred-card-updates.js: bubble-card.js already
+// Kept free of imports, like deferred-card-updates.js: lovely-card.js already
 // imports the pop-up runtime, so a registry shared with it cannot live in either
 // of them without a cycle.
 
@@ -63,7 +63,7 @@ function observerConstructor() {
 // The suggestion picker, and nothing else. `preview` is far from picker-only:
 // a dashboard in edit mode turns it on for every card it holds (hui-masonry-view
 // assigns `card.preview = true` per card, hui-section forwards it to all of its
-// own), and those must stay eager — a Bubble Card cell is `rows: auto`, so a
+// own), and those must stay eager — a Lovely Card cell is `rows: auto`, so a
 // card that draws nothing collapses it and the whole grid reflows under the
 // editor as it scrolls.
 //
@@ -85,14 +85,14 @@ function previewContext(element) {
   try {
     let node = element;
     // The walk crosses shadow boundaries, so it is capped rather than trusted
-    // to terminate on a tree Bubble Card does not own.
+    // to terminate on a tree Lovely Card does not own.
     for (let hops = 0; node && hops < 64; hops += 1) {
       const tag = hops > 0 ? node.tagName?.toLowerCase?.() : null;
       if (tag) {
-        // A card nested inside another Bubble Card (a pop-up's child cards get
+        // A card nested inside another Lovely Card (a pop-up's child cards get
         // `preview` too) follows its host instead of gating on its own: it is
         // the host that decides when anything is drawn at all.
-        if (tag === 'bubble-card') return { inPicker: false, scroller: null };
+        if (tag === 'lovely-card') return { inPicker: false, scroller: null };
         if (!context.scroller && isScrollable(node)) context.scroller = node;
         if (isSuggestionPickerHost(tag)) {
           context.inPicker = true;

@@ -83,8 +83,8 @@ async function _copyCardToDashboardClipboard(context, index, fallbackCardConfig)
         config: {
             views: [
                 {
-                    path: 'bubble-card-standalone',
-                    title: 'Bubble Card',
+                    path: 'lovely-card-standalone',
+                    title: 'Lovely Card',
                     sections: [sectionConfig],
                 },
             ],
@@ -113,7 +113,7 @@ async function _copyCardToDashboardClipboard(context, index, fallbackCardConfig)
             detail: { path: [0, 0, index] },
         }));
     } catch (error) {
-        console.warn('Bubble Card: Failed to copy card through HA clipboard proxy', error);
+        console.warn('Lovely Card: Failed to copy card through HA clipboard proxy', error);
         _writeClipboardFallback(fallbackCardConfig);
     } finally {
         setTimeout(() => proxySection.remove(), 0);
@@ -127,7 +127,7 @@ function _writeClipboardFallback(cardConfig) {
             : JSON.parse(JSON.stringify(cardConfig));
         sessionStorage.setItem('dashboardCardClipboard', JSON.stringify(clonedConfig));
     } catch (error) {
-        console.warn('Bubble Card: Failed to copy card to dashboard clipboard', error);
+        console.warn('Lovely Card: Failed to copy card to dashboard clipboard', error);
     }
 }
 
@@ -136,7 +136,7 @@ function _editCardDialog(context, index) {
 
     const standaloneDialogOpener = _getStandaloneDialogOpener(context);
     if (!standaloneDialogOpener) {
-        console.warn('Bubble Card: standalone pop-up editor unavailable for nested card edit');
+        console.warn('Lovely Card: standalone pop-up editor unavailable for nested card edit');
         return;
     }
 
@@ -146,7 +146,7 @@ function _editCardDialog(context, index) {
 function _addCardDialog(context) {
     const standaloneDialogOpener = _getStandaloneDialogOpener(context);
     if (!standaloneDialogOpener) {
-        console.warn('Bubble Card: standalone pop-up editor unavailable for nested card creation');
+        console.warn('Lovely Card: standalone pop-up editor unavailable for nested card creation');
         return;
     }
 
@@ -180,7 +180,7 @@ function _getStandaloneDialogOpener(context) {
     try {
         const dialog = document.querySelector('body > home-assistant')
             ?.shadowRoot?.querySelector('hui-dialog-edit-card');
-        const standaloneEditor = _deepQuerySelector(dialog?.shadowRoot, 'bubble-card-editor');
+        const standaloneEditor = _deepQuerySelector(dialog?.shadowRoot, 'lovely-card-editor');
 
         if (_scoreStandaloneEditor(standaloneEditor, context) >= 0) {
             return standaloneEditor._openStandaloneCardDialog.bind(standaloneEditor);
@@ -214,7 +214,7 @@ function _getRememberedStandaloneDialogOpener(context) {
         return null;
     }
 
-    const opener = window.__bubbleStandalonePopupEditorOpeners?.get?.(popupHash);
+    const opener = window.__lovelyStandalonePopupEditorOpeners?.get?.(popupHash);
     return typeof opener === 'function' ? opener : null;
 }
 
@@ -223,7 +223,7 @@ function _getRegisteredStandaloneDialogOpener(context) {
         return null;
     }
 
-    const editors = window.__bubbleCardEditorInstances;
+    const editors = window.__lovelyCardEditorInstances;
     if (!editors || typeof editors[Symbol.iterator] !== 'function') {
         return null;
     }
@@ -270,7 +270,7 @@ function _getRegisteredStandaloneCardsUpdater(context) {
         return null;
     }
 
-    const editors = window.__bubbleCardEditorInstances;
+    const editors = window.__lovelyCardEditorInstances;
     if (!editors || typeof editors[Symbol.iterator] !== 'function') {
         return null;
     }
@@ -336,14 +336,14 @@ function _getTransientStandaloneEditorBridge(context) {
     }
 
     try {
-        if (!customElements.get?.('bubble-card-editor')) {
+        if (!customElements.get?.('lovely-card-editor')) {
             return null;
         }
 
-        let bridge = window.__bubbleTransientStandalonePopupEditorBridge;
+        let bridge = window.__lovelyTransientStandalonePopupEditorBridge;
         if (!bridge || typeof bridge._openStandaloneCardDialogForPopup !== 'function') {
-            bridge = document.createElement('bubble-card-editor');
-            window.__bubbleTransientStandalonePopupEditorBridge = bridge;
+            bridge = document.createElement('lovely-card-editor');
+            window.__lovelyTransientStandalonePopupEditorBridge = bridge;
         }
 
         if (!bridge || typeof bridge._openStandaloneCardDialogForPopup !== 'function') {

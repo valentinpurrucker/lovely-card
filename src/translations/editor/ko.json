@@ -115,7 +115,7 @@
       "info_organize": "서브 버튼은 개별적으로 배치하거나 그룹으로 묶을 수 있어요. 그룹은 인라인(나란히) 또는 행(세로로 쌓기)으로 배치할 수 있고, 그룹 안의 버튼은 인라인 또는 열 레이아웃으로 표시할 수 있어요.",
       "editor_title": "서브 버튼 편집기",
       "rows_detected_title": "행(rows) 설정이 감지되었어요",
-      "rows_detected_body": "카드 높이(rows)가 구성에 명시적으로 설정되어 있어요. 이 경우 서브 버튼을 추가할 때(예: 하단 서브 버튼 추가 시) 행이 자동으로 조정되지 않아요. 아래 버튼을 클릭하면 이 설정을 제거하고 Bubble Card가 행을 자동으로 계산하게 할 수 있어요.",
+      "rows_detected_body": "카드 높이(rows)가 구성에 명시적으로 설정되어 있어요. 이 경우 서브 버튼을 추가할 때(예: 하단 서브 버튼 추가 시) 행이 자동으로 조정되지 않아요. 아래 버튼을 클릭하면 이 설정을 제거하고 Lovely Card가 행을 자동으로 계산하게 할 수 있어요.",
       "remove_override": "설정 제거 후 자동 계산",
       "card_specific": "카드 전용 버튼",
       "main_top": "메인 서브 버튼 (상단)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML을 사용하시나요?",
       "notice_yaml_body": "레거시 팝업 구성을 독립형 형식으로 바꿔 주세요:",
       "notice_protip": "유용한 팁:",
-      "notice_protip_body": "솔직히 지금도 Bubble Card를 YAML로 작성하고 있다면 새 편집기를 한번 써 보세요. 팝업을 만들고 편집하는 게 훨씬 수월해져요! Module Store도 사용할 수 있고요. 이 편집기에 정말 많은 애정을 쏟았어요 ❤️",
+      "notice_protip_body": "솔직히 지금도 Lovely Card를 YAML로 작성하고 있다면 새 편집기를 한번 써 보세요. 팝업을 만들고 편집하는 게 훨씬 수월해져요! Module Store도 사용할 수 있고요. 이 편집기에 정말 많은 애정을 쏟았어요 ❤️",
       "notice_enjoy": "이번 업데이트를 즐겨 주세요! 건배! 🍻",
       "notice_dismiss": "알겠어요, 이 뷰에서는 다시 표시하지 않기",
       "notice_remind": "나중에 알림"
@@ -579,7 +579,7 @@
       "show_original": "원문 보기",
       "show_translation": "번역 보기",
       "translate_offer_title": "모듈 텍스트 번역",
-      "translate_offer_body": "모듈은 영어로 게시됩니다. Bubble Card가 모듈의 설명과 옵션을 사용하는 언어로 번역할 수 있지만, 그 과정에서 해당 텍스트가 외부 번역 서비스로 전송됩니다. 직접 켜기 전까지는 꺼진 상태로 유지됩니다."
+      "translate_offer_body": "모듈은 영어로 게시됩니다. Lovely Card가 모듈의 설명과 옵션을 사용하는 언어로 번역할 수 있지만, 그 과정에서 해당 텍스트가 외부 번역 서비스로 전송됩니다. 직접 켜기 전까지는 꺼진 상태로 유지됩니다."
     },
     "module_editor": {
       "create_module": "새 모듈 만들기",
@@ -598,7 +598,7 @@
       "description_helper": "이 설명은 모듈과 (공유하는 경우) Module Store에 표시되니 명확하고 간결하게 작성하세요. {bold} 다만 모듈 안에서만 렌더링되고 Module Store에는 표시되지 않는 점을 참고하세요.",
       "description_helper_bold": "HTML과 인라인 CSS를 사용할 수 있지만,",
       "code_title": "코드 (CSS/JS 템플릿)",
-      "code_helper": "CSS 및 JS 템플릿으로 할 수 있는 것에 대한 더 많은 정보와 예시는 {link}에서 확인할 수 있어요. 팁: 패널 제목(Bubble Card configuration)을 클릭하면 편집기를 크게 만들 수 있어요.",
+      "code_helper": "CSS 및 JS 템플릿으로 할 수 있는 것에 대한 더 많은 정보와 예시는 {link}에서 확인할 수 있어요. 팁: 패널 제목(Lovely Card configuration)을 클릭하면 편집기를 크게 만들 수 있어요.",
       "styling_docs": "스타일 및 템플릿 문서",
       "editor_schema_title": "선택 사항: 편집기 스키마 (YAML)",
       "yaml_error_title": "YAML 스키마 오류",
@@ -653,7 +653,7 @@
       "download_error": "모듈 다운로드 오류: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card는 미니멀하고 자유롭게 꾸밀 수 있는 카드 모음이에요"
+      "description": "Lovely Card는 미니멀하고 자유롭게 꾸밀 수 있는 카드 모음이에요"
     },
     "errors": {
       "card_type_required": "카드 유형을 지정해야 해요",
@@ -673,8 +673,8 @@
       "hidden_content": "성능을 위해 편집 모드에서 콘텐츠를 숨겼어요"
     },
     "navigation": {
-      "group": "Bubble Card 팝업",
-      "hash_hint": "Bubble Card 팝업 해시"
+      "group": "Lovely Card 팝업",
+      "hash_hint": "Lovely Card 팝업 해시"
     }
   }
 }

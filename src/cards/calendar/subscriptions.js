@@ -61,7 +61,7 @@ export function updateCalendarSubscriptions(context, refresh) {
         await refresh(isCurrent);
       } while (state.pending && isCurrent());
     } catch (error) {
-      console.warn('Bubble Card - Could not refresh calendar events:', error);
+      console.warn('Lovely Card - Could not refresh calendar events:', error);
     } finally {
       state.refreshing = false;
     }

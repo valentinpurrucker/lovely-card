@@ -15,7 +15,7 @@
 //
 // WHY IT LIVES HERE and not in the picker: `hui-suggestion-card` is Home
 // Assistant's component and its badge is computed from its own truncation count.
-// Adding to its shadow root would be patching a surface Bubble Card does not
+// Adding to its shadow root would be patching a surface Lovely Card does not
 // own, which breaks on the next release. This draws in the card's OWN shadow
 // root instead, and only ever there.
 //

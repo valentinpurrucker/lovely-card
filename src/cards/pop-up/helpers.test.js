@@ -141,8 +141,8 @@ global.navigator = {
     deviceMemory: 2,
 };
 
-window.__bubbleLocationDeduperAdded = true;
-window.__bubbleDialogListenerAdded = true;
+window.__lovelyLocationDeduperAdded = true;
+window.__lovelyDialogListenerAdded = true;
 
 jest.unstable_mockModule('./backdrop.js', () => ({
     getBackdrop: jest.fn(() => ({
@@ -269,7 +269,7 @@ function createStandaloneContext(config = {}) {
         editor: false,
         config: {
             hash: '#standalone-popup',
-            cards: [{ type: 'custom:bubble-card' }],
+            cards: [{ type: 'custom:lovely-card' }],
             auto_close: 0,
             background_update: false,
             ...config,
@@ -364,8 +364,8 @@ describe('standalone popup lifecycle', () => {
         jest.useFakeTimers();
 
         window.history.replaceState({}, '', 'http://localhost/lovelace/test');
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
 
         rafCallbacks = new Map();
         nextRafId = 1;
@@ -3157,8 +3157,8 @@ describe('resolvePopupHostElements shadow DOM fallback', () => {
         jest.clearAllMocks();
         jest.useFakeTimers();
         window.history.replaceState({}, '', 'http://localhost/lovelace/test');
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
         rafCallbacks = new Map();
         nextRafId = 1;
     });
@@ -3495,7 +3495,7 @@ describe('resolvePopupHostElements shadow DOM fallback', () => {
     test.each(['GRID-LAYOUT', 'MASONRY-LAYOUT'])(
         'collapses only the popup host when hosted inside a layout-card %s',
         (layoutTagName) => {
-            // Structure (bottom → top): bubble-card → div (layout item) → layout host →
+            // Structure (bottom → top): lovely-card → div (layout item) → layout host →
             // layout-card → hui-card (wraps the whole view). The nearest hui-card
             // belongs to the view, not this pop-up's cell, so it must not be hidden.
             const viewHuiCard = {
@@ -3569,8 +3569,8 @@ describe('legacy popup location routing', () => {
         jest.useFakeTimers();
 
         window.history.replaceState({}, '', 'http://localhost/lovelace/test');
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
 
         rafCallbacks = new Map();
         nextRafId = 1;
@@ -4123,9 +4123,9 @@ describe('close_on_click when the click was suppressed', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         jest.useFakeTimers();
-        window.isScrolling = false;
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyIsScrolling = false;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
     });
 
     afterEach(() => {
@@ -4187,7 +4187,7 @@ describe('close_on_click when the click was suppressed', () => {
         window.history.replaceState.mockClear();
 
         pressInside(context);
-        window.isScrolling = true;
+        window.__lovelyIsScrolling = true;
         release(context);
         jest.advanceTimersByTime(400);
 
@@ -4347,8 +4347,8 @@ describe('pop-up styles', () => {
 // to three `history.replaceState` per event. Safari caps those at 100 per 10 s
 // and throws past that (#2606). A navigation still has to be announced, both
 // because it is Home Assistant's own protocol and because third-party hash
-// routing listens for it. Anything that never left Bubble Card must not be.
-describe('what Bubble Card announces to Home Assistant', () => {
+// routing listens for it. Anything that never left Lovely Card must not be.
+describe('what Lovely Card announces to Home Assistant', () => {
     function recorded(run) {
         const seen = [];
         const spy = (event) => seen.push(event.type);
@@ -4366,8 +4366,8 @@ describe('what Bubble Card announces to Home Assistant', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         jest.useFakeTimers();
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
         updateMockLocation(window.location, 'http://localhost/lovelace/test');
     });
 
@@ -4430,8 +4430,8 @@ describe('a pop-up shell abandoned by a view rebuild', () => {
         jest.useFakeTimers();
 
         window.history.replaceState({}, '', 'http://localhost/lovelace/test');
-        window.__bubbleLocationDeduperAdded = true;
-        window.__bubbleDialogListenerAdded = true;
+        window.__lovelyLocationDeduperAdded = true;
+        window.__lovelyDialogListenerAdded = true;
 
         rafCallbacks = new Map();
         nextRafId = 1;

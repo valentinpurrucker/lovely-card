@@ -19,7 +19,7 @@ const availabilityCache = {
 // Global hint to UI parts that persistence is available
 function setGlobalAvailabilityFlag(isAvailable) {
   try {
-    window.__bubble_bct_available = !!isAvailable;
+    window.__lovely_bct_available = !!isAvailable;
   } catch (e) {
     // noop
   }
@@ -166,7 +166,7 @@ export function isBCTAvailableSync() {
   }
   
   // Fallback to global flag (set by async checks)
-  return !!(typeof window !== 'undefined' && window.__bubble_bct_available);
+  return !!(typeof window !== 'undefined' && window.__lovely_bct_available);
 }
 
 export async function listFiles(hass) {
@@ -485,7 +485,7 @@ export async function deleteModuleFile(hass, moduleId) {
 // the dashboard fails, including this cache's own (silently, so the cache can
 // never refresh again). The aggregate is rebuilt from `files` on read instead.
 const CACHE_VERSION = 2;
-const CACHE_PREFIX = 'bubble-card-bct-cache-v';
+const CACHE_PREFIX = 'lovely-card-bct-cache-v';
 let eventsSubscribed = false;
 
 function getBCTCacheKey() {

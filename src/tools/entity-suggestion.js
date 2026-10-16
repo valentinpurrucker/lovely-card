@@ -46,7 +46,7 @@ const controlsRow = (t, group, extra = {}) => ({
 const bottomControls = (t, group, extra = {}) => ({ bottom: [controlsRow(t, group, extra)] });
 
 const tile = (config) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'button',
   ...config,
   grid_options: { ...TILE_GRID_OPTIONS },
@@ -243,7 +243,7 @@ const fanSpeedTile = (entityId, t) =>
   });
 
 const coverCard = (entityId, t, { position }) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'cover',
   entity: entityId,
   main_buttons_position: 'bottom',
@@ -273,7 +273,7 @@ const coverCard = (entityId, t, { position }) => ({
 });
 
 const coverTiltCard = (entityId, t) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'cover',
   entity: entityId,
   main_buttons_position: 'bottom',
@@ -341,7 +341,7 @@ const climateSliderTile = (entityId, t) =>
 // bottom, so the dropdown goes inline in the main row rather than into a bottom
 // row of its own, and there is no chevron competing with the controls.
 const climateCard = (entityId, t, modeSelect) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'climate',
   entity: entityId,
   show_state: false,
@@ -373,7 +373,7 @@ const climateCard = (entityId, t, modeSelect) => ({
 });
 
 const mediaPlayerCard = (entityId, t) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'media-player',
   entity: entityId,
   show_state: true,
@@ -396,7 +396,7 @@ const mediaPlayerCard = (entityId, t) => ({
 });
 
 const mediaPlayerSourceCard = (entityId, t) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'media-player',
   entity: entityId,
   show_state: true,
@@ -661,7 +661,7 @@ const lockTile = (entityId, t) =>
   });
 
 const calendarCard = (entityId) => ({
-  type: 'custom:bubble-card',
+  type: 'custom:lovely-card',
   card_type: 'calendar',
   entities: [{ entity: entityId }],
   rows: 1,
@@ -705,7 +705,7 @@ function classicSuggestions(entityId, domain, t) {
       label: t(dedicated.labelKey),
       classic: true,
       config: {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         ...dedicated.config(entityId),
         grid_options: { ...CLASSIC_GRID_OPTIONS },
       },
@@ -717,7 +717,7 @@ function classicSuggestions(entityId, domain, t) {
       label: t('editor.module_editor.card_button'),
       classic: true,
       config: {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'button',
         entity: entityId,
         grid_options: { ...CLASSIC_GRID_OPTIONS },
@@ -728,7 +728,7 @@ function classicSuggestions(entityId, domain, t) {
       label: t('editor.module_editor.card_button'),
       classic: true,
       config: {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'button',
         entity: entityId,
         button_type: 'state',
@@ -742,7 +742,7 @@ function classicSuggestions(entityId, domain, t) {
       label: t('editor.button.type_slider'),
       classic: true,
       config: {
-        type: 'custom:bubble-card',
+        type: 'custom:lovely-card',
         card_type: 'button',
         entity: entityId,
         button_type: 'slider',

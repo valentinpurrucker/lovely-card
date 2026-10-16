@@ -115,7 +115,7 @@
       "info_organize": "Is féidir leat fochnaipí a eagrú ina n-aonar nó iad a ghrúpáil le chéile. Is féidir grúpaí a leagan amach inlíne (taobh le taobh) nó i rónna (cruachta go hingearach), agus is féidir cnaipí laistigh de ghrúpaí a thaispeáint inlíne nó i leagan amach colúin.",
       "editor_title": "Eagarthóir na bhfochnaipí",
       "rows_detected_title": "Cumraíocht rónna aimsithe",
-      "rows_detected_body": "Tá airde an chárta (rows) socraithe go sainráite i do chumraíocht. Cuirfidh sé seo cosc ar choigeartuithe uathoibríocha na rónna nuair a chuirtear fochnaipí leis (mar shampla, nuair a chuirtear fochnaipí bunaidh leis). Cliceáil an cnaipe thíos chun an sárú a bhaint agus ligean do Bubble Card na rónna a ríomh go huathoibríoch.",
+      "rows_detected_body": "Tá airde an chárta (rows) socraithe go sainráite i do chumraíocht. Cuirfidh sé seo cosc ar choigeartuithe uathoibríocha na rónna nuair a chuirtear fochnaipí leis (mar shampla, nuair a chuirtear fochnaipí bunaidh leis). Cliceáil an cnaipe thíos chun an sárú a bhaint agus ligean do Lovely Card na rónna a ríomh go huathoibríoch.",
       "remove_override": "Bain an sárú agus ríomh go huathoibríoch",
       "card_specific": "Cnaipí a bhaineann leis an gcárta",
       "main_top": "Príomhfhochnaipí (barr)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "YAML á úsáid agat?",
       "notice_yaml_body": "Cuir an fhormáid neamhspleách in ionad sheanchumraíocht na preabfhuinneoige:",
       "notice_protip": "Leid:",
-      "notice_protip_body": "Le fírinne, má tá YAML fós in úsáid agat le haghaidh Bubble Card ag an bpointe seo, b'fhiú duit triail a bhaint as an eagarthóir nua, déanann sé cruthú agus eagarthóireacht preabfhuinneog an-simplí! Faigheann tú rochtain ar an Module Store freisin. Chuir mé an oiread sin grá isteach san eagarthóir seo ❤️",
+      "notice_protip_body": "Le fírinne, má tá YAML fós in úsáid agat le haghaidh Lovely Card ag an bpointe seo, b'fhiú duit triail a bhaint as an eagarthóir nua, déanann sé cruthú agus eagarthóireacht preabfhuinneog an-simplí! Faigheann tú rochtain ar an Module Store freisin. Chuir mé an oiread sin grá isteach san eagarthóir seo ❤️",
       "notice_enjoy": "Bain sult as an nuashonrú seo! Sláinte! 🍻",
       "notice_dismiss": "Tuigim, ná taispeáin arís san amharc seo",
       "notice_remind": "Cuir i gcuimhne dom níos déanaí"
@@ -579,7 +579,7 @@
       "show_original": "Taispeáin an bunleagan",
       "show_translation": "Taispeáin an t-aistriúchán",
       "translate_offer_title": "Aistrigh téacsanna na modúl",
-      "translate_offer_body": "Foilsítear modúil i mBéarla. Is féidir le Bubble Card a gcuid cur síos agus roghanna a aistriú go dtí do theanga, ach seolann sé sin an téacs sin chuig seirbhís aistriúcháin sheachtrach. Fanann sé múchta go dtí go gcuireann tú féin air é."
+      "translate_offer_body": "Foilsítear modúil i mBéarla. Is féidir le Lovely Card a gcuid cur síos agus roghanna a aistriú go dtí do theanga, ach seolann sé sin an téacs sin chuig seirbhís aistriúcháin sheachtrach. Fanann sé múchta go dtí go gcuireann tú féin air é."
     },
     "module_editor": {
       "create_module": "Cruthaigh modúl nua",
@@ -598,7 +598,7 @@
       "description_helper": "Taispeántar an cur síos seo i do mhodúl agus sa Module Store (má roinneann tú é), mar sin cinntigh go bhfuil sé soiléir agus gonta. {bold}, ach tabhair faoi deara nach rindreálfar é ach i do mhodúl; ní thaispeánfaidh an Module Store é.",
       "description_helper_bold": "Is féidir leat HTML agus CSS inlíne a úsáid",
       "code_title": "Cód (teimpléad CSS/JS)",
-      "code_helper": "Gheobhaidh tú tuilleadh eolais agus samplaí faoi na féidearthachtaí teimpléid CSS agus JS sa {link}. Leid: is féidir leat an t-eagarthóir a mhéadú trí chliceáil ar theideal an phainéil (Bubble Card configuration).",
+      "code_helper": "Gheobhaidh tú tuilleadh eolais agus samplaí faoi na féidearthachtaí teimpléid CSS agus JS sa {link}. Leid: is féidir leat an t-eagarthóir a mhéadú trí chliceáil ar theideal an phainéil (Lovely Card configuration).",
       "styling_docs": "doiciméadú Stíliú agus Teimpléid",
       "editor_schema_title": "Roghnach: scéimre eagarthóra (YAML)",
       "yaml_error_title": "Earráid sa scéimre YAML",
@@ -653,7 +653,7 @@
       "download_error": "Earráid agus an modúl á íoslódáil: {error}"
     },
     "card_picker": {
-      "description": "Is bailiúchán cártaí íostach agus inoiriúnaithe é Bubble Card"
+      "description": "Is bailiúchán cártaí íostach agus inoiriúnaithe é Lovely Card"
     },
     "errors": {
       "card_type_required": "Ní mór duit cineál cárta a shainiú",
@@ -673,8 +673,8 @@
       "hidden_content": "Tá an t-inneachar folaithe sa mhód eagarthóireachta ar mhaithe le feidhmíocht"
     },
     "navigation": {
-      "group": "Preabfhuinneoga Bubble Card",
-      "hash_hint": "Haiseáil preabfhuinneoige Bubble Card"
+      "group": "Preabfhuinneoga Lovely Card",
+      "hash_hint": "Haiseáil preabfhuinneoige Lovely Card"
     }
   }
 }

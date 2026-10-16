@@ -6,21 +6,21 @@ const movementThreshold = 5; // Movement threshold to consider as scroll
 const holdReleaseDeadZone = 15; // Dead zone for hold release to allow minor finger movement
 const scrollDisableTime = 300;
 
-window.isScrolling = false;
+window.__lovelyIsScrolling = false;
 
 // Lightweight hold indicator adapted from HA action-handler
-let __bubbleHoldIndicator;
-let __bubbleHoldIndicatorListenersSet = false;
+let __lovelyHoldIndicator;
+let __lovelyHoldIndicatorListenersSet = false;
 
 function ensureHoldIndicator(isTouch) {
-  if (!__bubbleHoldIndicator) {
+  if (!__lovelyHoldIndicator) {
     const el = document.createElement('div');
-    __bubbleHoldIndicator = el;
+    __lovelyHoldIndicator = el;
     document.body.appendChild(el);
   }
 
   const size = isTouch ? 100 : 50;
-  Object.assign(__bubbleHoldIndicator.style, {
+  Object.assign(__lovelyHoldIndicator.style, {
     position: 'fixed',
     width: `${size}px`,
     height: `${size}px`,
@@ -30,21 +30,21 @@ function ensureHoldIndicator(isTouch) {
     background: 'var(--primary-color)',
     display: 'none',
     opacity: '0.4',
-    borderRadius: '50%',
+    borderRadius: 'var(--lovely-radius-control, var(--lovely-radius, 8px))',
     transition: 'transform 180ms ease-in-out',
   });
 
-  if (!__bubbleHoldIndicatorListenersSet) {
+  if (!__lovelyHoldIndicatorListenersSet) {
     ['touchcancel','mouseout','mouseup','touchmove','mousewheel','wheel','scroll','pointercancel']
       .forEach((ev) => {
         document.addEventListener(ev, () => {
           stopHoldIndicator();
         }, { passive: true });
       });
-    __bubbleHoldIndicatorListenersSet = true;
+    __lovelyHoldIndicatorListenersSet = true;
   }
 
-  return __bubbleHoldIndicator;
+  return __lovelyHoldIndicator;
 }
 
 function showHoldIndicator(x, y, isTouch) {
@@ -62,27 +62,27 @@ function showHoldIndicator(x, y, isTouch) {
 }
 
 function stopHoldIndicator() {
-  if (!__bubbleHoldIndicator) return;
-  __bubbleHoldIndicator.style.transform = 'translate(-50%, -50%) scale(0)';
+  if (!__lovelyHoldIndicator) return;
+  __lovelyHoldIndicator.style.transform = 'translate(-50%, -50%) scale(0)';
   // Hide after transition completes
   setTimeout(() => {
-    if (__bubbleHoldIndicator) {
-      __bubbleHoldIndicator.style.display = 'none';
+    if (__lovelyHoldIndicator) {
+      __lovelyHoldIndicator.style.display = 'none';
     }
   }, 180);
 }
 
 function disableActionsDuringScroll() {
-  window.isScrolling = true;
+  window.__lovelyIsScrolling = true;
   setTimeout(() => {
-    window.isScrolling = false;
+    window.__lovelyIsScrolling = false;
   }, scrollDisableTime);
 }
 
 // Prevent context menu on elements with hold action configured
 function handleContextMenu(event) {
   const actionElement = event.composedPath().find(element => 
-    element.classList?.contains('bubble-action')
+    element.classList?.contains('lovely-action')
   );
 
   if (actionElement && actionElement.dataset.holdAction) {
@@ -97,12 +97,12 @@ function handleContextMenu(event) {
 }
 
 // Register global listeners only once
-if (!window.__bubbleTapActionsInitialized) {
+if (!window.__lovelyTapActionsInitialized) {
   document.addEventListener('scroll', disableActionsDuringScroll, { passive: true });
   document.addEventListener('contextmenu', handleContextMenu);
   document.body.addEventListener('pointerdown', handlePointerDown, { passive: true });
   document.body.addEventListener('touchstart', handlePointerDown, { passive: true });
-  window.__bubbleTapActionsInitialized = true;
+  window.__lovelyTapActionsInitialized = true;
 }
 
 const actionHandler = new WeakMap();
@@ -135,14 +135,14 @@ function watchForSuspend() {
 }
 
 function handlePointerDown(event) {
-  if (window.isScrolling) return;
+  if (window.__lovelyIsScrolling) return;
   // Ignore multi-touch to allow pinch-to-zoom and system gestures
   if ((event.touches && event.touches.length > 1) || (event.pointerType === 'touch' && event.isPrimary === false)) {
     return;
   }
 
   const actionElement = event.composedPath().find(element => 
-    element.classList?.contains('bubble-action')
+    element.classList?.contains('lovely-action')
   );
 
   // Exclude pop-up close buttons to avoid conflicts
@@ -280,7 +280,7 @@ export function callAction(element, actionConfig, action) {
 
 // Function to add actions and store configs in data attributes
 export function addActions(element, config, defaultEntity, defaultActions = {}) {
-  element.classList.add('bubble-action');
+  element.classList.add('lovely-action');
 
   // Use provided config for actions if available, otherwise use defaults
   const tapAction = config?.tap_action || defaultActions?.tap_action || { action: "none" };
@@ -294,7 +294,7 @@ export function addActions(element, config, defaultEntity, defaultActions = {}) 
 
   const hasAction = tapAction.action !== "none" || doubleTapAction.action !== "none" || holdAction.action !== "none";
   if (hasAction) {
-    element.classList.add('bubble-action-enabled');
+    element.classList.add('lovely-action-enabled');
     element.haRipple = createElement('ha-ripple');
     element.appendChild(element.haRipple);
   }
@@ -373,7 +373,7 @@ class ActionHandler {
       return; 
     }
 
-    if (window.isScrolling || this.isDisconnected) return;
+    if (window.__lovelyIsScrolling || this.isDisconnected) return;
 
     if (this.interactionStarted) {
       if (e.type === 'touchstart' && this.currentInteractionType === 'pointerdown' && (now - this.interactionStartTime < 50)) {
@@ -412,7 +412,7 @@ class ActionHandler {
 
     this.holdTimeout = setTimeout(() => {
       const holdAction = this.config.hold_action || { action: 'none' };
-      if (holdAction.action !== 'none' && !window.isScrolling) {
+      if (holdAction.action !== 'none' && !window.__lovelyIsScrolling) {
         // Check if total movement is within dead zone
         const deltaX = Math.abs(this.lastX - this.startX);
         const deltaY = Math.abs(this.lastY - this.startY);
@@ -500,7 +500,7 @@ class ActionHandler {
     // Allow hold if it was fired and total movement is within dead zone
     const isHoldWithinDeadZone = this.holdFired && totalDistance <= holdReleaseDeadZone;
 
-    if (window.isScrolling || this.isDisconnected || (this.hasMoved && !isHoldWithinDeadZone)) {
+    if (window.__lovelyIsScrolling || this.isDisconnected || (this.hasMoved && !isHoldWithinDeadZone)) {
       this.interactionStarted = false;
       stopHoldIndicator();
       return;

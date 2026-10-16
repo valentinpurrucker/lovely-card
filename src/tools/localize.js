@@ -3,8 +3,8 @@ import en from '../translations/editor/en.json';
 import runtime from '../translations/runtime.js';
 
 // Editor translations for languages other than English are not bundled: they
-// are loaded from the bubble-card-<lang>.json files shipped next to
-// bubble-card.js (never from a CDN), so the bundle stays small while every
+// are loaded from the lovely-card-<lang>.json files shipped next to
+// lovely-card.js (never from a CDN), so the bundle stays small while every
 // language supported by Home Assistant is covered, entirely offline. English
 // is bundled as the fallback dictionary. Fetched dictionaries persist in a
 // per-version localStorage cache hydrated synchronously before the first
@@ -21,7 +21,7 @@ import runtime from '../translations/runtime.js';
 
 const DEFAULT_LANG = 'en';
 const FETCH_TIMEOUT_MS = 10000;
-const ENGLISH_STORAGE_KEY = 'bubble-card-editor-english';
+const ENGLISH_STORAGE_KEY = 'lovely-card-editor-english';
 
 // Global opt-out: keeps the whole editor in English (bundled values and the
 // English fallback of natively resolved keys), and disables the machine
@@ -51,7 +51,7 @@ export function setEditorEnglishForced(forced) {
 // Cards and editors listen to it and re-render whatever they built earlier.
 function notifyLanguageChanged() {
   try {
-    window.dispatchEvent(new CustomEvent('bubble-card-language-changed'));
+    window.dispatchEvent(new CustomEvent('lovely-card-language-changed'));
   } catch (_) {}
 }
 
@@ -62,7 +62,7 @@ const pendingFetches = Object.create(null);
 // Per-version localStorage cache of the fetched dictionaries: hydrated
 // synchronously before the first render so translations are available
 // instantly everywhere, then revalidated silently once per session.
-const CACHE_PREFIX = 'bubble-card-i18n:';
+const CACHE_PREFIX = 'lovely-card-i18n:';
 const cacheKey = (lang) => `${CACHE_PREFIX}${version}:${lang}`;
 const hydratedLangs = new Set();
 const revalidatedLangs = new Set();
@@ -108,7 +108,7 @@ const scriptUrlAtLoad = typeof document !== 'undefined' ? document.currentScript
 function getScriptBaseUrl() {
     if (scriptUrlAtLoad) return scriptUrlAtLoad.replace(/[^/]*$/, '');
     try {
-        const tag = document.querySelector('script[src*="bubble-card.js"]');
+        const tag = document.querySelector('script[src*="lovely-card.js"]');
         if (tag?.src) return tag.src.replace(/[^/]*$/, '');
     } catch (_) {}
     return null;
@@ -197,11 +197,11 @@ export default function setupTranslation(hass) {
 
 // Candidate local folders holding the dictionaries shipped next to the bundle.
 // No network host is ever contacted: these all resolve to the Home Assistant
-// instance serving bubble-card.js itself.
+// instance serving lovely-card.js itself.
 function localBases() {
   const bases = [];
   // Optional override for development/testing.
-  const custom = typeof window !== 'undefined' ? window.bubbleCardTranslationsBase : undefined;
+  const custom = typeof window !== 'undefined' ? window.lovelyCardTranslationsBase : undefined;
   if (typeof custom === 'string') bases.push(custom);
   else if (Array.isArray(custom)) bases.push(...custom);
   const scriptBase = getScriptBaseUrl();
@@ -218,7 +218,7 @@ async function fetchDict(lang) {
       const timer = controller ? setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS) : null;
       // The version query defeats stale browser caches after an update (HACS
       // only cache-busts the JS resource itself, not sibling files).
-      const response = await fetch(`${base}bubble-card-${lang}.json?v=${encodeURIComponent(version)}`, controller ? { signal: controller.signal } : {});
+      const response = await fetch(`${base}lovely-card-${lang}.json?v=${encodeURIComponent(version)}`, controller ? { signal: controller.signal } : {});
       if (timer) clearTimeout(timer);
       if (!response.ok) continue;
       const dict = await response.json();

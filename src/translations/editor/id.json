@@ -115,7 +115,7 @@
       "info_organize": "Anda dapat mengatur subtombol satu per satu atau mengelompokkannya. Grup dapat disusun sejajar (berdampingan) atau dalam baris (bertumpuk vertikal), dan tombol di dalam grup dapat ditampilkan sejajar atau dalam tata letak kolom.",
       "editor_title": "Editor subtombol",
       "rows_detected_title": "Konfigurasi baris terdeteksi",
-      "rows_detected_body": "Tinggi kartu (rows) ditetapkan secara eksplisit dalam konfigurasi Anda. Ini akan mencegah penyesuaian baris otomatis saat subtombol ditambahkan (misalnya, saat menambahkan subtombol bawah). Klik tombol di bawah untuk menghapus pengaturan tersebut dan membiarkan Bubble Card menghitung baris secara otomatis.",
+      "rows_detected_body": "Tinggi kartu (rows) ditetapkan secara eksplisit dalam konfigurasi Anda. Ini akan mencegah penyesuaian baris otomatis saat subtombol ditambahkan (misalnya, saat menambahkan subtombol bawah). Klik tombol di bawah untuk menghapus pengaturan tersebut dan membiarkan Lovely Card menghitung baris secara otomatis.",
       "remove_override": "Hapus pengaturan dan hitung otomatis",
       "card_specific": "Tombol khusus kartu",
       "main_top": "Subtombol utama (atas)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Menggunakan YAML?",
       "notice_yaml_body": "Ganti konfigurasi pop-up lama dengan format mandiri:",
       "notice_protip": "Tips:",
-      "notice_protip_body": "Sejujurnya, jika Anda masih memakai YAML untuk Bubble Card sampai sekarang, coba saja editor barunya, membuat dan mengedit pop-up jadi sangat mudah! Anda juga bisa mengakses Module Store. Saya menuangkan begitu banyak cinta ke editor ini ❤️",
+      "notice_protip_body": "Sejujurnya, jika Anda masih memakai YAML untuk Lovely Card sampai sekarang, coba saja editor barunya, membuat dan mengedit pop-up jadi sangat mudah! Anda juga bisa mengakses Module Store. Saya menuangkan begitu banyak cinta ke editor ini ❤️",
       "notice_enjoy": "Selamat menikmati pembaruan ini! Salam! 🍻",
       "notice_dismiss": "Mengerti, jangan tampilkan lagi di tampilan ini",
       "notice_remind": "Ingatkan saya nanti"
@@ -579,7 +579,7 @@
       "show_original": "Tampilkan asli",
       "show_translation": "Tampilkan terjemahan",
       "translate_offer_title": "Terjemahkan teks modul",
-      "translate_offer_body": "Modul diterbitkan dalam bahasa Inggris. Bubble Card dapat menerjemahkan deskripsi dan opsinya ke bahasa Anda, tetapi ini mengirim teks tersebut ke layanan terjemahan eksternal. Tetap nonaktif sampai Anda sendiri mengaktifkannya."
+      "translate_offer_body": "Modul diterbitkan dalam bahasa Inggris. Lovely Card dapat menerjemahkan deskripsi dan opsinya ke bahasa Anda, tetapi ini mengirim teks tersebut ke layanan terjemahan eksternal. Tetap nonaktif sampai Anda sendiri mengaktifkannya."
     },
     "module_editor": {
       "create_module": "Buat Modul baru",
@@ -598,7 +598,7 @@
       "description_helper": "Deskripsi ini muncul di modul Anda dan di Module Store (jika Anda membagikannya), jadi pastikan jelas dan ringkas. {bold}, tetapi perlu diketahui bahwa itu hanya akan dirender di modul Anda, Module Store tidak akan menampilkannya.",
       "description_helper_bold": "Anda dapat menggunakan HTML dan CSS inline",
       "code_title": "Kode (templat CSS/JS)",
-      "code_helper": "Informasi dan contoh lebih lanjut tentang kemungkinan templat CSS dan JS dapat ditemukan di {link}. Tips: Anda dapat memperbesar editor dengan mengklik judul panel (Bubble Card configuration).",
+      "code_helper": "Informasi dan contoh lebih lanjut tentang kemungkinan templat CSS dan JS dapat ditemukan di {link}. Tips: Anda dapat memperbesar editor dengan mengklik judul panel (Lovely Card configuration).",
       "styling_docs": "dokumentasi Gaya dan Templat",
       "editor_schema_title": "Opsional: Skema editor (YAML)",
       "yaml_error_title": "Kesalahan pada skema YAML",
@@ -653,7 +653,7 @@
       "download_error": "Kesalahan saat mengunduh modul: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card adalah koleksi kartu minimalis dan dapat disesuaikan"
+      "description": "Lovely Card adalah koleksi kartu minimalis dan dapat disesuaikan"
     },
     "errors": {
       "card_type_required": "Anda perlu menentukan jenis kartu",
@@ -673,8 +673,8 @@
       "hidden_content": "Konten disembunyikan dalam mode edit demi performa"
     },
     "navigation": {
-      "group": "Pop-up Bubble Card",
-      "hash_hint": "Hash pop-up Bubble Card"
+      "group": "Pop-up Lovely Card",
+      "hash_hint": "Hash pop-up Lovely Card"
     }
   }
 }

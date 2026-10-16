@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// i18n consistency checker for Bubble Card.
+// i18n consistency checker for Lovely Card.
 //   node src/translations/check-i18n.mjs          -> checks t() keys vs en.json/runtime.js
 //   node src/translations/check-i18n.mjs --langs  -> also checks every editor/<lang>.json
 import fs from 'fs';

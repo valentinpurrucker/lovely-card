@@ -92,7 +92,7 @@ function _styleSegments(styles) {
   return _memoByTemplate(_segmentsCache, styles, (s) => {
     const split = splitStyleTemplate(s);
     if (split && split.unbalanced.length > 0) {
-      console.warn('Bubble Card - A Jinja block ({% if %}, {% for %}...) cannot enclose a ${ } JavaScript template, move the ${ } out of the block:', split.segments[split.unbalanced[0]].substring(0, 80));
+      console.warn('Lovely Card - A Jinja block ({% if %}, {% for %}...) cannot enclose a ${ } JavaScript template, move the ${ } out of the block:', split.segments[split.unbalanced[0]].substring(0, 80));
     }
     return split;
   });
@@ -326,8 +326,8 @@ export const handleCustomStyles = (context, element = context.card) => {
 
     // A template result change is not handled here: the store renders the
     // cards that hold the template, through onTemplateResults on the element.
-    window.addEventListener('bubble-card-modules-changed', refreshHandler);
-    window.addEventListener('bubble-card-module-updated', refreshHandler);
+    window.addEventListener('lovely-card-modules-changed', refreshHandler);
+    window.addEventListener('lovely-card-module-updated', refreshHandler);
     document.addEventListener('yaml-modules-updated', refreshHandler);
     context._moduleChangeListenerAdded = true;
     context._moduleChangeHandler = refreshHandler;
@@ -471,7 +471,7 @@ function _handleCustomStylesCore(context, parsedYamlModules, styleElementToInjec
           if (typeof moduleCode !== "string" || moduleCode === "") { stylesParts.push("{}"); continue; }
           stylesParts.push(evalStyles(context, moduleCode, { type: 'module', id: moduleId }, cycleSubButtonStates, cycleState));
         } catch (moduleError) {
-          console.error(`Bubble Card - Error processing module "${moduleId}" before evaluation:`, moduleError);
+          console.error(`Lovely Card - Error processing module "${moduleId}" before evaluation:`, moduleError);
           stylesParts.push("{}");
         }
       }
@@ -480,7 +480,7 @@ function _handleCustomStylesCore(context, parsedYamlModules, styleElementToInjec
     try {
       stylesParts.push(evalStyles(context, customStyles, { type: 'custom_styles' }, cycleSubButtonStates, cycleState));
     } catch (customStyleError) {
-      console.error("Bubble Card - Error processing custom styles before evaluation:", customStyleError);
+      console.error("Lovely Card - Error processing custom styles before evaluation:", customStyleError);
     }
 
     const assembledStyles = stylesParts.join("\n").trim();
@@ -763,7 +763,7 @@ export function evalStyles(context, styles = "", sourceInfo = { type: 'unknown' 
     const cardType = context.config?.card_type || 'N/A';
     const entityId = context.config?.entity || 'N/A';
     const errorMessageToLog = 
-`Bubble Card - Template Error:
+`Lovely Card - Template Error:
   Card Type: ${cardType}
   Entity: ${entityId}
   Source: ${sourceDescription}
@@ -808,7 +808,7 @@ export function evalStyles(context, styles = "", sourceInfo = { type: 'unknown' 
 }
 
 function emitEditorError(message, errorContext) {
-  window.dispatchEvent(new CustomEvent("bubble-card-error", { 
+  window.dispatchEvent(new CustomEvent("lovely-card-error", {
     detail: {
       message: message,
       context: errorContext

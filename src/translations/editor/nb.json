@@ -115,7 +115,7 @@
       "info_organize": "Du kan organisere underknapper enkeltvis eller gruppere dem. Grupper kan plasseres på linje (side om side) eller i rader (stablet vertikalt), og knapper i grupper kan vises på linje eller i et kolonneoppsett.",
       "editor_title": "Redigerer for underknapper",
       "rows_detected_title": "Radkonfigurasjon oppdaget",
-      "rows_detected_body": "Kortets høyde (rader) er eksplisitt angitt i konfigurasjonen din. Dette hindrer automatiske radjusteringer når underknapper legges til (for eksempel når nedre underknapper legges til). Klikk på knappen nedenfor for å fjerne overstyringen og la Bubble Card beregne radene automatisk.",
+      "rows_detected_body": "Kortets høyde (rader) er eksplisitt angitt i konfigurasjonen din. Dette hindrer automatiske radjusteringer når underknapper legges til (for eksempel når nedre underknapper legges til). Klikk på knappen nedenfor for å fjerne overstyringen og la Lovely Card beregne radene automatisk.",
       "remove_override": "Fjern overstyring og beregn automatisk",
       "card_specific": "Kortspesifikke knapper",
       "main_top": "Hovedunderknapper (øverst)",
@@ -200,7 +200,7 @@
       "notice_yaml_title": "Bruker du YAML?",
       "notice_yaml_body": "Erstatt den gamle pop-up-konfigurasjonen med det frittstående formatet:",
       "notice_protip": "Proffstips:",
-      "notice_protip_body": "Helt ærlig, hvis du fortsatt bruker YAML for Bubble Card, bør du prøve den nye redigereren, den gjør det til en lek å lage og redigere pop-uper! Du får også tilgang til Module Store. Jeg har lagt så mye kjærlighet i denne redigereren ❤️",
+      "notice_protip_body": "Helt ærlig, hvis du fortsatt bruker YAML for Lovely Card, bør du prøve den nye redigereren, den gjør det til en lek å lage og redigere pop-uper! Du får også tilgang til Module Store. Jeg har lagt så mye kjærlighet i denne redigereren ❤️",
       "notice_enjoy": "Kos deg med denne oppdateringen! Skål! 🍻",
       "notice_dismiss": "Forstått, ikke vis igjen i denne visningen",
       "notice_remind": "Minn meg på det senere"
@@ -579,7 +579,7 @@
       "show_original": "Vis original",
       "show_translation": "Vis oversettelse",
       "translate_offer_title": "Oversett modulenes tekster",
-      "translate_offer_body": "Moduler publiseres på engelsk. Bubble Card kan oversette beskrivelsene og valgene deres til ditt språk, men det sender teksten til en ekstern oversettelsestjeneste. Det er av til du slår det på selv."
+      "translate_offer_body": "Moduler publiseres på engelsk. Lovely Card kan oversette beskrivelsene og valgene deres til ditt språk, men det sender teksten til en ekstern oversettelsestjeneste. Det er av til du slår det på selv."
     },
     "module_editor": {
       "create_module": "Opprett ny modul",
@@ -598,7 +598,7 @@
       "description_helper": "Denne beskrivelsen vises i modulen din og i Module Store (hvis du deler den), så sørg for at den er klar og konsis. {bold}, men merk at den bare gjengis i modulen din, Module Store viser den ikke.",
       "description_helper_bold": "Du kan bruke HTML og inline-CSS",
       "code_title": "Kode (CSS/JS-mal)",
-      "code_helper": "Mer informasjon og eksempler på mulighetene med CSS- og JS-maler finnes i {link}. Tips: Du kan forstørre redigereren ved å klikke på panelets tittel (Bubble Card-konfigurasjon).",
+      "code_helper": "Mer informasjon og eksempler på mulighetene med CSS- og JS-maler finnes i {link}. Tips: Du kan forstørre redigereren ved å klikke på panelets tittel (Lovely Card-konfigurasjon).",
       "styling_docs": "dokumentasjonen for styling og maler",
       "editor_schema_title": "Valgfritt: Redigeringsskjema (YAML)",
       "yaml_error_title": "Feil i YAML-skjema",
@@ -653,7 +653,7 @@
       "download_error": "Feil ved nedlasting av modulen: {error}"
     },
     "card_picker": {
-      "description": "Bubble Card er en minimalistisk og tilpassbar kortsamling"
+      "description": "Lovely Card er en minimalistisk og tilpassbar kortsamling"
     },
     "errors": {
       "card_type_required": "Du må angi en korttype",
@@ -673,8 +673,8 @@
       "hidden_content": "Innhold skjult i redigeringsmodus av ytelseshensyn"
     },
     "navigation": {
-      "group": "Bubble Card-pop-uper",
-      "hash_hint": "Hash for Bubble Card-pop-up"
+      "group": "Lovely Card-pop-uper",
+      "hash_hint": "Hash for Lovely Card-pop-up"
     }
   }
 }

@@ -68,7 +68,7 @@ export async function changeEventList(context) {
       return events.map(e => ({...e, entity}));
     } catch (error) {
       // An unavailable calendar answers a 400, which must not empty the whole card
-      console.warn(`Bubble Card - Could not load the events of ${entity.entity}:`, error);
+      console.warn(`Lovely Card - Could not load the events of ${entity.entity}:`, error);
       return [];
     }
   });
