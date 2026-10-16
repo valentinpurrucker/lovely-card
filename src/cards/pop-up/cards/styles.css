@@ -29,7 +29,7 @@
 
 .bubble-cards-grid-container > .card {
     position: relative;
-    border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
+    border-radius: var(--lovely-radius-card, var(--lovely-radius, var(--lovely-default-radius-card)));
     grid-row: span var(--row-size, 1);
     grid-column: span min(var(--column-size, 1), var(--grid-column-count));
 }
@@ -82,7 +82,7 @@
     justify-content: center;
     min-height: var(--row-height);
     border: 2px dashed var(--divider-color, #e0e0e0);
-    border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px));
+    border-radius: var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control)));
     background: none;
     cursor: pointer;
     color: var(--secondary-text-color);
@@ -117,7 +117,7 @@
     min-height: var(--row-height);
     padding: 12px 16px;
     border: 1px solid var(--warning-color, #ffa600);
-    border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));
+    border-radius: var(--lovely-radius-card, var(--lovely-radius, var(--lovely-default-radius-card)));
     background: color-mix(in srgb, var(--warning-color, #ffa600) 12%, var(--card-background-color, #fff));
     color: var(--primary-text-color);
 }

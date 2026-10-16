@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { cornerProperties, cornerStyles } from '../src/styles/corners.js';
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({
@@ -12,6 +13,7 @@ const output = resolve('docs/preview');
 await mkdir(output, { recursive: true });
 let assertions = 0;
 const check = (actual, expected, message) => { assert.deepEqual(actual, expected, message); assertions++; };
+const expectedRadius = role => cornerProperties[`--lovely-default-radius-${role}`];
 
 async function open(query = '', width = 1140) {
   const page = await browser.newPage({ viewport: { width, height: 1250 } });
@@ -39,7 +41,7 @@ try {
       const result = { defined: names.every(name => !!customElements.get(name)), originalRadius: getComputedStyle(original.elements.mainContainer).borderTopLeftRadius, lovelyRadius: getComputedStyle(window.__gallery.cards[0].elements.mainContainer).borderTopLeftRadius };
       original.remove();return result;
     });
-    check(registration, { defined: true, originalRadius: '28px', lovelyRadius: '12px' }, `Independent registrations and styling: ${order}`);
+    check(registration, { defined: true, originalRadius: '28px', lovelyRadius: expectedRadius('card') }, `Independent registrations and styling: ${order}`);
     await page.locator('[data-sample="Button"] lovely-card').first().locator('.bubble-background').click();
     await page.waitForFunction(() => window.__gallery.calls.length > 0);
     check(await page.evaluate(() => window.__gallery.calls.filter(call => call.domain === 'switch' && call.service === 'toggle').length), 1, `Single action dispatch: ${order}`);
@@ -70,7 +72,7 @@ try {
       navigation:radius(card('horizontal-buttons-stack').shadowRoot.querySelector('.bubble-button')),
     };
   });
-  check(corners, { card:'12px',icon:'8px',climate:'8px',cover:'8px',media:'8px',subButton:'8px',subSlider:'8px',image:'4px',colorCursor:'2px',calendar:'8px',event:'2px',separator:'2px',navigation:'8px' }, 'Corner scale across all rendered component families');
+  check(corners, Object.fromEntries(Object.entries({card:'card',icon:'icon',climate:'control',cover:'control',media:'control',subButton:'control',subSlider:'control',image:'small',colorCursor:'indicator',calendar:'icon',event:'indicator',separator:'indicator',navigation:'control'}).map(([component,role])=>[component,expectedRadius(role)])), 'Corner scale across all rendered component families');
 
   // Per-card and per-theme customization must still work.
   check(await page.evaluate(() => {
@@ -81,6 +83,18 @@ try {
     c.style.removeProperty('--lovely-radius-card');c.style.removeProperty('--bubble-button-border-radius');
     return {customized,upstreamOverride};
   }), {customized:'6px',upstreamOverride:'10px'}, 'Lovely tokens and existing component overrides');
+
+  check(await page.evaluate(() => {
+    const card=window.__gallery.cards[0];
+    card.elements.mainContainer.style.setProperty('--lovely-radius','3px');
+    const result=[card.elements.mainContainer,card.elements.iconContainer].map(el=>getComputedStyle(el).borderTopLeftRadius);
+    card.elements.mainContainer.style.removeProperty('--lovely-radius');
+    return result;
+  }), ['3px','3px'], 'Local shared radius overrides are resolved at each component');
+
+  // The hold indicator is attached to body, outside the card's styled shadow root.
+  await page.locator('[data-sample="Button"] lovely-card').first().locator('.bubble-background').click({delay:600});
+  check(await page.locator('body > div[style*="--lovely-default-radius-control"]').evaluate(el=>getComputedStyle(el).borderTopLeftRadius), expectedRadius('control'), 'Body-mounted hold indicator shares the central defaults');
 
   // A real climate button must retain its service behavior.
   await page.locator('[data-sample="Climate"] lovely-card').first().locator('.bubble-climate-plus-button').first().click();
@@ -97,9 +111,9 @@ try {
   await alarm.locator('.bubble-background').click();
   await alarm.locator('ha-dropdown-item').first().click();
   await alarm.locator('.bubble-keypad').waitFor();
-  check(await alarm.locator('.bubble-keypad-key').first().evaluate(el=>getComputedStyle(el).borderTopLeftRadius),'8px','Alarm keypad keys');
+  check(await alarm.locator('.bubble-keypad-key').first().evaluate(el=>getComputedStyle(el).borderTopLeftRadius),expectedRadius('control'),'Alarm keypad keys');
   await alarm.locator('[data-key="1"]').click();
-  check(await alarm.locator('.bubble-keypad-dot').evaluate(el=>getComputedStyle(el).borderTopLeftRadius),'2px','Alarm code indicators');
+  check(await alarm.locator('.bubble-keypad-dot').evaluate(el=>getComputedStyle(el).borderTopLeftRadius),expectedRadius('indicator'),'Alarm code indicators');
   await alarm.locator('[data-key="back"]').click();await alarm.locator('[data-key="back"]').click();
   await page.evaluate(()=>{const c=window.__gallery.cards.find(c=>c.config.entity==='alarm_control_panel.home');c.elements.dropdownSelect.shadowRoot.querySelector('ha-dropdown').open=false;});
   await page.evaluate(()=>document.getElementById('toast').classList.remove('visible'));
@@ -122,8 +136,16 @@ try {
       },{style,mode});
       await page.waitForFunction(()=>window.__gallery.popup.popUp?.classList.contains('is-popup-opened'));
       await page.waitForTimeout(350);
-      check(await page.evaluate(()=>getComputedStyle(window.__gallery.popup.popUp).borderTopLeftRadius),'16px',`Popup shell: ${style}/${mode} at ${width}`);
-      check(await page.evaluate(()=>getComputedStyle(window.__gallery.popup.elements.closeButton).borderTopLeftRadius),'8px',`Popup close control: ${style}/${mode} at ${width}`);
+      check(await page.evaluate(()=>getComputedStyle(window.__gallery.popup.popUp).borderTopLeftRadius),expectedRadius('popup'),`Popup shell: ${style}/${mode} at ${width}`);
+      check(await page.evaluate(()=>getComputedStyle(window.__gallery.popup.elements.closeButton).borderTopLeftRadius),expectedRadius('control'),`Popup close control: ${style}/${mode} at ${width}`);
+      if(style==='classic'&&mode==='centered'&&width===1140) {
+        check(await page.evaluate(()=>{
+          const popup=window.__gallery.popup;const shell=popup.popUp;const parent=shell.parentNode;const next=shell.nextSibling;
+          document.body.append(shell);
+          const result=[shell,popup.elements.closeButton].map(el=>getComputedStyle(el).borderTopLeftRadius);
+          parent.insertBefore(shell,next);return result;
+        }),[expectedRadius('popup'),expectedRadius('control')],'Popup corners survive moving outside the card shadow root');
+      }
       if(style==='home-assistant'&&mode==='adaptive-dialog')await page.screenshot({path:resolve(output,width===390?'popup-mobile.png':'popup.png'),fullPage:false});
       await page.locator('#gallery-popup .bubble-close-button').click();
       await page.waitForFunction(()=>location.hash==='');
@@ -145,8 +167,16 @@ try {
     const probe=document.createElement('div');probe.style.cssText='position:fixed;left:-10000px';document.body.append(probe);
     const root=probe.attachShadow({mode:'open'});root.innerHTML=`<style>${css}</style><button class="remove-button"></button><span class="version-number">0.1.0</span><a class="bubble-badge">Preview</a><div class="store-refresh-button"></div><img class="author-avatar"><div class="bubble-progress-track"></div><div class="bubble-progress-bar"></div>`;
     const result=[...root.querySelectorAll('button,span,a,div,img')].map(el=>getComputedStyle(el).borderTopLeftRadius);probe.remove();return result;
-  },editorCSS+moduleCSS);
-  check(editorRadii,['8px','4px','8px','8px','4px','2px','2px'],'Editor and Module Store corner scale');
+  },cornerStyles+editorCSS+moduleCSS);
+  check(editorRadii,['control','small','control','control','small','indicator','indicator'].map(expectedRadius),'Editor and Module Store corner scale');
+
+  await page.locator('.editor-panel').evaluate(el=>{el.open=true;});
+  const editor=page.locator('lovely-card-editor');await editor.waitFor({state:'attached'});
+  check(await editor.evaluate(async el=>{
+    await el.updateComplete;
+    const probe=document.createElement('a');probe.className='bubble-badge';probe.textContent='Corner check';el.shadowRoot.append(probe);
+    const result=getComputedStyle(probe).borderTopLeftRadius;probe.remove();return result;
+  }),expectedRadius('control'),'The real editor installs the shared defaults in its shadow root');
   check(errors, [], 'No browser errors during interaction and responsive checks');
   await page.close();
   const original=await open('?mode=original');

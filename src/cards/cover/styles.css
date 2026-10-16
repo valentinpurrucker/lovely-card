@@ -3,7 +3,7 @@
   position: relative;
   height: 36px;
   width: 36px;
-  border-radius: var(--bubble-cover-buttons-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, 8px))));
+  border-radius: var(--bubble-cover-buttons-border-radius, var(--bubble-border-radius, var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control)))));
   background-color: var(--bubble-cover-button-background-color);
   cursor: pointer;
   align-items: center;

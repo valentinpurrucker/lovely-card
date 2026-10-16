@@ -1098,7 +1098,7 @@ export function renderPopupOnboarding(context) {
         aspect-ratio: 210 / 130;
         background: var(--primary-background-color);
         border: 1.5px solid var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
-        border-radius: 5.71cqw;
+        border-radius: var(--lovely-default-preview-radius-popup);
         overflow: hidden;
         container-type: inline-size;
       }
@@ -1111,7 +1111,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-bg-row {
         flex: 1;
-        border-radius: 4.29cqw;
+        border-radius: var(--lovely-default-preview-radius-card);
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
         opacity: 0.3;
       }
@@ -1127,7 +1127,7 @@ export function renderPopupOnboarding(context) {
         position: absolute;
         inset: auto 0 0;
         height: 48.57cqw;
-        border-radius: 5.71cqw 5.71cqw 0 0;
+        border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0;
         background: var(--ha-card-background, var(--card-background-color));
         display: flex;
         flex-direction: column;
@@ -1149,14 +1149,14 @@ export function renderPopupOnboarding(context) {
       .bhp-popup-header-card {
         flex: 1;
         height: 16.67cqw;
-        border-radius: 2.86cqw;
+        border-radius: var(--lovely-default-preview-radius-control);
         background: var(--bubble-pop-up-main-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color))));
       }
       /* close button — mirrors .bubble-header-action-button */
       .bhp-popup-close-btn {
         width: 16.67cqw;
         height: 16.67cqw;
-        border-radius: 2.86cqw;
+        border-radius: var(--lovely-default-preview-radius-control);
         background: var(--bubble-pop-up-main-background-color, var(--bubble-secondary-background-color, var(--background-color, var(--secondary-background-color))));
         flex-shrink: 0;
         position: relative;
@@ -1170,7 +1170,7 @@ export function renderPopupOnboarding(context) {
         position: absolute;
         width: 6.19cqw;
         height: 0.71cqw;
-        border-radius: 0.48cqw;
+        border-radius: var(--lovely-default-preview-radius-handle);
         background: var(--primary-text-color);
         opacity: 0.55;
       }
@@ -1190,7 +1190,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-popup-row {
         flex: 1;
-        border-radius: 4.29cqw;
+        border-radius: var(--lovely-default-preview-radius-card);
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
       }
       /* === default mode (full-height bottom sheet) === */
@@ -1202,14 +1202,14 @@ export function renderPopupOnboarding(context) {
       .bubble-popup-onboarding[data-mode="centered"] .bhp-popup {
         inset: 50% 4.76cqw auto;
         height: 48.57cqw;
-        border-radius: 5.71cqw;
+        border-radius: var(--lovely-default-preview-radius-popup);
         transform: translateY(-50%) scale(0.85);
         opacity: 0;
         animation: bhp-center 5s ease infinite;
       }
       .bubble-popup-onboarding[data-mode="centered"][data-full-width="true"] .bhp-popup {
         inset: 50% 0 auto;
-        border-radius: 5.71cqw;
+        border-radius: var(--lovely-default-preview-radius-popup);
       }
       /* === adaptive-dialog (alternates: centered dialog → bottom sheet) === */
       .bubble-popup-onboarding[data-mode="adaptive-dialog"] .bhp-popup {
@@ -1221,7 +1221,7 @@ export function renderPopupOnboarding(context) {
       @media (max-width: 767px) {
         .bubble-popup-onboarding[data-mode="centered"][data-full-width="true"] .bhp-popup {
           inset: auto 0 0;
-          border-radius: 5.71cqw 5.71cqw 0 0;
+          border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0;
         }
       }
       /* === trigger button === */
@@ -1232,7 +1232,7 @@ export function renderPopupOnboarding(context) {
         gap: 4.76cqw;
         width: 100%;
         height: 20.95cqw;
-        border-radius: 4.29cqw;
+        border-radius: var(--lovely-default-preview-radius-card);
         background: var(--bubble-button-main-background-color, var(--bubble-main-background-color, var(--background-color-2, var(--secondary-background-color))));
         padding: 0 4.29cqw;
         box-sizing: border-box;
@@ -1242,7 +1242,7 @@ export function renderPopupOnboarding(context) {
       .bhp-icon {
         width: 13.33cqw;
         height: 13.33cqw;
-        border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
+        border-radius: var(--lovely-radius-small, var(--lovely-radius, var(--lovely-default-radius-small)));
         background: var(--primary-background-color);
         flex-shrink: 0;
       }
@@ -1254,7 +1254,7 @@ export function renderPopupOnboarding(context) {
       }
       .bhp-text-line {
         height: 3.33cqw;
-        border-radius: 0.48cqw;
+        border-radius: var(--lovely-default-preview-radius-handle);
         background: var(--primary-text-color);
         opacity: 0.12;
       }
@@ -1288,14 +1288,14 @@ export function renderPopupOnboarding(context) {
         gap: 10px;
         background: var(--card-background-color, var(--primary-background-color));
         border: 1px solid var(--divider-color);
-        border-radius: 12px;
+        border-radius: var(--lovely-radius-card, var(--lovely-radius, var(--lovely-default-radius-card)));
         padding: 8px 10px;
       }
       .bhp-step-num {
         flex-shrink: 0;
         width: 20px;
         height: 20px;
-        border-radius: var(--lovely-radius-small, var(--lovely-radius, 4px));
+        border-radius: var(--lovely-radius-small, var(--lovely-radius, var(--lovely-default-radius-small)));
         background: var(--primary-color);
         color: var(--on-primary-color, white);
         font-size: 12px;
@@ -1321,32 +1321,32 @@ export function renderPopupOnboarding(context) {
       @keyframes bhp-adaptive {
         /* === centered dialog phase (first 5s mapped to 0-50%) === */
         /* 0%,15% of bhp-center → 0%,7.5% */
-        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* 28%,55% of bhp-center → 14%,27.5% */
-        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
+        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(1);    opacity: 1; }
         /* 65%,100% of bhp-center → 32.5%,49% */
-        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* snap to bottom while invisible */
-        50%        { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 0; }
+        50%        { inset: auto 0 0; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 0; }
         /* === bottom-sheet phase (second 5s mapped to 50-100%) === */
         /* 0%,15% of bhp-slide → 50%,57.5% */
-        57.5%      { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
+        57.5%      { inset: auto 0 0; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 1; }
         /* 28%,55% of bhp-slide → 64%,77.5% */
-        64%, 77.5% { inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(0);    opacity: 1; }
+        64%, 77.5% { inset: auto 0 0; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(0);    opacity: 1; }
         /* 65%,100% of bhp-slide → 82.5%,100% */
-        82.5%, 100%{ inset: auto 0 0; height: 48.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
+        82.5%, 100%{ inset: auto 0 0; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 1; }
       }
       @keyframes bhp-adaptive-offset {
         /* === centered dialog phase — same as bhp-adaptive === */
-        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
-        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(1);    opacity: 1; }
-        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: 5.71cqw; transform: translateY(-50%) scale(0.85); opacity: 0; }
+        0%, 7.5%   { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(0.85); opacity: 0; }
+        14%, 27.5% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(1);    opacity: 1; }
+        32.5%, 49% { inset: 50% 4.76cqw auto; height: 48.57cqw; border-radius: var(--lovely-default-preview-radius-popup); transform: translateY(-50%) scale(0.85); opacity: 0; }
         /* snap to bottom while invisible */
-        50%        { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 0; }
+        50%        { inset: auto 0 0; height: 58.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 0; }
         /* === bottom-sheet phase — 58.57cqw to show offset === */
-        57.5%      { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
-        64%, 77.5% { inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(0);    opacity: 1; }
-        82.5%, 100%{ inset: auto 0 0; height: 58.57cqw; border-radius: 5.71cqw 5.71cqw 0 0; transform: translateY(100%); opacity: 1; }
+        57.5%      { inset: auto 0 0; height: 58.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 1; }
+        64%, 77.5% { inset: auto 0 0; height: 58.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(0);    opacity: 1; }
+        82.5%, 100%{ inset: auto 0 0; height: 58.57cqw; border-radius: var(--lovely-default-preview-radius-popup) var(--lovely-default-preview-radius-popup) 0 0; transform: translateY(100%); opacity: 1; }
       }
       @keyframes bhp-overlay {
         0%,  15% { opacity: 0; }

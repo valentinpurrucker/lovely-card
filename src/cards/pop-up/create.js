@@ -12,6 +12,7 @@ import { hideLegacyPopupContent } from './legacy.js';
 import { renderPopupOnboarding } from './editor.js';
 import { configurePopupSlideToClose } from './slide-to-close.js';
 import styles from "./styles.css";
+import { cornerStyles } from '../../styles/corners.js';
 
 const CLOSE_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>';
 const PREVIOUS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><title>arrow-left</title><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>';
@@ -316,12 +317,13 @@ export function ensurePopupShellStyles(context) {
     return;
   }
   if (!context.elements) context.elements = {};
+  context.popUp.classList.add('lovely-corner-scope');
 
   const styleTags = context.popUp.querySelectorAll("style");
   if (!context.stylesAdded || styleTags.length === 0) {
     context.elements.customStyle = createElement("style");
     context.elements.style = createElement("style");
-    context.elements.style.textContent = styles;
+    context.elements.style.textContent = cornerStyles + styles;
     context.popUp.appendChild(context.elements.customStyle);
     context.popUp.appendChild(context.elements.style);
     context.stylesAdded = true;

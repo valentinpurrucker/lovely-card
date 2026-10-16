@@ -1,4 +1,5 @@
 import { forwardHaptic, createElement } from "./utils.js";
+import { applyCornerDefaults } from '../styles/corners.js';
 
 const maxHoldDuration = 500;
 const doubleTapTimeout = 200;
@@ -15,6 +16,7 @@ let __lovelyHoldIndicatorListenersSet = false;
 function ensureHoldIndicator(isTouch) {
   if (!__lovelyHoldIndicator) {
     const el = document.createElement('div');
+    applyCornerDefaults(el);
     __lovelyHoldIndicator = el;
     document.body.appendChild(el);
   }
@@ -30,7 +32,7 @@ function ensureHoldIndicator(isTouch) {
     background: 'var(--primary-color)',
     display: 'none',
     opacity: '0.4',
-    borderRadius: 'var(--lovely-radius-control, var(--lovely-radius, 8px))',
+    borderRadius: 'var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control)))',
     transition: 'transform 180ms ease-in-out',
   });
 

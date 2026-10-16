@@ -58,8 +58,8 @@ export class HaFormBcGroup extends LitElement {
     ha-expansion-panel {
       display: block;
       --expansion-panel-content-padding: 0;
-      border-radius: 6px;
-      --ha-card-border-radius: 6px;
+      border-radius: var(--lovely-radius-editor, var(--lovely-radius, var(--lovely-default-radius-editor)));
+      --ha-card-border-radius: var(--lovely-radius-editor, var(--lovely-radius, var(--lovely-default-radius-editor)));
     }
     ha-icon[slot="leading-icon"] {
       color: var(--secondary-text-color);

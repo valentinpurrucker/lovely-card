@@ -28,9 +28,8 @@ import { isSuggestionPickerPreview } from './lazy-preview.js';
 
 const BADGE_CLASS = 'bubble-preview-badge';
 
-// Matches the picker's own "+N more" chip, so it reads as part of the dialog
-// rather than as something the card drew. The fallbacks matter: these tokens
-// are recent, and a card must never render an unstyled chip on an older theme.
+// Keep the picker's typography and colors, with the same shared corner role
+// as Lovely's other controls.
 const BADGE_STYLE = [
   'position:absolute',
   'top:6px',
@@ -38,7 +37,7 @@ const BADGE_STYLE = [
   'z-index:2',
   'pointer-events:none',
   'padding:2px 8px',
-  'border-radius:var(--ha-border-radius-md,12px)',
+  'border-radius:var(--lovely-radius-control,var(--lovely-radius,var(--lovely-default-radius-control)))',
   'background:var(--ha-color-fill-neutral-quiet-resting,var(--secondary-background-color))',
   'color:var(--ha-color-text-secondary,var(--secondary-text-color))',
   'font-family:var(--ha-font-family-body,inherit)',

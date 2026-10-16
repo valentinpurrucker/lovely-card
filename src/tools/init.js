@@ -1,12 +1,14 @@
+import { cornerStyles } from '../styles/corners.js';
+
 // Initialize the content if it's not there yet.
 
 export function initializeContent(context) {
     if (!context.content) {
         let shadow = context.shadowRoot || context.attachShadow({ mode: 'open' });
         let hostStyle = document.createElement("style");
-        hostStyle.textContent = ":host{display:inline-block;width:100%;vertical-align:top;}";
+        hostStyle.textContent = cornerStyles + ":host{display:inline-block;width:100%;vertical-align:top;}";
         let card = document.createElement("ha-card");
-        card.style.cssText = "background: none; border: none; box-shadow: none; border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));";
+        card.style.cssText = "background: none; border: none; box-shadow: none; border-radius: var(--lovely-radius-card, var(--lovely-radius, var(--lovely-default-radius-card)));";
         let content = document.createElement("div");
         content.className = "card-content";
         content.style.padding = "0";

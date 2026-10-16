@@ -84,6 +84,7 @@ hass = {
   localize:()=>undefined,
   formatEntityState:(s,state=s.state)=>`${state}${s.attributes.unit_of_measurement?' '+s.attributes.unit_of_measurement:''}`,
   formatEntityAttributeValue:(s,a,value=s.attributes[a])=>String(value??''),
+  formatEntityAttributeName:(s,a)=>a.replace(/_/g,' '),
   hassUrl:p=>p,
   callService:async(domain,service,data)=>{
     calls.push({domain,service,data});

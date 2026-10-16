@@ -30,6 +30,8 @@ The fork includes [`hacs.json`](hacs.json) for HACS packaging. Manual installati
 
 ## The corner system
 
+All corner sizes are defined in **[`src/styles/corners.js`](src/styles/corners.js)**. Change `cornerScale` to resize the whole collection proportionally, or edit one entry in `cornerSizes` to change a role such as cards or controls. Run `npm run dist` afterward. Components have no numeric corner fallbacks of their own; editor panels, detached pop-ups, hold indicators, and onboarding illustrations use the same configuration.
+
 Every bundled card type is retained: **button** (switch, slider, state, name), **sub-buttons**, **separator**, **cover**, **climate** (including water heaters and humidifiers), **select**, **media player**, **calendar**, **horizontal buttons stack**, **pop-up**, and **empty column**. Empty columns remain invisible layout helpers.
 
 The design also covers nested and bottom sub-buttons, grouped controls, sliders and color cursors, dropdown menus, alarm keypads, entity pictures, media/volume controls, pop-up navigation and close buttons, foreground clipping, all responsive pop-up modes and styles, onboarding illustrations, the configuration editor, and Module Store UI.
@@ -42,6 +44,9 @@ The design also covers nested and bottom sub-buttons, grouped controls, sliders 
 | `lovely-radius-popup` | `16px` | Dialogs and bottom sheets |
 | `lovely-radius-small` | `4px` | Small images and compact badges |
 | `lovely-radius-indicator` | `2px` | Color cursors, keypad indicators, separator lines |
+| `lovely-radius-editor` | `6px` | Small editor panels and examples |
+| `lovely-radius-tab` | `3px` | Module tab accents |
+| `lovely-radius-handle` | `1px` | Thin pop-up handles and decorative strokes |
 
 Set these keys in a Home Assistant theme (Home Assistant adds the CSS `--` prefix):
 

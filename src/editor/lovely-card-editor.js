@@ -5,6 +5,7 @@ import {
     unsafeCSS
 } from 'lit';
 import { version } from '../var/version.js';
+import { cornerStyles } from '../styles/corners.js';
 import { fireEvent } from '../tools/utils.js';
 import { keepEqualParts, acceptConditions } from './config-identity.js';
 // Custom selector for object fields with dynamic entity-attribute context support
@@ -520,7 +521,7 @@ class BubbleCardEditor extends LitElement {
                             </h4>
                         </div>
                         ${this.makeDropdown(t('editor.common.card_type'), "card_type", cardTypeList)}
-                        <img style="width: 100%; height: auto; border-radius: var(--lovely-radius-card, var(--lovely-radius, 12px));" src="https://raw.githubusercontent.com/Clooos/Bubble-Card/main/.github/bubble-card.gif">
+                        <img style="width: 100%; height: auto; border-radius: var(--lovely-radius-card, var(--lovely-radius, var(--lovely-default-radius-card)));" src="https://raw.githubusercontent.com/Clooos/Bubble-Card/main/.github/bubble-card.gif">
                         
                         <div class="bubble-info-container">
                             <div class="bubble-info">
@@ -2074,7 +2075,7 @@ class BubbleCardEditor extends LitElement {
 
   static get styles() {
     return css`
-        ${unsafeCSS(styles + moduleStyles + cardsEditorStyles)}
+        ${unsafeCSS(cornerStyles + styles + moduleStyles + cardsEditorStyles)}
     `;
   }
 

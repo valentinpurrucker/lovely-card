@@ -1,3 +1,4 @@
+import { cornerProperties } from './styles/corners.js';
 import { cleanupCalendarSubscriptions } from './cards/calendar/subscriptions.js';
 import { version } from './var/version.js';
 import setupTranslation, { ensureEditorTranslations, tGlobal } from './tools/localize.js';
@@ -636,6 +637,6 @@ window.customCards.push({
 
 console.info(
   `%c Lovely Card %c ${version} `,
-  'background-color: #555;color: #fff;padding: 3px 2px 3px 3px;border-radius: 14px 0 0 14px;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)',
-  'background-color: #506eac;color: #fff;padding: 3px 3px 3px 2px;border-radius: 0 14px 14px 0;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)'
+  `background-color: #555;color: #fff;padding: 3px 2px 3px 3px;border-radius: ${cornerProperties['--lovely-default-radius-control']} 0 0 ${cornerProperties['--lovely-default-radius-control']};font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)`,
+  `background-color: #506eac;color: #fff;padding: 3px 3px 3px 2px;border-radius: 0 ${cornerProperties['--lovely-default-radius-control']} ${cornerProperties['--lovely-default-radius-control']} 0;font-family: DejaVu Sans,Verdana,Geneva,sans-serif;text-shadow: 0 1px 0 rgba(1, 1, 1, 0.3)`
 );

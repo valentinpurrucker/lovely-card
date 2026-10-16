@@ -1,4 +1,5 @@
 import { html } from 'lit';
+import { applyCornerDefaults } from '../../styles/corners.js';
 import { findConfigPath, getConfigAtPath } from '../../editor/standalone-dialog-bridge.js';
 import { isHashOnCurrentPage } from './navigation-picker-bridge.js';
 import { getCurrentViewPopUps, normalizePopUpHash } from './view-popups.js';
@@ -768,6 +769,7 @@ function _show() {
 
     /* ── Body content ────────────────────────────────────────────────────── */
     const content = document.createElement('div');
+    applyCornerDefaults(content);
     content.style.lineHeight = '1.6';
 
     // The pop-ups left to migrate on this view, read from its config when the
@@ -781,7 +783,7 @@ function _show() {
     const hashTitle = escapeHtml(String(t('editor.migration.notice_available'))).replace(/"/g, '&quot;');
     const hashList = hashes.size > 0 ? `
         <p class="bubble-migration-notice-hashes" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 16px;">
-            ${[...hashes].map((popUpHash) => `<span title="${hashTitle}" style="display: inline-flex; align-items: center; padding: 4px 8px; border-radius: var(--lovely-radius-control, var(--lovely-radius, 8px)); white-space: nowrap; background-color: var(--mdc-text-field-disabled-line-color); font-size: 13px;">${escapeHtml(popUpHash)}</span>`).join('')}
+            ${[...hashes].map((popUpHash) => `<span title="${hashTitle}" style="display: inline-flex; align-items: center; padding: 4px 8px; border-radius: var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control))); white-space: nowrap; background-color: var(--mdc-text-field-disabled-line-color); font-size: 13px;">${escapeHtml(popUpHash)}</span>`).join('')}
         </p>` : '';
 
     content.innerHTML = `
@@ -797,7 +799,7 @@ function _show() {
         <p>
             ${fill('editor.migration.notice_change_body', { stack: '<em>vertical-stack</em>' })}
         </p>
-        <details style="margin: 0 0 16px; border-radius: 8px; overflow: hidden; background: var(--primary-background-color);">
+        <details style="margin: 0 0 16px; border-radius: var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control))); overflow: hidden; background: var(--primary-background-color);">
             <summary style="padding: 12px 16px; cursor: pointer; user-select: none;">
                 <span style="margin-inline-end: 4px;"></span> <strong>${t('editor.migration.notice_video_summary')}</strong> ${t('editor.migration.notice_video_hint')}
             </summary>
@@ -821,7 +823,7 @@ function _show() {
         <p style="margin: 14px 0 24px;">
             ${t('editor.migration.notice_yaml_body')}
         </p>
-        <pre style="margin: 0 0 12px; padding: 12px; background: var(--secondary-background-color); border-radius: 8px; overflow-x: auto; font-size: 0.85em;">
+        <pre style="margin: 0 0 12px; padding: 12px; background: var(--secondary-background-color); border-radius: var(--lovely-radius-control, var(--lovely-radius, var(--lovely-default-radius-control))); overflow-x: auto; font-size: 0.85em;">
 - type: custom:lovely-card
   card_type: pop-up
   name: My Pop-up
